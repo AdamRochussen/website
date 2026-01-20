@@ -9,11 +9,11 @@
         body { background-color: #f8f9fa; color: #333; }
         .navbar-brand, .nav-link { color: #8b0000 !important; }
         h2 { color: #8b0000; border-bottom: 2px solid #d4a017; padding-bottom: 5px; }
+        footer { text-align: center; margin-top: 20px; font-size: 0.8em; color: #666; }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
-        <!-- Same navbar code as above -->
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Adam Rochussen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,39 +34,72 @@
         <h1>Research Experience</h1>
         <div class="accordion" id="researchAccordion">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
+                <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        A novel role for CDC42 in killer T cells
+                        A novel role for CDC42 in killer T cells (Prof Gillian Griffiths, Oct 2020 – Jan 2025, CIMR, Cambridge, UK)
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                <div id="collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body">
-                        <p>Prof Gillian Griffiths | October 2020 – January 2025 | CIMR, Cambridge, UK</p>
-                        <p>Discovered the expression of an unusual splice isoform of CDC42 in cytotoxic T lymphocytes (CTL). Elucidated the role of this protein isoform in activating dynein-mediated transport of secretory lysosomes towards the immune synapse for CTL-mediated killing. Manuscript under review at Journal of Cell Biology and is available upon request.</p>
-                        <p>Discovered potent transcriptional adaptation (TA) in CTLs in response to CRISPR/Cas9-mediated deletion of Cdc42. Characterised the molecular pathways leading to enhanced CTL function after TA. <a href="https://doi.org/10.1242/jcs.263826">Publication</a>.</p>
-                        <p>Collaborations: Carsten Speckmann (University of Freiburg, Germany), Doreen Cantrell (University of Dundee, Scotland)</p>
+                        <ul>
+                            <li>Discovered the expression of an unusual splice isoform of CDC42 in cytotoxic T lymphocytes (CTL). Elucidated the role of this protein isoform in activating dynein-mediated transport of secretory lysosomes towards the immune synapse for CTL-mediated killing. Manuscript under review at Journal of Cell Biology and is available upon request.</li>
+                            <li>Discovered potent transcriptional adaptation (TA) in CTLs in response to CRISPR/Cas9-mediated deletion of Cdc42. Characterised the molecular pathways leading to enhanced CTL function after TA. <a href="https://doi.org/10.1242/jcs.263826" target="_blank" rel="noopener">Publication</a>.</li>
+                            <li>Collaborations: Carsten Speckmann (University of Freiburg, Germany), Doreen Cantrell (University of Dundee, Scotland)</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!-- Add more accordion items for each research project from your CV -->
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
+                <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Visualizing forces during T cell migration and killing
+                        Visualizing forces during T cell migration and killing (Prof Gillian Griffiths, Oct 2020 – Jan 2025, CIMR, Cambridge, UK)
                     </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                <div id="collapseTwo" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        <!-- Content from CV -->
-                        <p>Prof Gillian Griffiths | October 2020 – January 2025 | CIMR, Cambridge, UK</p>
-                        <p>Optimised novel actin conformation probes for use in CTLs. Optimised traction force microscopy for CTLs. Discovered spatiotemporal correlation between distinct F-actin conformations and force production by CTLs. Manuscript submitted to Nature Communications. <a href="https://doi.org/10.1101/2025.05.15.654337">Preprint</a>.</p>
-                        <!-- Etc. -->
+                        <ul>
+                            <li>Optimised novel actin conformation probes for use in CTLs. Optimised traction force microscopy for CTLs. Discovered spatiotemporal correlation between distinct F-actin conformations and force production by CTLs. Manuscript submitted to Nature Communications. <a href="https://doi.org/10.1101/2025.05.15.654337" target="_blank" rel="noopener">Preprint</a>.</li>
+                            <li>Collaborations: Dan Fletcher (UC Berkeley, USA), Anna Lippert (University of Würzburg, Germany), Alex Winkel (University of Cambridge, UK)</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!-- Repeat for all research entries; this makes long lists collapsible for better UX -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Characterisation of T cell dysfunction from PID patients (Collaboration with Dr Alex Kreins, Oct 2023 – Nov 2024, Great Ormond Street Hospital & UCL)
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Discovered a unique cellular phenotype in the CTLs from patients with a novel ∆RAB27A mutation, whereby CTL function is maintained despite loss of canonical granzyme/perforin-mediated killing pathway. These data formed the basis for grant applications for future work proposing cellular phenotyping of patients with inborn errors in immunity to predict future immunodeficiency.</li>
+                            <li>Determined the impact of novel ITPR3 mutations on calcium homeostasis and nuclear translocation of transcription factors in patient CTLs. <a href="https://doi.org/10.1084/jem.20220979" target="_blank" rel="noopener">Publication</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Add similar accordion items for the remaining research experiences from your CV: Imaging the T-cell receptor, Engineering synthetic nucleic acids, Screening for vaccine targets, Investigating the regulation of a novel anti-fungal compound, Investigating the effect of ligand size on rate of endocytosis, Investigating immune cell distribution -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Imaging the T-cell receptor: new approaches, new insights (Prof Gillian Griffiths, Apr 2020 – Aug 2020, COVID-19 lockdown)
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>MRes Rotation III</li>
+                            <li>Literature review discussing the potential for imaging modality to bias results regarding the localisation and dynamics of the T cell receptor, particularly in the resting T cell. <a href="https://doi.org/10.1016/j.coi.2023.102309" target="_blank" rel="noopener">Publication</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Continue adding for all 9 research items -->
         </div>
     </div>
+
+    <footer>Last updated: January 20, 2026</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
