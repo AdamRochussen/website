@@ -1,160 +1,344 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB" data-theme="dark">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adam Rochussen - CV</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body { background-color: #f8f9fa; color: #333; }
-        .navbar-brand, .nav-link { color: #8b0000 !important; }
-        h2 { color: #8b0000; border-bottom: 2px solid #d4a017; padding-bottom: 5px; }
-        footer { text-align: center; margin-top: 20px; font-size: 0.8em; color: #666; }
-        .card { margin-bottom: 10px; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CV · Adam Rochussen</title>
+  <meta name="description" content="Curriculum vitae of Adam Rochussen, PhD, Postdoctoral Fellow at the Salk Institute for Biological Studies. Download as PDF.">
+  <meta name="theme-color" content="#0b0a08">
+  <link rel="canonical" href="https://rochussen.xyz/cv.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Adam Rochussen">
+  <meta property="og:title" content="CV · Adam Rochussen">
+  <meta property="og:description" content="Curriculum vitae of Adam Rochussen, PhD, Postdoctoral Fellow at the Salk Institute for Biological Studies. Download as PDF.">
+  <meta property="og:url" content="https://rochussen.xyz/cv.html">
+  <meta property="og:image" content="https://rochussen.xyz/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AdamRochussen">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/bodoni-moda-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})(document.documentElement);</script>
+  <script src="assets/js/site.js" defer></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Adam Rochussen</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./" aria-label="Adam Rochussen, home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M14 1.5h36L62.5 14v36L50 62.5H14L1.5 50V14z"/><path fill="none" stroke="currentColor" stroke-width=".8" opacity=".55" d="M15.6 5.5h32.8l10.1 10.1v32.8L48.4 58.5H15.6L5.5 48.4V15.6z"/><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" d="M14 46 22.5 18 31 46M17.4 35.5h10.2M37 46V18h7a7 7 0 0 1 0 14h-7M43.5 32 51 46"/></svg>
+        <span class="brand-name">Adam <b>Rochussen</b></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="cv.html" aria-current="page">CV</a></li>
+          <li><a href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Writing<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme">
+          <svg class="icon i-sun" aria-hidden="true"><use href="assets/img/icons.svg#i-sun"></use></svg>
+          <svg class="icon i-moon" aria-hidden="true"><use href="assets/img/icons.svg#i-moon"></use></svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                <!-- Updated Writing link – opens Substack in new tab -->
-                <li class="nav-item">
-                    <a class="nav-link" 
-                       href="https://adam.rochussen.xyz" 
-                       target="_blank" 
-                       rel="noopener">
-                        Writing
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <a class="btn btn-gold nav-cta" href="./#contact">Get in touch</a>
+        <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+      </div>
     </div>
-</nav>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
 
-    <div class="container mt-4">
-        <h1>Curriculum Vitae</h1>
-        <a href="Jan_2026_CV.pdf" class="btn btn-primary mb-3" download>Download PDF</a> <!-- Rename your uploaded PDF if needed -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="pattern-fan" aria-hidden="true"></div>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="cv.html" aria-current="page">CV</a></li>
+        <li><a href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Writing ↗</a></li>
+        <li><a href="./#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-        <div class="accordion" id="cvAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#visionCollapse" aria-expanded="true" aria-controls="visionCollapse">
-                        Scientific Vision
-                    </button>
-                </h2>
-                <div id="visionCollapse" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <p>I am dedicated to increasing our understanding of how human behaviour affects the immune system. This covers behaviours relating to diet, exercise, sleep, social interaction, and stress (among others). My current focus is on the interplay between circadian health and immunity, particularly with respect to timing of food intake and T cell immunity against cancers.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expertiseCollapse" aria-expanded="false" aria-controls="expertiseCollapse">
-                        Technical Expertise
-                    </button>
-                </h2>
-                <div id="expertiseCollapse" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">Immunology & Cell Biology: Primary mouse & human T cell culture, in vitro T cell functional assays, CAR T cell production, flow cytometry, lentiviral transduction</li>
-                            <li class="list-group-item">Molecular Biology: CRISPR/Cas9 gene editing/knock in/deletion, molecular cloning, qPCR, ddPCR, immunoblotting, co-immunoprecipitation, protein expression & purification, RNA extraction & single-cell RNA library preparation</li>
-                            <li class="list-group-item">Microbiology: Bacterial (E. coli, D. solani), fungal (S. cerevisiae), nematode (C. elegans), and parasite (T. brucei, P. knowlesi) culture, bacteriophage culture from field samples, phage transduction, random transposon mutagenesis screening</li>
-                            <li class="list-group-item">Microscopy & Imaging: Live microscopy, immunofluorescence, super-resolution microscopy, traction force microscopy, electron microscopy. Experience with spinning disc confocal, airyscan confocal, lattice SIM2, oblique plane light sheet, lattice light sheet, and epifluorescence microscopes, and LumiCycle, IncuCyte & CellCyte imaging systems. Experience fixing and staining samples with heavy metals for EM imaging.</li>
-                            <li class="list-group-item">Bioinformatics & Data Analysis: Bulk transcriptomic and proteomic analysis (R, Python, Excel), custom image analysis (ImageJ, MATLAB), conventional image analysis (ImageJ, Imaris, Zen), flow cytometric analysis (FlowJo), statistical analyses (Prism, Excel)</li>
-                            <li class="list-group-item">Animal Models: Mouse breeding, colony management, and tissue harvesting</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#qualificationsCollapse" aria-expanded="false" aria-controls="qualificationsCollapse">
-                        Academic Qualifications
-                    </button>
-                </h2>
-                <div id="qualificationsCollapse" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr><th>Degree</th><th>Institution</th><th>Year</th><th>Location</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>PhD in Cell Biology & Immunology</td><td>University of Cambridge</td><td>2025</td><td>CIMR</td></tr>
-                                <tr><td>MA in Natural Sciences</td><td>University of Cambridge</td><td>2021</td><td>Churchill College</td></tr>
-                                <tr><td>MRes in Medical Science</td><td>University of Cambridge</td><td>2020</td><td>Dept. of Medicine</td></tr>
-                                <tr><td>MSci in Biochemistry</td><td>University of Cambridge</td><td>2019</td><td>Dept. of Biochemistry</td></tr>
-                                <tr><td>BA in Natural Sciences</td><td>University of Cambridge</td><td>2018</td><td>Churchill College</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- Add accordions for Research Experience (cross-link to Research page if desired), Awards & Honours (use cards for each award), Mentoring & Teaching, Non-Academic Achievements, Positions of Responsibility, Languages, Programming Languages, Referees, Publications -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#awardsCollapse" aria-expanded="false" aria-controls="awardsCollapse">
-                        Awards & Honours
-                    </button>
-                </h2>
-                <div id="awardsCollapse" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">2025 CSAR PhD Student Award winner</h5>
-                                        <p>University-wide competition "to recognise outstanding research with real world application and to assist students to pursue their research or careers", awarded by the Cambridge Society for the Application of Research</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Add cards for each award -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Continue for Mentoring, Non-Academic (with sub-accordions for Musical/Athletic), Positions (cards), Languages/Programming (lists), Referees (table), Publications (table with links) -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#publicationsCollapse" aria-expanded="false" aria-controls="publicationsCollapse">
-                        Publications
-                    </button>
-                </h2>
-                <div id="publicationsCollapse" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <h3>Journal Articles</h3>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr><th>Citation</th><th>DOI</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Y. Asano et al., “Nuclear polarization to the immune synapse facilitates an early transcriptional burst,” Science Immunology, 2025.</td><td><a href="https://doi.org/10.1126/sciimmunol.adt5909" target="_blank" rel="noopener">DOI</a></td></tr>
-                                <tr><td>A. M. Rochussen et al., “Actin conformation dynamics precede force generation in cytotoxic T lymphocytes,” BioRχiv, 2025.</td><td><a href="https://doi.org/10.1101/2025.05.15.654337" target="_blank" rel="noopener">DOI</a></td></tr>
-                                <tr><td>A. M. Rochussen et al., “Transcriptional adaptation after deletion of CDC42 in primary T cells,” Journal of Cell Science, 2025.</td><td><a href="https://doi.org/10.1242/jcs.263826" target="_blank" rel="noopener">DOI</a></td></tr>
-                                <tr><td>E. Blanco et al., “Dominant negative variants in ITPR3 impair T cell Ca2+ dynamics causing combined immunodeficiency,” Journal of Experimental Medicine, 2024.</td><td><a href="https://doi.org/10.1084/jem.20220979" target="_blank" rel="noopener">DOI</a></td></tr>
-                                <tr><td>T. Douanne et al., “NFIL3 contributes to cytotoxic T lymphocyte-mediated killing,” Open Biology, 2024.</td><td><a href="https://doi.org/10.1098/rsob.230456" target="_blank" rel="noopener">DOI</a></td></tr>
-                                <tr><td>A. M. Rochussen et al., “Imaging the T-cell receptor: new approaches, new insights,” Current Opinion in Immunology, 2023.</td><td><a href="https://doi.org/10.1016/j.coi.2023.102309" target="_blank" rel="noopener">DOI</a></td></tr>
-                                <tr><td>M. J. Donde et al., “Targeting non-coding RNA family members with artificial endonuclease XNAzymes,” Communications Biology, 2022.</td><td><a href="https://doi.org/10.1038/s42003-022-03987-5" target="_blank" rel="noopener">DOI</a></td></tr>
-                                <!-- Add all from PDF -->
-                            </tbody>
-                        </table>
-                        <!-- Sub-sections for Theses, Conference Presentations -->
-                    </div>
-                </div>
-            </div>
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="pattern-fan" aria-hidden="true"></div>
+      <div class="sunburst" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow" data-reveal>Curriculum vitae</p>
+        <h1 id="page-title" data-reveal>Adam Rochussen, <em>PhD</em></h1>
+        <p class="lede" data-reveal>Postdoctoral Fellow at the Salk Institute for Biological Studies. T cell biology, biological rhythms, adoptive cell therapy and meta-science.</p>
+        <div class="cv-download" data-reveal style="margin-top: 32px;">
+          <a class="btn btn-gold" href="assets/cv/Adam_Rochussen_CV.pdf" download="Adam_Rochussen_CV.pdf">Download PDF <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-download"></use></svg></a>
+          <a class="btn btn-ghost" href="assets/cv/Adam_Rochussen_CV.pdf" target="_blank" rel="noopener">View in browser <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></a>
+          <span class="file-meta"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-doc"></use></svg>PDF · US Letter · 3 pages · 392 KB · Updated November 2026</span>
         </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: clamp(48px, 6vw, 88px);">
+      <div class="container cv-layout">
+        <aside class="toc" aria-label="On this page">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#positions">Positions</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#awards">Honours &amp; awards</a></li>
+            <li><a href="#patents">Patents</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#talks">Presentations</a></li>
+            <li><a href="#teaching">Teaching &amp; mentoring</a></li>
+            <li><a href="#skills">Technical expertise</a></li>
+            <li><a href="#beyond">Beyond the lab</a></li>
+          </ol>
+          <a class="btn btn-ghost" href="assets/cv/Adam_Rochussen_CV.pdf" download="Adam_Rochussen_CV.pdf">PDF <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-download"></use></svg></a>
+        </aside>
+
+        <div>
+          <section class="cv-section" id="profile" aria-labelledby="h-profile">
+            <h2 id="h-profile"><span class="num">I</span>Profile</h2>
+            <div class="prose lede" style="font-size: clamp(1.1rem, .4vw + 1rem, 1.25rem);">
+              <p>I'm a T cell biologist interested in the interplay between human physiology and cellular immunology: how are our immune cells affected by dynamic changes in our physiology? Some of those changes we choose, through diet, exercise, sleep, social interaction and stress. Others are temporal, from rhythmic fluctuations across the day–night cycle to the changes that come with age. My current focus is on biological rhythms and T cell immunity against cancer, and on engineering better adoptive T cell therapies.</p>
+              <p>I'm equally committed to meta-science and research rigour, which I write about as a 2026 Roots of Progress Fellow, and I'm exploring company formation as a solo biotech founder.</p>
+            </div>
+          </section>
+
+          <section class="cv-section" id="positions" aria-labelledby="h-positions">
+            <h2 id="h-positions"><span class="num">II</span>Research positions</h2>
+            <div class="entries">
+              <div class="entry">
+                <p class="entry-when">Aug 2026 – now</p>
+                <div>
+                  <h3>Postdoctoral Fellow</h3>
+                  <p class="where">Kosuri Lab, Integrative Biology Laboratory · Salk Institute for Biological Studies, La Jolla, CA</p>
+                </div>
+              </div>
+              <div class="entry">
+                <p class="entry-when">Jan 2025 – Jul 2026</p>
+                <div>
+                  <h3>Postdoctoral Fellow</h3>
+                  <p class="where">Salk Institute for Biological Studies, La Jolla, CA</p>
+                  <p>Biological rhythms, meal timing and T cell immunity against cancer; rhythm-engineering of T cells for adoptive cell therapy.</p>
+                </div>
+              </div>
+              <div class="entry">
+                <p class="entry-when">2020 – 2025</p>
+                <div>
+                  <h3>PhD researcher</h3>
+                  <p class="where">Griffiths Lab, Cambridge Institute for Medical Research · University of Cambridge, UK</p>
+                  <p>Cell biology of cytotoxic T lymphocytes: CDC42 isoforms, transcriptional adaptation, and actin conformation and force.</p>
+                </div>
+              </div>
+              <div class="entry">
+                <p class="entry-when">2019 – 2020</p>
+                <div>
+                  <h3>MRes rotation student</h3>
+                  <p class="where">Wellcome Trust II&amp;I programme · University of Cambridge, UK</p>
+                  <p>Rotation projects on XNAzymes against cancer-associated microRNAs, and on <i>Plasmodium vivax</i> blood-stage vaccine candidates.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="cv-section" id="education" aria-labelledby="h-education">
+            <h2 id="h-education"><span class="num">III</span>Education</h2>
+            <div class="entries">
+              <div class="entry"><p class="entry-when">2025</p><div><h3>PhD in Cell Biology &amp; Immunology</h3><p class="where">University of Cambridge · Cambridge Institute for Medical Research</p></div></div>
+              <div class="entry"><p class="entry-when">2021</p><div><h3>MA in Natural Sciences</h3><p class="where">University of Cambridge · Churchill College</p></div></div>
+              <div class="entry"><p class="entry-when">2020</p><div><h3>MRes in Medical Science</h3><p class="where">University of Cambridge · Department of Medicine</p></div></div>
+              <div class="entry"><p class="entry-when">2019</p><div><h3>MSci in Biochemistry</h3><p class="where">University of Cambridge · Department of Biochemistry</p></div></div>
+              <div class="entry"><p class="entry-when">2018</p><div><h3>BA in Natural Sciences</h3><p class="where">University of Cambridge · Churchill College</p></div></div>
+            </div>
+          </section>
+
+          <section class="cv-section" id="awards" aria-labelledby="h-awards">
+            <h2 id="h-awards"><span class="num">IV</span>Honours &amp; awards</h2>
+            <div class="award-grid">
+              <article class="card award award--new">
+                <span class="yr">2026</span>
+                <h3>Winner, TPTC Postdoc Pitch</h3>
+                <p>Torrey Pines Training Consortium competition in which postdoctoral finalists, chosen through internal competitions at Salk, Sanford Burnham Prebys, Scripps Research and UC San Diego, present their research in three minutes with a single slide.</p>
+              </article>
+              <article class="card award award--new">
+                <span class="yr">2026</span>
+                <h3>Roots of Progress Fellow</h3>
+                <p>One of 41 fellows selected from nearly 400 applicants for the Roots of Progress Institute's 2026 Blog-Building Intensive, a fellowship for writers on progress in science, technology and society.</p>
+              </article>
+              <article class="card award">
+                <span class="yr">2025</span>
+                <h3>CSAR PhD Student Award</h3>
+                <p>University-wide competition “to recognise outstanding research with real world application and to assist students to pursue their research or careers”, awarded by the Cambridge Society for the Application of Research.</p>
+              </article>
+              <article class="card award">
+                <span class="yr">2019</span>
+                <h3>Wellcome Trust PhD Studentship</h3>
+                <p>One of five successful candidates, from a pool of over 300, accepted onto the Wellcome Trust MRes + PhD programme in Infection, Immunity &amp; Inflammation (II&amp;I) at the University of Cambridge.</p>
+              </article>
+              <article class="card award">
+                <span class="yr">2018</span>
+                <h3>First-class undergraduate research project</h3>
+                <p>Graded first class for my undergraduate research project on the effect of ligand size on endocytosis in the protozoan parasite <i>Trypanosoma brucei</i>.</p>
+              </article>
+              <article class="card award">
+                <span class="yr">2015</span>
+                <h3>Elite A-level results</h3>
+                <p>Achieved 5 A* grades at A level, the highest ever achieved at my school, placing me in the top ~30 of over 250,000 students nationwide.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="cv-section" id="patents" aria-labelledby="h-patents">
+            <h2 id="h-patents"><span class="num">V</span>Patents &amp; translation</h2>
+            <div class="entries">
+              <div class="entry">
+                <p class="entry-when">Pending</p>
+                <div>
+                  <h3>Provisional patent application, adoptive T cell therapy</h3>
+                  <p class="where">Inventor</p>
+                  <p>Exploring company formation as a solo biotech founder. <a class="link" href="./#contact">Investor enquiries welcome</a>.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="cv-section" id="publications" aria-labelledby="h-publications">
+            <h2 id="h-publications"><span class="num">VI</span>Publications</h2>
+            <div class="entries">
+              <div class="entry"><p class="entry-when">2026</p><div><h3>Flawed methods and overstated conclusions regarding ‘Brain Sex’: a peer review of Kurth et al. (2022)</h3><p>Wright CM, <b>Rochussen AM</b>, Stagg SG · <i>Theory and Society</i> 55(5), 84 · <a class="link" href="https://doi.org/10.1007/s11186-026-09747-2" target="_blank" rel="noopener">doi</a></p></div></div>
+              <div class="entry"><p class="entry-when">2026</p><div><h3>Actin conformation dynamics precede force generation in cytotoxic T lymphocytes</h3><p><b>Rochussen AM</b>, Kebabci AO, Winkel AK, Franze K, Fletcher DA, Griffiths GM, Lippert AH · <i>Communications Biology</i> 9, 1256 · <a class="link" href="https://doi.org/10.1038/s42003-026-11011-3" target="_blank" rel="noopener">doi</a></p></div></div>
+              <div class="entry"><p class="entry-when">2025</p><div><h3>Nuclear polarization to the immune synapse facilitates an early transcriptional burst</h3><p>Asano Y, Ma CY, Limbäck-Stokin MM, <b>Rochussen AM</b>, Stinchcombe JC, Griffiths GM · <i>Science Immunology</i> 10(111), eadt5909 · <a class="link" href="https://doi.org/10.1126/sciimmunol.adt5909" target="_blank" rel="noopener">doi</a></p></div></div>
+              <div class="entry"><p class="entry-when">2025</p><div><h3>Transcriptional adaptation after deletion of <i>Cdc42</i> in primary T cells</h3><p><b>Rochussen AM</b>, Ma CY, Griffiths GM · <i>Journal of Cell Science</i> 138(15), jcs263826 · <a class="link" href="https://doi.org/10.1242/jcs.263826" target="_blank" rel="noopener">doi</a></p></div></div>
+              <div class="entry"><p class="entry-when">2025</p><div><h3>Dominant negative variants in <i>ITPR3</i> impair T cell Ca<sup>2+</sup> dynamics causing combined immunodeficiency</h3><p>Blanco E, … <b>Rochussen AM</b>, … Kreins AY · <i>Journal of Experimental Medicine</i> 222(1), e20220979 · <a class="link" href="https://doi.org/10.1084/jem.20220979" target="_blank" rel="noopener">doi</a></p></div></div>
+              <div class="entry"><p class="entry-when">2024</p><div><h3>NFIL3 contributes to cytotoxic T lymphocyte-mediated killing</h3><p>Douanne T, Strege K, Del Castillo Velasco-Herrera M, <b>Rochussen AM</b>, Adams DJ, Griffiths GM · <i>Open Biology</i> 14(2), 230456 · <a class="link" href="https://doi.org/10.1098/rsob.230456" target="_blank" rel="noopener">doi</a></p></div></div>
+              <div class="entry"><p class="entry-when">2023</p><div><h3>Imaging the T-cell receptor: new approaches, new insights</h3><p><b>Rochussen AM</b>, Lippert AH, Griffiths GM · <i>Current Opinion in Immunology</i> 82, 102309 · <a class="link" href="https://doi.org/10.1016/j.coi.2023.102309" target="_blank" rel="noopener">doi</a></p></div></div>
+              <div class="entry"><p class="entry-when">2022</p><div><h3>Targeting non-coding RNA family members with artificial endonuclease XNAzymes</h3><p>Donde MJ, <b>Rochussen AM</b>, Kapoor S, Taylor AI · <i>Communications Biology</i> 5, 1010 · <a class="link" href="https://doi.org/10.1038/s42003-022-03987-5" target="_blank" rel="noopener">doi</a></p></div></div>
+            </div>
+            <p style="margin-top: 24px;"><a class="btn-text" href="publications.html">Summaries, theses &amp; preprints <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-r"></use></svg></a></p>
+          </section>
+
+          <section class="cv-section" id="talks" aria-labelledby="h-talks">
+            <h2 id="h-talks"><span class="num">VII</span>Presentations</h2>
+            <div class="entries">
+              <div class="entry"><p class="entry-when">2026</p><div><h3>“Science is largely fake”</h3><p class="where">Talk · The Avalon Exposition, Avalon Institute · Berkeley, CA, USA</p><p>On the biases that distort scientific truth, and the prevalence of influential fake and fraudulent science.</p></div></div>
+              <div class="entry"><p class="entry-when">2026</p><div><h3>Postdoc Pitch competition (winner)</h3><p class="where">Pitch · Torrey Pines Training Consortium · La Jolla, CA, USA</p></div></div>
+              <div class="entry"><p class="entry-when">2026</p><div><h3>Rhythm-engineering enhances T cell differentiation for adoptive cell therapy</h3><p class="where">Poster · ImmunoMemphis: Tuning T cells to give cancer the blues · Memphis, TN, USA</p></div></div>
+              <div class="entry"><p class="entry-when">2024</p><div><h3>CDC42 “brain” isoform controls secretory lysosome delivery to the cytotoxic immune synapse</h3><p class="where">Talk · LMB–Karolinska Student Symposium · Cambridge, UK</p></div></div>
+              <div class="entry"><p class="entry-when">2024</p><div><h3>CDC42 and killer T cell function</h3><p class="where">Talk · CRUK Fundamental Biology of Cancer: Imaging Immunity Workshop · Cambridge, UK</p></div></div>
+              <div class="entry"><p class="entry-when">2023</p><div><h3>These cells are actin' weirdly: the roles and regulation of CDC42 in killer T cell function</h3><p class="where">Poster · FASEB: Signal Transduction in the Immune System · CA, USA</p></div></div>
+              <div class="entry"><p class="entry-when">2022</p><div><h3>These cells are actin' weirdly: how CDC42 regulates CTL function</h3><p class="where">Poster · Cold Spring Harbor: Gene Expression &amp; Signaling in the Immune System · NY, USA</p></div></div>
+            </div>
+          </section>
+
+          <section class="cv-section" id="teaching" aria-labelledby="h-teaching">
+            <h2 id="h-teaching"><span class="num">VIII</span>Teaching &amp; mentoring</h2>
+            <div class="entries">
+              <div class="entry"><p class="entry-when">Summer 2024</p><div><h3>Summer student mentorship: Bernardo Petochi</h3><p class="where">CIMR, Cambridge, UK</p><ul><li>Planned and supervised an 8-week lab project for an undergraduate veterinary medicine student from the University of Milan.</li><li>Bernardo is now applying for PhD programmes in the USA.</li></ul></div></div>
+              <div class="entry"><p class="entry-when">Summer 2023</p><div><h3>Summer student mentorship: Beverly Yuan</h3><p class="where">CIMR, Cambridge, UK</p><ul><li>Planned and supervised a 10-week lab project for an undergraduate biochemistry student from Imperial College London.</li><li>Beverly is now completing her PhD at the University of Cambridge.</li></ul></div></div>
+              <div class="entry"><p class="entry-when">2023 – 2025</p><div><h3>Interdisciplinary journal club: “Friday Breakfast Buffet”</h3><p class="where">CIMR, Cambridge, UK</p><ul><li>Co-founded and ran a journal club for students and postdocs at CIMR.</li><li>Emphasis on papers completely unrelated to one's own work, to promote interdisciplinary thinking.</li></ul></div></div>
+              <div class="entry"><p class="entry-when">2023 – 2025</p><div><h3>Admissions interview tutor</h3><p class="where">Athena Tuition · online</p><ul><li>Prepared clients for the University of Cambridge undergraduate admissions interview for Natural Sciences.</li></ul></div></div>
+              <div class="entry"><p class="entry-when">2023</p><div><h3>BioNatSci supervisor</h3><p class="where">University of Cambridge · King's College</p><ul><li>Taught, set and marked work for small groups of first-year undergraduates in the Biology of Cells module of the Biological Natural Sciences Tripos.</li></ul></div></div>
+              <div class="entry"><p class="entry-when">2022 &amp; 2023</p><div><h3>ISAC outreach programme: Inspiring Scientists at CIMR</h3><p class="where">CIMR, Cambridge, UK</p><ul><li>Outreach programme exposing local school students from underprivileged backgrounds to scientific research.</li><li>Co-designed a week of experiments accessible to 16-year-olds, guided students through mini-projects and helped them present their results.</li></ul></div></div>
+              <div class="entry"><p class="entry-when">2019 &amp; 2020</p><div><h3>Summer programme counsellor</h3><p class="where">Bucksmore Education · Cambridge, UK</p><ul><li>Organised and ran an 8-week summer school for 15 to 18-year-olds; one of five staff responsible for sixty students.</li></ul></div></div>
+            </div>
+          </section>
+
+          <section class="cv-section" id="skills" aria-labelledby="h-skills">
+            <h2 id="h-skills"><span class="num">IX</span>Technical expertise</h2>
+            <dl class="skills">
+              <div><dt>Cell biology</dt><dd>Primary mouse &amp; human T cell culture, <i>in vitro</i> T cell functional assays, CAR T cell production, flow cytometry, lentiviral production &amp; transduction</dd></div>
+              <div><dt>Molecular biology</dt><dd>CRISPR/Cas9 gene editing, knock-in &amp; deletion, molecular cloning, qPCR, ddPCR, immunoblotting, co-immunoprecipitation, protein expression &amp; purification, RNA extraction, bulk &amp; single-cell RNA library preparation</dd></div>
+              <div><dt>Microbiology</dt><dd>Bacterial (<i>E. coli</i>, <i>D. solani</i>), fungal (<i>S. cerevisiae</i>), nematode (<i>C. elegans</i>) and parasite (<i>T. brucei</i>, <i>P. knowlesi</i>) culture, bacteriophage culture from field samples, phage transduction, random transposon mutagenesis screening</dd></div>
+              <div><dt>Microscopy &amp; imaging</dt><dd>Live microscopy, immunofluorescence, super-resolution microscopy, traction force microscopy, scanning electron microscopy of thin sections, atomic force microscopy. Fluorescence modalities: spinning disc confocal, Airyscan confocal, SIM &amp; lattice SIM², oblique plane light sheet, lattice light sheet, epifluorescence; LumiCycle, IncuCyte &amp; CellCyte imaging systems</dd></div>
+              <div><dt>Data analysis</dt><dd>Bulk transcriptomic and proteomic analysis including rhythmicity analysis (R, Python, Excel), custom image analysis (ImageJ, MATLAB), conventional image analysis (ImageJ, Imaris, Zen), flow cytometric analysis (FlowJo), statistics (R, Python, Prism, Excel)</dd></div>
+              <div><dt>Animal models</dt><dd>Mouse breeding, colony management, tissue harvesting (spleen, bone marrow, cardiac puncture), tumour engraftment and monitoring, adoptive T cell transfer; subcutaneous, intraperitoneal &amp; retro-orbital injections</dd></div>
+            </dl>
+          </section>
+
+          <section class="cv-section" id="beyond" aria-labelledby="h-beyond">
+            <h2 id="h-beyond"><span class="num">X</span>Beyond the lab</h2>
+            <div class="two-col">
+              <div class="card beyond">
+                <h3>Athletic</h3>
+                <ul>
+                  <li>California International Marathon: 3:11:37 (2025)</li>
+                  <li>La Quinta Ironman 70.3: 5:18:54 (2024)</li>
+                  <li>London Marathon: 4:26:18 (2022), raising over £10,000 for Whizz-Kidz</li>
+                  <li>“Half Blue” for representing Cambridge in powerlifting (2017–18) and skiing (2016–19)</li>
+                  <li>16th in weight class, 2018 IPF University World Powerlifting Championships</li>
+                  <li>2nd at the Oxford vs Cambridge Varsity ski races, the oldest alpine ski race in the world (2018)</li>
+                  <li>Represented the University in rugby (2019–21) and track &amp; field (2016–17)</li>
+                  <li>CYQ Level 2 Gym Instructor &amp; Level 3 Personal Trainer (2015)</li>
+                </ul>
+              </div>
+              <div class="card beyond">
+                <h3>Musical</h3>
+                <ul>
+                  <li>Clarinet: Diploma of the Associated Board of the Royal Schools of Music (DipABRSM) in performance (2014)</li>
+                  <li>Piano: ABRSM Performance Grade 5 (2010)</li>
+                  <li>Voice: ABRSM Performance Grade 5 (2012)</li>
+                  <li>Surrey County Youth Wind Orchestra, 2nd clarinet (2009)</li>
+                  <li>Formed a barbershop quartet that performed professionally and gave workshops to schoolchildren (2015)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="footer-chevrons" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./" aria-label="Adam Rochussen, home">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M14 1.5h36L62.5 14v36L50 62.5H14L1.5 50V14z"/><path fill="none" stroke="currentColor" stroke-width=".8" opacity=".55" d="M15.6 5.5h32.8l10.1 10.1v32.8L48.4 58.5H15.6L5.5 48.4V15.6z"/><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" d="M14 46 22.5 18 31 46M17.4 35.5h10.2M37 46V18h7a7 7 0 0 1 0 14h-7M43.5 32 51 46"/></svg>
+            <span class="brand-name">Adam <b>Rochussen</b></span>
+          </a>
+          <p>T cell biologist at the Salk Institute for Biological Studies in La Jolla, California, and writer on meta-science.</p>
+        </div>
+        <div>
+          <p class="footer-title">Explore</p>
+          <ul class="footer-links">
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="cv.html">Curriculum vitae</a></li>
+            <li><a href="assets/cv/Adam_Rochussen_CV.pdf" download>CV (PDF)</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Elsewhere</p>
+          <ul class="footer-links">
+            <li><a href="https://adam.rochussen.xyz" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-substack"></use></svg>Substack</a></li>
+            <li><a href="https://x.com/AdamRochussen" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-x"></use></svg>X</a></li>
+            <li><a href="https://orcid.org/0000-0001-9439-1206" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-orcid"></use></svg>ORCID</a></li>
+            <li><a href="https://scholar.google.com/citations?user=7kjD4AEAAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-scholar"></use></svg>Google Scholar</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul class="footer-links">
+            <li><a href="mailto:arochussen@salk.edu"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-mail"></use></svg>Email</a></li>
+            <li><a href="./#contact">Donors &amp; investors</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <footer>Last updated: April 13, 2026</footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <p class="footer-word" aria-hidden="true">Rochussen</p>
+    <div class="container footer-base">
+      <p>© 2026 Adam Rochussen</p>
+      <p>Last updated November 2026</p>
+    </div>
+  </footer>
 </body>
 </html>
