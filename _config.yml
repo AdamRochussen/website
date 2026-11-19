@@ -1,0 +1,27 @@
+# ============================================================================
+#  Site configuration for rochussen.xyz
+#  You normally DON'T need to touch this file. The words that appear ON the
+#  site live in the _data/ folder (see README.md). This file is just plumbing.
+# ============================================================================
+title: Adam Rochussen
+description: >-
+  Adam Rochussen is a T cell biologist at the Salk Institute working on
+  biological rhythms, cancer cell therapy and the integrity of science.
+url: "https://rochussen.xyz"
+baseurl: ""
+lang: en-GB
+
+# Build settings
+encoding: utf-8
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - _build/
+  - node_modules/
+  - vendor/
+  - "*.docx"
+keep_files:
+  - assets
+sass:
+  style: compressed

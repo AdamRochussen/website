@@ -1,0 +1,238 @@
+# ============================================================================
+#  PUBLICATIONS PAGE
+#  "articles" are the filterable journal papers. For each one:
+#   - tags:    drive the filter buttons. Use any of: first, immunology,
+#              metascience, review  (space-separated inside the list is fine)
+#   - new:     true adds a "NEW" flash
+#   - summary: your plain-language blurb. "ai: true" shows the "AI-generated"
+#              mark. If you rewrite a summary yourself, set "ai: false".
+# ============================================================================
+
+hero:
+  kicker: "Publications"
+  heading_plain: "Papers, theses & "
+  heading_accent: "talks"
+  lede: >-
+    Peer-reviewed work in T cell biology, immunology and meta-science. Each
+    paper has a short plain-language summary, in case you're not an immunologist.
+  stats:
+    - { num: "8", label: "Articles" }
+    - { num: "3", label: "First-author" }
+    - { num: "5", label: "Theses" }
+    - { num: "7", label: "Talks" }
+
+filters:
+  - { key: "all",         label: "All" }
+  - { key: "first",       label: "First author" }
+  - { key: "immunology",  label: "Immunology" }
+  - { key: "metascience", label: "Meta-science" }
+  - { key: "review",      label: "Reviews" }
+
+# Note shown under the article list, explaining the AI-generated label.
+ai_note: >-
+  Plain-language summaries marked "AI-generated" were drafted by an AI model
+  (Claude) from each paper's published abstract, as a reading aid. The papers
+  themselves are the authoritative source.
+
+articles:
+  - id: "pub-brain-sex"
+    year: "2026"
+    month: "Sep"
+    venue: "Theory and Society"
+    venue_detail: "55(5), 84"
+    title: "Flawed methods and overstated conclusions regarding ‘Brain Sex’: a peer review of Kurth et al. (2022)"
+    authors: "Wright CM, <b>Rochussen AM</b>, Stagg SG"
+    tags: "metascience review"
+    new: true
+    doi: "https://doi.org/10.1007/s11186-026-09747-2"
+    citation: "Wright CM, Rochussen AM, Stagg SG. Flawed methods and overstated conclusions regarding ‘Brain Sex’: a peer review of Kurth et al. (2022). Theory and Society. 2026;55(5):84. doi:10.1007/s11186-026-09747-2"
+    summary:
+      ai: true
+      text: >-
+        A 2022 study claimed the brains of transgender women are shifted away
+        from their birth sex and towards their gender identity. This peer review
+        re-examines the evidence and finds the headline rests on a very small
+        sample, weakly justified statistics, one-tailed tests, no correction for
+        multiple comparisons, and little robustness checking — and that sexual
+        orientation, a known confound, wasn't properly accounted for despite the
+        data being available. Each of those choices nudges the result the same
+        way, so the paper's conclusion isn't supported by its own evidence.
+
+  - id: "pub-actin"
+    year: "2026"
+    month: "Sep"
+    venue: "Communications Biology"
+    venue_detail: "9, 1256"
+    title: "Actin conformation dynamics precede force generation in cytotoxic T lymphocytes"
+    authors: "<b>Rochussen AM</b>, Kebabci AO, Winkel AK, Franze K, Fletcher DA, Griffiths GM, Lippert AH"
+    tags: "first immunology"
+    new: true
+    doi: "https://doi.org/10.1038/s42003-026-11011-3"
+    preprint: "https://doi.org/10.1101/2025.05.15.654337"
+    citation: "Rochussen AM, Kebabci AO, Winkel AK, Franze K, Fletcher DA, Griffiths GM, Lippert AH. Actin conformation dynamics precede force generation in cytotoxic T lymphocytes. Communications Biology. 2026;9:1256. doi:10.1038/s42003-026-11011-3"
+    summary:
+      ai: true
+      text: >-
+        Killer T cells push and pull as they crawl and attack, but how their
+        internal skeleton makes those forces was unclear. Using probes that light
+        up particular shapes of actin filament, alongside traction force
+        microscopy to measure the push on the surroundings, we watched both at
+        once in living T cells. The shape change comes first and the force
+        follows — so actin's conformation is set upstream of the force it
+        produces, including at the synapse where the cell kills.
+
+  - id: "pub-nucleus"
+    year: "2025"
+    month: "Sep"
+    venue: "Science Immunology"
+    venue_detail: "10(111), eadt5909"
+    title: "Nuclear polarization to the immune synapse facilitates an early transcriptional burst"
+    authors: "Asano Y, Ma CY, Limbäck-Stokin MM, <b>Rochussen AM</b>, Stinchcombe JC, Griffiths GM"
+    tags: "immunology"
+    doi: "https://doi.org/10.1126/sciimmunol.adt5909"
+    citation: "Asano Y, Ma CY, Limbäck-Stokin MM, Rochussen AM, Stinchcombe JC, Griffiths GM. Nuclear polarization to the immune synapse facilitates an early transcriptional burst. Science Immunology. 2025;10(111):eadt5909. doi:10.1126/sciimmunol.adt5909"
+    summary:
+      ai: true
+      text: >-
+        When a killer T cell recognises a target, it reorganises towards the
+        point of contact. This paper shows the nucleus itself moves to and
+        touches that contact — deforming as it goes, and arriving before the
+        centrosome docks — while the transcription factors NFAT and NF-κB pile
+        into it. Block the motor protein myosin IIA and both stop. Moving the
+        nucleus to the synapse seems to kick off an early burst of gene
+        expression, delivering freshly made cytokines right where they're needed.
+
+  - id: "pub-cdc42"
+    year: "2025"
+    month: "Aug"
+    venue: "Journal of Cell Science"
+    venue_detail: "138(15), jcs263826"
+    title: "Transcriptional adaptation after deletion of <i>Cdc42</i> in primary T cells"
+    authors: "<b>Rochussen AM</b>, Ma CY, Griffiths GM"
+    tags: "first immunology"
+    doi: "https://doi.org/10.1242/jcs.263826"
+    extra_link: { label: "Editor's summary", url: "https://journals.biologists.com/jcs/article/138/15/e138_e1502/368799/Cytotoxic-T-lymphocytes-adapt-to-loss-of-a-key" }
+    citation: "Rochussen AM, Ma CY, Griffiths GM. Transcriptional adaptation after deletion of Cdc42 in primary T cells. Journal of Cell Science. 2025;138(15):jcs263826. doi:10.1242/jcs.263826"
+    summary:
+      ai: true
+      text: >-
+        CDC42 is supposed to be essential for cell polarity, yet deleting it from
+        killer T cells with CRISPR only briefly dented their killing — which then
+        recovered and overshot, with the protein still absent. A chemical
+        inhibitor, by contrast, reliably suppressed normal cells and did nothing
+        to the knockouts. The knockouts had rewired their gene expression to
+        compensate (including via other Rho GTPases), consistent with
+        nonsense-mediated-decay-driven "transcriptional adaptation." The lesson:
+        knockouts and acute inhibition can disagree, so use both.
+
+  - id: "pub-itpr3"
+    year: "2025"
+    month: "Jan"
+    venue: "Journal of Experimental Medicine"
+    venue_detail: "222(1), e20220979"
+    title: "Dominant negative variants in <i>ITPR3</i> impair T cell Ca<sup>2+</sup> dynamics causing combined immunodeficiency"
+    authors: "Blanco E, Camps C, Bahal S, Kerai MD, Ferla MP, <b>Rochussen AM</b>, Handel AE, … Griffiths GM, Thrasher AJ, Dhalla F, Kreins AY <span class=\"muted\">(41 authors)</span>"
+    tags: "immunology"
+    doi: "https://doi.org/10.1084/jem.20220979"
+    citation: "Blanco E, Camps C, Bahal S, Kerai MD, Ferla MP, Rochussen AM, et al. Dominant negative variants in ITPR3 impair T cell Ca2+ dynamics causing combined immunodeficiency. Journal of Experimental Medicine. 2025;222(1):e20220979. doi:10.1084/jem.20220979"
+    summary:
+      ai: true
+      text: >-
+        Calcium signalling switches T cells on. This paper describes five
+        unrelated patients with new mutations in <i>ITPR3</i>, part of a calcium
+        channel in the cell's internal store, who have combined immunodeficiency —
+        few T cells, poor development, weak activation — plus problems in other
+        organs. The mutant protein doesn't just make less working channel; it
+        actively jams it, draining the internal calcium store and blunting the
+        signal T cells need.
+
+  - id: "pub-nfil3"
+    year: "2024"
+    month: "Feb"
+    venue: "Open Biology"
+    venue_detail: "14(2), 230456"
+    title: "NFIL3 contributes to cytotoxic T lymphocyte-mediated killing"
+    authors: "Douanne T, Strege K, Del Castillo Velasco-Herrera M, <b>Rochussen AM</b>, Adams DJ, Griffiths GM"
+    tags: "immunology"
+    doi: "https://doi.org/10.1098/rsob.230456"
+    citation: "Douanne T, Strege K, Del Castillo Velasco-Herrera M, Rochussen AM, Adams DJ, Griffiths GM. NFIL3 contributes to cytotoxic T lymphocyte-mediated killing. Open Biology. 2024;14(2):230456. doi:10.1098/rsob.230456"
+    summary:
+      ai: true
+      text: >-
+        To find new regulators of T cell killing, this study compared resting and
+        activated T cells and ran a CRISPR screen on the genes switched on during
+        activation. It flagged NFIL3, a transcription factor already known in
+        other immune cells. Remove it and killing drops sharply — even though
+        early signalling, synapse formation and granule release all look normal —
+        because NFIL3 controls production of the proteins and cytokines that do
+        the actual damage.
+
+  - id: "pub-tcr"
+    year: "2023"
+    month: "Jun"
+    venue: "Current Opinion in Immunology"
+    venue_detail: "82, 102309"
+    title: "Imaging the T-cell receptor: new approaches, new insights"
+    authors: "<b>Rochussen AM</b>, Lippert AH, Griffiths GM"
+    tags: "first review immunology"
+    doi: "https://doi.org/10.1016/j.coi.2023.102309"
+    citation: "Rochussen AM, Lippert AH, Griffiths GM. Imaging the T-cell receptor: new approaches, new insights. Current Opinion in Immunology. 2023;82:102309. doi:10.1016/j.coi.2023.102309"
+    summary:
+      ai: true
+      text: >-
+        T cells sense threats through the T-cell receptor, and how those
+        receptors are arranged on a resting cell matters for explaining how fast
+        it can switch on — but recent imaging studies disagree about that
+        arrangement. This review lines up the conflicting results from different
+        microscopy methods, picks apart the biases baked into each, and looks at
+        evidence that the very surfaces cells are imaged on can change how they
+        activate.
+
+  - id: "pub-xnazyme"
+    year: "2022"
+    month: "Sep"
+    venue: "Communications Biology"
+    venue_detail: "5, 1010"
+    title: "Targeting non-coding RNA family members with artificial endonuclease XNAzymes"
+    authors: "Donde MJ, <b>Rochussen AM</b>, Kapoor S, Taylor AI"
+    tags: ""
+    doi: "https://doi.org/10.1038/s42003-022-03987-5"
+    citation: "Donde MJ, Rochussen AM, Kapoor S, Taylor AI. Targeting non-coding RNA family members with artificial endonuclease XNAzymes. Communications Biology. 2022;5:1010. doi:10.1038/s42003-022-03987-5"
+    summary:
+      ai: true
+      text: >-
+        Non-coding RNAs are promising drug targets, but close relatives in the
+        same family are hard to hit one at a time. This work engineered synthetic
+        cutting enzymes — XNAzymes, built from an artificial nucleic acid — that
+        selectively cleave individual family members, including cancer-linked
+        microRNAs, and even self-assemble into a stable nanostructure that targets
+        three at once. A route towards precise RNA knockdown with fewer
+        off-target effects.
+
+other_writing_kicker: "Other writing"
+other_writing_heading_plain: "Reviews & "
+other_writing_heading_accent: "essays"
+other_writing:
+  - { year: "2025", kind: "Preprint · Qeios", title: "How much protein should you eat?", body: "A synthesis of meta-analyses of randomised trials on protein and muscle, arguing the 0.8 g/kg/day RDA is a floor to avoid deficiency, not a target for health.", url: "https://doi.org/10.32388/substack.o72c0z" }
+  - { year: "2025 –", kind: "Essays · Substack", title: "Fruit of Eden", body: "Essays on meta-science, academic publishing, scientific hiring and culture — including the 2026 Roots of Progress series.", url: "https://adam.rochussen.xyz" }
+
+theses_kicker: "Theses"
+theses_heading: "Dissertations"
+theses:
+  - { year: "2025", kind: "PhD thesis · Cambridge", title: "Cytotoxic T lymphocyte biology under the microscope", url: "https://www.dropbox.com/scl/fi/42lgnmukt3j61yyjag56s/PhD-Thesis-Adam-Rochussen.pdf?rlkey=6b7yoryyeopq3jkgrn523v9rl&st=oqsptcq1&dl=0" }
+  - { year: "2020", kind: "MRes rotation II", title: "Developing XNAzymes to cleave cancer-associated microRNAs", url: "https://www.dropbox.com/s/ylczp6odea7mmth/WT%20II%26I%20MRes%20Rotation%20II%20Report%20-%20Adam%20Rochussen.pdf?dl=0" }
+  - { year: "2020", kind: "MRes rotation I", title: "Screening <i>Plasmodium vivax</i> blood-stage vaccine candidates", url: "https://www.dropbox.com/s/u9higmmfyx5n8qp/WT%20II%26I%20MRes%20Rotation%20I%20Report%20-%20Adam%20Rochussen.pdf?dl=0" }
+  - { year: "2019", kind: "Master of Natural Sciences", title: "Regulation of a novel antifungal compound in the plant pathogen <i>Dickeya solani</i>", url: "https://www.dropbox.com/s/z3zy149x69xo747/MSci%20Project%20Dissertation%20-%20Adam%20Rochussen.pdf?dl=0" }
+  - { year: "2018", kind: "Bachelor of Arts", title: "Effect of ligand size on surface-protein uptake in bloodstream-form <i>Trypanosoma brucei</i>", url: "https://www.dropbox.com/s/052cd44j6pu3a16/BA%20Project%20Dissertation%20-%20Adam%20Rochussen.pdf?dl=0" }
+
+talks_kicker: "Conference presentations"
+talks_heading_plain: "Talks & "
+talks_heading_accent: "posters"
+talks:
+  - { year: "2026", kind: "Talk · The Avalon Exposition · Berkeley, CA", title: "Science is largely fake", badge: "New", body: "On the biases that bend scientific truth — fraud, funding and publication bias, and science journalism — and how common influential fake science really is.", url: "https://avalon.institute/exposition/" }
+  - { year: "2026", kind: "Pitch · TPTC Postdoc Pitch · La Jolla, CA", title: "Postdoc Pitch competition", badge: "Winner", body: "A winning three-minute, one-slide pitch on how biological rhythms change T cell function and how to aim that at cancer, against finalists from Salk, Sanford Burnham Prebys, Scripps and UC San Diego.", url: "https://tptc.wordpress.com/postdoc-pitch-2/" }
+  - { year: "2026", kind: "Poster · ImmunoMemphis · Memphis, TN", title: "Rhythm-engineering enhances T cell differentiation for adoptive cell therapy" }
+  - { year: "2024", kind: "Talk · LMB–Karolinska Student Symposium · Cambridge, UK", title: "CDC42 “brain” isoform controls secretory lysosome delivery to the cytotoxic immune synapse" }
+  - { year: "2024", kind: "Talk · CRUK Imaging Immunity Workshop · Cambridge, UK", title: "CDC42 and killer T cell function" }
+  - { year: "2023", kind: "Poster · FASEB: Signal Transduction in the Immune System · CA, USA", title: "These cells are actin’ weirdly: the roles and regulation of CDC42 in killer T cell function" }
+  - { year: "2022", kind: "Poster · Cold Spring Harbor: Gene Expression & Signaling in the Immune System · NY, USA", title: "These cells are actin’ weirdly: how CDC42 regulates CTL function" }

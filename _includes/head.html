@@ -1,0 +1,49 @@
+{%- comment -%} <head> contents. Page title/description come from each page's front matter. {%- endcomment -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description | default: site.data.site.meta_description | strip_newlines }}">
+<meta name="theme-color" content="#0e1018">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.data.site.name }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description | default: site.data.site.meta_description | strip_newlines }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@AdamRochussen">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+<link rel="preload" href="/assets/fonts/pressstart2p-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dmsans-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+
+<script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})(document.documentElement);</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Adam Rochussen",
+  "honorificSuffix": "PhD",
+  "jobTitle": "Postdoctoral Fellow",
+  "affiliation": { "@type": "Organization", "name": "Salk Institute for Biological Studies", "url": "https://www.salk.edu" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Cambridge" },
+  "url": "https://rochussen.xyz/",
+  "email": "mailto:arochussen@salk.edu",
+  "knowsAbout": ["T cell biology","Immunology","Circadian rhythms","Adoptive cell therapy","Meta-science","Research integrity"],
+  "sameAs": [
+    "https://x.com/AdamRochussen",
+    "https://orcid.org/0000-0001-9439-1206",
+    "https://scholar.google.com/citations?user=7kjD4AEAAAAJ",
+    "https://adam.rochussen.xyz",
+    "https://rootsofprogress.org/fellow/adam-rochussen/"
+  ]
+}
+</script>

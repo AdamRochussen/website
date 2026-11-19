@@ -1,0 +1,41 @@
+# ============================================================================
+#  SITE-WIDE TEXT  ·  edit the words inside the quotes/after the colons
+#  This controls the things that appear on EVERY page: your name, the top
+#  navigation, your links, and the footer.
+# ============================================================================
+
+name: "Adam Rochussen"
+role: "T cell biologist"                 # shown under your name in a few places
+location: "La Jolla, California"
+email: "arochussen@salk.edu"
+
+# One-line description used by Google and link previews
+meta_description: >-
+  Adam Rochussen is a T cell biologist at the Salk Institute. He works on how
+  biological rhythms shape immunity, on better cancer cell therapies, and on
+  the integrity of science. Roots of Progress Fellow, 2026.
+
+# The links in the top menu. "label" is what shows; "url" is where it goes.
+# external: true opens the link in a new tab.
+nav:
+  - { label: "Research",     url: "/research.html" }
+  - { label: "Publications", url: "/publications.html" }
+  - { label: "CV",           url: "/cv.html" }
+  - { label: "Writing",      url: "https://adam.rochussen.xyz", external: true }
+
+# Your profiles. Set "show: false" to hide one, or change the url.
+# icon names map to pictures already built into the site; leave them alone.
+socials:
+  - { label: "Email",          icon: "i-mail",     url: "mailto:arochussen@salk.edu" }
+  - { label: "X",              icon: "i-x",        url: "https://x.com/AdamRochussen" }
+  - { label: "Substack",       icon: "i-substack", url: "https://adam.rochussen.xyz" }
+  - { label: "ORCID",          icon: "i-orcid",    url: "https://orcid.org/0000-0001-9439-1206" }
+  - { label: "Google Scholar", icon: "i-scholar",  url: "https://scholar.google.com/citations?user=7kjD4AEAAAAJ&hl=en" }
+
+substack_name: "Fruit of Eden"           # the name of your Substack
+
+# Footer
+footer_blurb: >-
+  T cell biologist at the Salk Institute in La Jolla, California. Writer on
+  meta-science. Occasional founder.
+footer_updated: "November 2026"          # the "last updated" note in the footer

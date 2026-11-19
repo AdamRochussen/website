@@ -1,0 +1,122 @@
+---
+layout: default
+title: "Publications · Adam Rochussen"
+description: "Journal articles, theses and conference presentations by Adam Rochussen, with plain-language summaries."
+nav_active: Publications
+---
+{%- assign p = site.data.publications -%}
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="container">
+      <p class="eyebrow" data-reveal>{{ p.hero.kicker }}</p>
+      <h1 id="page-title" data-reveal>{{ p.hero.heading_plain }}<em>{{ p.hero.heading_accent }}</em></h1>
+      <p class="lede" data-reveal>{{ p.hero.lede }}</p>
+      <div class="scorebox scorebox--row" data-reveal>
+        {%- for s in p.hero.stats %}<div class="stat"><span class="stat-num">{{ s.num }}</span><span class="label">{{ s.label }}</span></div>{% endfor %}
+      </div>
+      <div class="btn-row" data-reveal>
+        <a class="btn btn-ghost" href="https://orcid.org/0000-0001-9439-1206" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-orcid"></use></svg> ORCID</a>
+        <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=7kjD4AEAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-scholar"></use></svg> Google Scholar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:clamp(32px,4vw,56px)" aria-labelledby="articles-title">
+    <div class="container">
+      <h2 class="sr-only" id="articles-title">Journal articles</h2>
+      <div class="pub-toolbar">
+        <div class="chips" role="group" aria-label="Filter articles">
+          {%- for f in p.filters %}
+          <button class="chip" type="button" data-filter="{{ f.key }}" aria-pressed="{% if f.key == 'all' %}true{% else %}false{% endif %}">{{ f.label }} <span class="count"></span></button>
+          {%- endfor %}
+        </div>
+        <label class="search">
+          <span class="sr-only">Search articles</span>
+          <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-search"></use></svg>
+          <input id="pub-search" type="search" placeholder="Search titles, authors, journals" autocomplete="off">
+        </label>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+
+      <div class="pub-list" data-pub-list>
+        {%- for a in p.articles %}
+        <article class="pub" id="{{ a.id }}" data-tags="{{ a.tags }}">
+          <div class="pub-year">{{ a.year }}<small>{{ a.month }}</small></div>
+          <div>
+            <p class="pub-venue">{{ a.venue }} <span>· {{ a.venue_detail }}</span></p>
+            <h3><a href="{{ a.doi }}" target="_blank" rel="noopener">{{ a.title }}</a></h3>
+            <p class="pub-authors">{{ a.authors }}</p>
+            <div class="pub-tags">
+              {%- if a.new %}<span class="pill pill--live">New</span>{% endif %}
+              {%- if a.tags contains 'first' %}<span class="pill">First author</span>{% endif %}
+              {%- if a.tags contains 'immunology' %}<span class="pill">Immunology</span>{% endif %}
+              {%- if a.tags contains 'metascience' %}<span class="pill">Meta-science</span>{% endif %}
+              {%- if a.tags contains 'review' %}<span class="pill">Review</span>{% endif %}
+            </div>
+            <div class="pub-actions">
+              <a class="btn-text" href="{{ a.doi }}" target="_blank" rel="noopener">DOI <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>
+              {%- if a.preprint %}<a class="btn-text" href="{{ a.preprint }}" target="_blank" rel="noopener">Preprint <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>{% endif %}
+              {%- if a.extra_link %}<a class="btn-text" href="{{ a.extra_link.url }}" target="_blank" rel="noopener">{{ a.extra_link.label }} <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>{% endif %}
+              <button class="btn-text" type="button" data-copy="{{ a.citation | escape }}" data-copy-msg="Citation copied">Copy citation <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-copy"></use></svg></button>
+            </div>
+            {%- if a.summary %}
+            <details class="disclosure">
+              <summary>Plain-language summary {% if a.summary.ai %}<span class="ai-mark" title="Drafted by an AI model from the published abstract">AI-generated</span>{% endif %}</summary>
+              <div class="disclosure-body summary-text">{{ a.summary.text }}</div>
+            </details>
+            {%- endif %}
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+
+      <p class="ai-note"><span aria-hidden="true">✦</span><span>{{ p.ai_note }}</span></p>
+    </div>
+  </section>
+
+  <!-- Other writing -->
+  <section class="section section--alt" aria-labelledby="other-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ p.other_writing_kicker }}</p>
+        <h2 class="h-display" id="other-title">{{ p.other_writing_heading_plain }}<em>{{ p.other_writing_heading_accent }}</em></h2>
+      </div>
+      <ul class="list-rows">
+        {%- for w in p.other_writing %}
+        <li data-reveal><span class="yr">{{ w.year }}</span><div><span class="kind">{{ w.kind }}</span><h3><a class="link" href="{{ w.url }}" target="_blank" rel="noopener">{{ w.title }}</a></h3><p>{{ w.body }}</p></div></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Theses -->
+  <section class="section" aria-labelledby="theses-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ p.theses_kicker }}</p>
+        <h2 class="h-display" id="theses-title">{{ p.theses_heading }}</h2>
+      </div>
+      <ul class="list-rows">
+        {%- for t in p.theses %}
+        <li data-reveal><span class="yr">{{ t.year }}</span><div><span class="kind">{{ t.kind }}</span><h3><a class="link" href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title }}</a></h3><p>PDF ↗</p></div></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Talks -->
+  <section class="section section--alt" id="talks" aria-labelledby="talks-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ p.talks_kicker }}</p>
+        <h2 class="h-display" id="talks-title">{{ p.talks_heading_plain }}<em>{{ p.talks_heading_accent }}</em></h2>
+      </div>
+      <ul class="list-rows">
+        {%- for t in p.talks %}
+        <li data-reveal><span class="yr">{{ t.year }}</span><div><span class="kind">{{ t.kind }}</span><h3>{% if t.url %}<a class="link" href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}{% if t.badge %} <span class="pill pill--live new-badge">{{ t.badge }}</span>{% endif %}</h3>{% if t.body %}<p>{{ t.body }}</p>{% endif %}</div></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+</main>

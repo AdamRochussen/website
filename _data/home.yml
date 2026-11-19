@@ -1,0 +1,236 @@
+# ============================================================================
+#  HOME PAGE TEXT  ·  everything on the front page, top to bottom.
+#  Edit the words; keep the labels (the bits before the colon) as they are.
+# ============================================================================
+
+# ---- 1. HERO (the big opening) --------------------------------------------
+hero:
+  kicker: "Postdoctoral Fellow · Salk Institute"
+  # Your name is drawn in big letters automatically; these two lines sit above/below.
+  title_line_1: "Adam"
+  title_line_2: "Rochussen"
+  lede: >-
+    I'm a T cell biologist at the Salk Institute. I study how the body's daily
+    rhythms change the immune cells that hunt cancer — and how to turn that into
+    better therapies. I also spend a good deal of time arguing that much of
+    science is broken, and trying to work out how to fix it.
+  tags:                                  # the little "HUD" chips under the lede
+    - "La Jolla, CA"
+    - "Kosuri Lab, Salk"
+  cta_primary:   { label: "Enter the research", url: "/research.html" }
+  cta_secondary: { label: "Download CV", url: "/assets/cv/Adam_Rochussen_CV.pdf" }
+
+# ---- 2. SCROLLING TICKER (the moving strip of credentials) -----------------
+ticker:
+  - "Salk Institute for Biological Studies"
+  - "PhD, University of Cambridge"
+  - "Wellcome Trust PhD Scholar"
+  - "Roots of Progress Fellow 2026"
+  - "Winner · TPTC Postdoc Pitch 2026"
+  - "Inventor · adoptive T cell therapy patent"
+
+# ---- 3. ROOTS OF PROGRESS FELLOWSHIP --------------------------------------
+fellowship:
+  kicker: "Achievement unlocked"
+  title_plain: "A 2026 "
+  title_accent: "Roots of Progress"       # this bit is highlighted
+  title_end: " Fellow"
+  body: >-
+    One of 41 writers picked from nearly 400 for the Roots of Progress
+    Institute's 2026 Blog-Building Intensive. I'm using it to write about
+    meta-science and the future of scientific talent — including what happens
+    to the lab once the robots turn up.
+  stats:
+    - { num: "41",   label: "Fellows" }
+    - { num: "~400", label: "Applicants" }
+    - { num: "2026", label: "Cohort" }
+  link_primary:   { label: "Fellow profile", url: "https://rootsofprogress.org/fellow/adam-rochussen/" }
+  link_secondary: { label: "Read the essays", url: "https://adam.rochussen.xyz" }
+
+# ---- 4. ABOUT -------------------------------------------------------------
+about:
+  kicker: "About"
+  heading_plain: "A T cell biologist who wants science to be "
+  heading_accent: "true"
+  # Each "- >-" below is one paragraph. Add or remove paragraphs freely.
+  paragraphs:
+    - >-
+      I work on killer T cells: the white blood cells that find infected and
+      cancerous cells and kill them. The question I'd like to spend a career on
+      is a simple one — how does the way we live change the way our immune cells
+      work? Diet, sleep, exercise, stress; the daily swing between light and
+      dark; the slow business of getting older. All of it leaves a mark on our
+      cells, and I want to know what that mark is.
+    - >-
+      Right now I'm most taken with biological rhythms. Our bodies run on
+      roughly 24-hour clocks, yet when we grow cells in the lab — including the
+      T cells now being manufactured as cancer therapies — we grow them in flat,
+      clockless conditions. I think that's a mistake, and a fixable one.
+    - >-
+      Since August 2026 I've been in Pallav Kosuri's lab at Salk, where I've
+      taken on a second question: how the physical mechanics of a cell, the
+      forces and tension at its surface, decide whether a killer T cell actually
+      manages to kill. It's the biophysics of the moment of the kill.
+    - >-
+      I care just as much about whether science can be trusted in the first
+      place. Too much of it doesn't replicate, and the incentives reward the
+      wrong things — a tidy story over a true one. I write about this on my
+      Substack, <a href="https://adam.rochussen.xyz">Fruit of Eden</a>, and on
+      <a href="https://x.com/AdamRochussen">X</a>; in 2026 I co-authored a
+      formal takedown of a widely-cited "brain sex" paper in <em>Theory and
+      Society</em>.
+    - >-
+      And I'd like to build things, not only describe them. I'm the inventor on
+      a provisional patent in adoptive T cell therapy, and I'm working towards a
+      company — solo, for now.
+    - >-
+      Before San Diego I spent a decade at Cambridge: BA, MSci, MRes, and a
+      Wellcome Trust-funded PhD with <a href="https://www.griffiths-lab.com/">Gillian
+      Griffiths</a>. I moved to California in January 2025.
+  # The little "stats panel" beside the text.
+  glance_title: "Player stats"
+  glance:
+    - { dt: "Now",          dd: "Postdoctoral Fellow, Salk Institute (Kosuri Lab)" }
+    - { dt: "Focus",        dd: "T cells · biological rhythms · cell therapy · meta-science" }
+    - { dt: "Trained",      dd: "University of Cambridge — BA, MSci, MRes, PhD" }
+    - { dt: "Fellowships",  dd: "Wellcome Trust PhD · Roots of Progress 2026" }
+    - { dt: "Writing",      dd: "<a href=\"https://adam.rochussen.xyz\">Fruit of Eden</a> on Substack" }
+    - { dt: "Outside",      dd: "Marathons (3:11 at CIM 2025), Ironman 70.3, and chasing good coffee" }
+
+# ---- 5. THREE THREADS (the three cards) -----------------------------------
+pillars_kicker: "Three threads"
+pillars_heading_plain: "The bench, the record & "
+pillars_heading_accent: "the venture"
+pillars:
+  - sprite: "tcell"
+    tag: "Immunology"
+    title: "The bench"
+    body: >-
+      How the body's rhythms, and the physical forces inside cells, shape what
+      killer T cells do — and how to build better T cell therapies out of that.
+    points:
+      - "Biological rhythms & T cell function"
+      - "The mechanics of killing"
+      - "Adoptive cell therapy for cancer"
+    link: { label: "Research", url: "/research.html" }
+  - sprite: "cancer"
+    tag: "Meta-science"
+    title: "The record"
+    body: >-
+      Bias, fraud and bad incentives quietly bend the scientific literature. I
+      study how it happens, and write about what to do about it.
+    points:
+      - "Peer review in <em>Theory and Society</em> (2026)"
+      - "“Science is largely fake” at Avalon"
+      - "Essays on <em>Fruit of Eden</em>"
+    link: { label: "Read the essays", url: "https://adam.rochussen.xyz", external: true }
+  - sprite: "coin"
+    tag: "Biotech"
+    title: "The venture"
+    body: >-
+      Turning the biology into a product. A provisional patent in adoptive T
+      cell therapy, and the first steps towards a company.
+    points:
+      - "Provisional patent, adoptive T cell therapy"
+      - "Winner, TPTC Postdoc Pitch 2026"
+      - "Open to angel investors"
+    link: { label: "Get in touch", url: "#contact" }
+
+# ---- 6. NEWS --------------------------------------------------------------
+news_kicker: "Latest"
+news_heading_plain: "Recent "
+news_heading_accent: "news"
+news:
+  - date_label: "November 2026"
+    date_iso: "2026-11"
+    title: "“Science is largely fake”"
+    body: >-
+      Spoke at the Avalon Exposition in Berkeley on the biases that bend science
+      — and on how much influential research is simply fake or fraudulent.
+    link: { label: "The Exposition", url: "https://avalon.institute/exposition/" }
+  - date_label: "October 2026"
+    date_iso: "2026-10"
+    title: "Pitch winner"
+    body: >-
+      Won the Torrey Pines Training Consortium's Postdoc Pitch, up against
+      finalists from Salk, Sanford Burnham Prebys, Scripps and UC San Diego.
+    link: { label: "TPTC", url: "https://tptc.wordpress.com/postdoc-pitch-2/" }
+  - date_label: "September 2026"
+    date_iso: "2026-09"
+    title: "Two new papers"
+    body: >-
+      Actin and force in killer T cells, in <em>Communications Biology</em>; and
+      a peer review of “brain sex” research, in <em>Theory and Society</em>.
+    link: { label: "Publications", url: "/publications.html" }
+  - date_label: "August 2026"
+    date_iso: "2026-08"
+    title: "New lab, new fellowship"
+    body: >-
+      Joined the Kosuri Lab at Salk, and started the Roots of Progress
+      Blog-Building Intensive.
+    link: { label: "Research", url: "/research.html" }
+
+# ---- 7. ESSAYS (pulled from your Substack, by hand) -----------------------
+essays_kicker: "Writing"
+essays_heading_plain: "Notes on how science "
+essays_heading_accent: "actually"
+essays_heading_end: " works"
+essays_intro: >-
+  On <em>Fruit of Eden</em> I write about science, culture, and whatever else
+  takes my fancy — with a soft spot for meta-science: how research really gets
+  funded, done, published and believed.
+essays:
+  - { date_label: "27 Oct 2026", title: "At what age do we start to get stupider?", blurb: "Younger than you'd hope.", url: "https://adam.rochussen.xyz/p/at-what-age-do-we-start-to-get-stupider" }
+  - { date_label: "22 Oct 2026", title: "Robots will put the humanity back in science", blurb: "We've had humans doing robot jobs this whole time.", url: "https://adam.rochussen.xyz/p/robots-will-put-the-humanity-back" }
+  - { date_label: "25 Sep 2026", title: "Gerontocracy is killing science", blurb: "Younger scientists are simply better. We fund the old anyway.", url: "https://adam.rochussen.xyz/p/gerontocracy-is-killing-science" }
+  - { date_label: "4 Sep 2026",  title: "Against scientific collaboration", blurb: "It was Archimedes alone who shouted “Eureka!”", url: "https://adam.rochussen.xyz/p/against-scientific-collaboration" }
+  - { date_label: "25 Aug 2026", title: "Academic science has a hierarchy problem", blurb: "Harassment, stolen credit and slow progress share a root cause.", url: "https://adam.rochussen.xyz/p/academic-science-has-a-hierarchy" }
+  - { date_label: "17 Mar 2026", title: "Never trust The Science™", blurb: "Find the bias and read the data yourself.", url: "https://adam.rochussen.xyz/p/never-trust-the-science" }
+essays_footer: "More on publishing, hiring, and how research really gets done."
+essays_cta: { label: "All essays on Substack", url: "https://adam.rochussen.xyz" }
+
+# ---- 8. CONTACT -----------------------------------------------------------
+contact_kicker: "Get in touch"
+contact_heading_plain: "Fund the science. "
+contact_heading_accent: "Back what's next."
+contact_intro: >-
+  I'm always glad to talk to people who want to help good science happen —
+  whether by funding the lab or by backing a company.
+contact_cards:
+  - sprite: "heart"
+    tag: "For donors"
+    title: "Fund the science"
+    body: >-
+      My work at Salk runs on grants and gifts. If you'd like to help fund
+      research on how our rhythms shape immunity — and on making cancer
+      immunotherapy work better — I'd genuinely like to hear from you.
+    button: { label: "Email about giving", subject: "Supporting your research at Salk" }
+    fineprint: >-
+      Gifts in support of research are made to the Salk Institute for Biological
+      Studies, a non-profit research institute.
+  - sprite: "coin"
+    tag: "For angel investors"
+    title: "Back the company"
+    body: >-
+      I'm building towards a biotech company as a solo founder, on the back of a
+      provisional patent in adoptive T cell therapy. If you're an angel investor
+      and want an early conversation, get in touch.
+    button: { label: "Email about investing", subject: "Early-stage investment enquiry" }
+    fineprint: >-
+      For exploratory conversations only. Nothing here is an offer to sell, or a
+      solicitation of an offer to buy, any security.
+contact_direct_label: "Or just write to me —"
+
+# ---- 9. PHOTO GALLERY (the photos you sent) --------------------------------
+# Small, pixel-framed strip. Remove any line to drop a photo; edit captions freely.
+gallery_kicker: "Bonus stage"
+gallery_heading_plain: "Life outside "
+gallery_heading_accent: "the lab"
+gallery_intro: >-
+  Talks, a marathon, and a stint behind the espresso machine.
+gallery:
+  - { img: "talk-rhythms", caption: "Pitching the rhythms work, 2026",       alt: "Giving a talk beside a slide reading ‘the body is rhythmic, the way we grow cells is not’" }
+  - { img: "marathon",     caption: "California International Marathon, 2025", alt: "Running a marathon in green shorts past a crowd" }
+  - { img: "talk-cdc42",   caption: "Talking CDC42 & killer T cells",         alt: "Giving a talk at a lectern beside a microscopy slide" }
+  - { img: "coffee",       caption: "London Coffee Festival, 2023",           alt: "Brewing a pour-over coffee at a festival stand" }
+  - { img: "csar",         caption: "CSAR PhD Student Award, 2025",           alt: "Speaking into a microphone at an awards ceremony" }

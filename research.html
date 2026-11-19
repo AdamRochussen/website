@@ -1,152 +1,100 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adam Rochussen - Research</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body { background-color: #f8f9fa; color: #333; }
-        .navbar-brand, .nav-link { color: #8b0000 !important; }
-        h2 { color: #8b0000; border-bottom: 2px solid #d4a017; padding-bottom: 5px; }
-        footer { text-align: center; margin-top: 20px; font-size: 0.8em; color: #666; }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Adam Rochussen</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Writing</a>
-                </li>
-            </ul>
-        </div>
+---
+layout: default
+title: "Research · Adam Rochussen"
+description: "Research by Adam Rochussen at the Salk Institute: biological rhythms and T cell therapy, the mechanics of killing, CDC42, and meta-science."
+nav_active: Research
+---
+{%- assign r = site.data.research -%}
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="container">
+      <p class="eyebrow" data-reveal>{{ r.hero.kicker }}</p>
+      <h1 id="page-title" data-reveal>{{ r.hero.heading_plain }}<em>{{ r.hero.heading_accent }}</em></h1>
+      <p class="lede" data-reveal>{{ r.hero.lede }}</p>
+      <div class="btn-row" data-reveal>
+        <a class="btn btn-key" href="{{ r.hero.cta_primary.url }}"><span>{{ r.hero.cta_primary.label }} <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-r"></use></svg></span></a>
+        <a class="btn btn-ghost" href="{{ r.hero.cta_secondary.url }}">{{ r.hero.cta_secondary.label }}</a>
+      </div>
     </div>
-</nav>
+  </section>
 
-    <div class="container mt-4">
-        <h1>Active Research Projects</h1>
-        <div class="accordion" id="activeresearchAccordion">
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        What does the protein CDC42 do in cytotoxic T lymphocytes?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>During my PhD with Prof Gillian Griffiths, I discovered the expression of an unusual splice isoform of the protein CDC42 in cytotoxic T lymphocytes (CTLs), previously thought to only be expressed in the brain. It turns out that this protein is an important regulator of how CTLs kill cancer cells. The project is mostly wrapped up and awaits resubmission to <i>Journal of Cell Biology</i>, where it has been under review.</li>
-                            <li><b>Abstract:</b> The control of polarized secretion from cytotoxic T lymphocytes (CTLs) requires rapid and accurate delivery of secretory lysosomes to the immune synapse. Previous studies have shown that secretory lysosomes undergo dynein-directed transport towards the polarized centrosome. How this process is regulated is not known. We investigate CTLs from a human patient with a pathogenic C-terminal CDC42 mutation, but find that these CTLs retain full killing capacity. This mutation only affects the “ubiquitous” splice isoform of CDC42 (CDC42u). However, we find that CTLs also express the alternative “brain” splice isoform (CDC42b). The active pool of CDC42 is localized primarily on secretory lysosomes in CTLs, and inhibition of CDC42 activity or overexpression of constitutively inactive CDC42b impairs their polarised secretion. We find that CDC42 inhibition does not impact dynein-tether recruitment, but prevents dynein-mediated transport of lysosomes. These findings reveal a novel role for the brain isoform of CDC42 in regulating secretory lysosome polarization, critical for CTL-mediated killing.</li>
-                            <li>This work was done at the <a href="https://www.cimr.cam.ac.uk/">Cambridge Institute for Medical Research</a> within the University of Cambridge, UK.</li>
-                            <li>Collaborations: Carsten Speckmann (University of Freiburg, Germany), Doreen Cantrell (University of Dundee, Scotland)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        How does the timing of our nutrition affect the function of our immune cells?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Our immune system exhibits daily oscillations in function that are synchronised to the rotation of the Earth. These circadian rhythms are maintained via a transcription-translation feedback loop and are synchronised by environmental factors, such as light and food. Work done predominantly in nocturnal rodents has revealed that both the migration patterns and cellular activity of T lymphocytes oscillate under circadian control. The importance of this regulation in cancers has been highlighted across a range of cancer types. Taking advantage of this phenomenon, recent work has highlighted how time-of-day of infusion of cancer immunotherapies can be optimised to maximise therapeutic benefit. Diet is a powerful and controllable circadian entrainment cue. In humans, time-restricted eating, whereby all daily calories are consumed within an 8–12-hour window, has been shown to improve health outcomes of patients with metabolic disease and shift workers. The impact of time-restricted feeding (TRF) on mouse liver metabolites and gene expression has been shown to have beneficial health outcomes too. Additionally, TRF has beneficial effects for certain types of liver cancer and Alzheimerʼs disease in mice. Yet the direct effect of TRF on the immune system has not been investigated. This project explores whether TRF can optimise rhythmicity and synchronicity across peripheral clocks, including those in T cells, and thereby enhance immunity--particularly anticancer immunity in immunotherapeutic settings.</li>
-                            <li>This work is being done at the <a href="https://www.salk.edu/">Salk Institute for Biological Studies</a> in La Jolla, CA, USA.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        How do physiological rhythms affect cellular growth and differentiation?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Cells in our bodies experience diurnal rhythms in signals ranging from nutrients to hormones. Yet, when we grow cells in the lab, we forget about these and culture them in constant conditions. This project explores how introducing physiologic rhythms in cell culture influences cell function, growth, and differentiation.</li>
-                            <li>This work is being done at the <a href="https://www.salk.edu/">Salk Institute for Biological Studies</a> in La Jolla, CA, USA.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <!-- Current lab -->
+  <section class="section section--tight" aria-labelledby="lab-title">
+    <div class="container">
+      <article class="panel lab-card" data-reveal>
+        <div>
+          <p class="eyebrow">{{ r.lab.kicker }}</p>
+          <h2 id="lab-title">{{ r.lab.title }}</h2>
+          <p class="prose">{{ r.lab.body }}</p>
+          <a class="btn-text" href="{{ r.lab.link.url }}" target="_blank" rel="noopener">{{ r.lab.link.label }} <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>
         </div>
-
-        <h1>Previous Research Projects</h1>
-        <div class="accordion" id="prevresearchAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Why does CRISPR knockout of important genes sometimes unexpectedly boost T cell function?
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <ul>
-                            <li><b>Abstract:</b> Cdc42 is a Rho family GTPase known for its central role in cell polarity and cytoskeletal regulation. To understand the role of Cdc42 in polarised secretion from cytotoxic T lymphocytes (CTLs) we used CRISPR/Cas9 gene deletion. Although Cdc42-deleted CTLs initially showed reduced cytotoxicity for up to 2 days after CRISPR-mediated deletion, full secretion and cytotoxicity was rapidly restored and even enhanced while CDC42 protein remained absent. In contrast, chemical inhibition of CDC42 using CASIN consistently decreased secretion in wild-type cells, but had no impact on Cdc42-deleted CTLs, confirming the specificity of this inhibitor. Comparative proteomics and transcriptomics of CTLs after Cdc42 deletion revealed transcriptional changes that could support improved T cell function, including compensation via other Rho GTPases. Targeting the promoter region of Cdc42 did not trigger transcriptional adaptation, consistent with a nonsense-mediated decay mechanism of genetic compensation. Our work highlights the importance of taking orthogonal approaches to study protein function and reveals the remarkable robustness of primary T cells to adapt to loss of an essential gene.</li>
-                            <li>See the publication <a href="https://doi.org/10.1242/jcs.263826" target="_blank" rel="noopener">here</a>, and the editor's summary <a href="https://journals.biologists.com/jcs/article/138/15/e138_e1502/368799/Cytotoxic-T-lymphocytes-adapt-to-loss-of-a-key" target="_blank" rel="noopener">here</a>.</li>
-                            <li>This work was done at the <a href="https://www.cimr.cam.ac.uk/">Cambridge Institute for Medical Research</a> within the University of Cambridge, UK.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        How does the filament conformation of the actin cytoskeleton change with respect to cellular force production during migration and killing by cytotoxic T lymphocytes?
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <ul>
-                            <li><b>Abstract:</b> Cytotoxic T lymphocytes (CTLs) are cells of the adaptive immune system that are able to recognise and kill cancerous or virally infected target cells. The biochemical basis of CTL-mediated killing has been examined in great detail. Recent work has underscored the importance of physical forces in T cell function too, but how CTLs sense and exert force during migration and killing is not fully understood. Here, by expressing actin conformation probes based on the CH domain of utrophin, we directly visualize regions of altered F-actin conformation in primary CTLs during migration and killing. By combining these probes with traction force microscopy, we correlate external force with the internal cytoskeleton. We show that actin conformation is regulated upstream of force production, and that force exertion at the cytotoxic immune synapse temporally follows actin conformation dynamics. Our work offers novel insight into the relationship between cellular force production and F-actin conformation in important primary immune cells.</li>
-                            <li>This work was done at the <a href="https://www.cimr.cam.ac.uk/">Cambridge Institute for Medical Research</a> within the University of Cambridge, UK, in collaboration with Dan Fletcher (UC Berkeley, USA), Anna Lippert (University of Würzburg, Germany), and Alex Winkel (University of Cambridge, UK)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h1>Research Project Contributions</h1>
-        <div class="accordion" id="researchcontribAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        What effect do heritable mutations to the <i>ITPR3</i> gene, which cause immunodeficiency, have on cytotoxic T cell function?
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <ul>
-                            <li><b>Abstract:</b> The importance of calcium (Ca2+) as a second messenger in T cell signaling is exemplified by genetic deficiencies of STIM1 and ORAI1, which abolish store-operated Ca2+ entry (SOCE) resulting in combined immunodeficiency (CID). We report five unrelated patients with de novo missense variants in ITPR3, encoding a subunit of the inositol 1,4,5-trisphosphate receptor (IP3R), which forms a Ca2+ channel in the endoplasmic reticulum (ER) membrane responsible for the release of ER Ca2+ required to trigger SOCE, and for Ca2+ transfer to other organelles. The patients presented with CID, abnormal T cell Ca2+ homeostasis, incompletely penetrant ectodermal dysplasia, and multisystem disease. Their predominant T cell immunodeficiency is characterized by significant T cell lymphopenia, defects in late stages of thymic T cell development, and impaired function of peripheral T cells, including inadequate NF-κB- and NFAT-mediated, proliferative, and metabolic responses to activation. Pathogenicity is not due to haploinsufficiency, rather ITPR3 protein variants interfere with IP3R channel function leading to depletion of ER Ca2+ stores and blunted SOCE in T cells.</li>
-                            <li>See the publication <a href="https://doi.org/10.1084/jem.20220979" target="_blank" rel="noopener">here</a>.</li>
-                            <li>I contributed to this collaboration by performing various functional assays on T cells taken from the blood of the immunodeficiency patients. My data are shown in Figure 4E and Figure 7B.</li>
-                            <li>This work was done at the <a href="https://www.cimr.cam.ac.uk/">Cambridge Institute for Medical Research</a> within the University of Cambridge, UK, in collaboration with the Kreins Lab (Great Ormond Street Hospital and University College London, UK)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="lab-since"><span class="stat-num">{{ r.lab.since }}</span><span class="label">Joined</span></div>
+      </article>
     </div>
+  </section>
 
-    <footer>Last updated: April 13, 2026</footer>
+  <!-- Current research -->
+  <section class="section" aria-labelledby="current-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ r.current_kicker }}</p>
+        <h2 class="h-display" id="current-title">{{ r.current_heading_plain }}<em>{{ r.current_heading_accent }}</em></h2>
+      </div>
+      <div class="theme-list">
+        {%- for t in r.current_themes %}{% include theme-card.html t=t %}{% endfor %}
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+  <!-- Doctoral -->
+  <section class="section section--alt" aria-labelledby="phd-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ r.phd_kicker }}</p>
+        <h2 class="h-display" id="phd-title">{{ r.phd_heading_plain }}<em>{{ r.phd_heading_accent }}</em></h2>
+        <p class="lede">{{ r.phd_intro }}</p>
+      </div>
+      <div class="theme-list">
+        {%- for t in r.phd_themes %}{% include theme-card.html t=t %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contributions -->
+  <section class="section" aria-labelledby="contrib-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ r.contrib_kicker }}</p>
+        <h2 class="h-display" id="contrib-title">{{ r.contrib_heading_plain }}<em>{{ r.contrib_heading_accent }}</em></h2>
+      </div>
+      <div class="contrib-grid" data-stagger>
+        {%- for c in r.contributions %}
+        <article class="panel contrib" data-reveal>
+          <p class="label">{{ c.venue }}</p>
+          <h3>{{ c.title }}</h3>
+          <p class="prose">{{ c.body }}</p>
+          <a class="btn-text" href="{{ c.url }}" target="_blank" rel="noopener">Read the paper <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Venture -->
+  <section class="section section--alt" id="venture" aria-labelledby="venture-title">
+    <div class="container">
+      <article class="panel venture" data-reveal>
+        <div>
+          <p class="eyebrow">{{ r.venture.kicker }}</p>
+          <h2 id="venture-title">{{ r.venture.heading_plain }}<em>{{ r.venture.heading_accent }}</em></h2>
+          {%- for p in r.venture.body %}<p class="prose">{{ p }}</p>{% endfor %}
+        </div>
+        <div class="venture-cta">
+          <a class="btn btn-key" href="{{ r.venture.cta_primary.url }}"><span>{{ r.venture.cta_primary.label }} <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-r"></use></svg></span></a>
+          <a class="btn btn-ghost" href="mailto:{{ site.data.site.email }}?subject={{ r.venture.cta_secondary.subject | uri_escape }}">{{ r.venture.cta_secondary.label }}</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
