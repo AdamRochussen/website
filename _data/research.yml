@@ -1,0 +1,237 @@
+# ============================================================================
+#  RESEARCH PAGE TEXT
+#  "themes" are the big cards. Each has a heading, body paragraphs, optional
+#  tags (the little chips), an optional "abstract" hidden behind a toggle, and
+#  an optional "foot" row of links/collaborators.
+# ============================================================================
+
+hero:
+  kicker: "Research"
+  heading_plain: "How does the way we live tune the cells that "
+  heading_accent: "defend us?"
+  lede: >-
+    I work where human physiology meets cellular immunology, on the killer T
+    cells that hunt infected and cancerous cells — and on how to make them into
+    better medicines. Alongside the bench, I study whether the scientific record
+    can be trusted at all.
+  cta_primary:   { label: "Publications", url: "/publications.html" }
+  cta_secondary: { label: "The venture", url: "#venture" }
+
+lab:
+  kicker: "Current lab"
+  title: "Kosuri Lab, Salk Institute"
+  body: >-
+    Since August 2026 I've been in Pallav Kosuri's group, in Salk's Integrative
+    Biology Laboratory. The lab builds tiny measuring devices and pairs them with
+    advanced microscopy to watch how molecules move and generate force — from the
+    motors inside single cells up to the mechanics of the beating heart.
+  link: { label: "Visit the lab", url: "https://kosurilab.com/" }
+  since: "Aug 2026"
+
+current_kicker: "Current research"
+current_heading_plain: "Active "
+current_heading_accent: "questions"
+current_themes:
+  - id: "rhythms"
+    num: "01"
+    tags: ["Active", "Salk · 2025 –", "Patent filed"]
+    live: true
+    title: "How do the body's daily rhythms shape T cells — and can we use them to build better cell therapies?"
+    body:
+      - >-
+        Your immune system keeps time. T cells move around the body and kill on a
+        daily schedule, set by cues like light and when you eat; even the time of
+        day you give a cancer immunotherapy seems to change how well it works.
+      - >-
+        And yet we manufacture therapeutic T cells in flat, clockless culture. I'm
+        asking what we lose by doing that, and what we gain by putting the rhythm
+        back in — for the cells themselves, and for anti-cancer immunity. This is
+        the work behind my provisional patent.
+    abstract_label: "More: meal timing and immunity"
+    abstract: >-
+      Work in nocturnal rodents shows that both the movement and the activity of
+      T cells oscillate under circadian control, and this matters across a range
+      of cancers. Diet is one of the strongest, most controllable ways to set the
+      clock: in people, eating within an 8–12 hour window improves outcomes in
+      metabolic disease and in shift workers, and in mice, time-restricted
+      feeding benefits liver metabolism and some liver cancers. What it does
+      directly to the immune system has barely been looked at. I'm testing
+      whether restoring rhythm — in the body, and in cultured cells — tightens
+      the clocks inside T cells and sharpens immunity, especially in
+      immunotherapy.
+    foot:
+      - { strong: "Presented", text: "ImmunoMemphis 2026 (poster) · TPTC Postdoc Pitch 2026 (winner)" }
+
+  - id: "mechanics"
+    num: "02"
+    tags: ["Active", "Kosuri Lab", "Biophysics"]
+    live: true
+    title: "What makes a killer T cell actually kill?"
+    body:
+      - >-
+        Recognising a cancer cell and killing it are two different things — a T
+        cell can do the first and still fail at the second. With the Kosuri lab
+        I'm looking at the physical side of that gap: the forces and tension at
+        the surface where the T cell meets its target, and how the mechanics
+        decide whether the lethal hit lands.
+      - >-
+        It's early, and I'm keeping the details under wraps for now. If it works,
+        it points at a new set of dials for making cancer cells easier to kill —
+        and therapeutic T cells better at killing them.
+
+  - id: "metascience"
+    num: "03"
+    tags: ["Active", "Meta-science", "Research integrity"]
+    live: true
+    title: "How much of the scientific record can we actually trust?"
+    body:
+      - >-
+        A lot of influential science doesn't replicate. I'm interested in how the
+        distortion gets in — fraud, funding and publication bias, flexible
+        statistics, and the game of telephone between a paper and its headline —
+        and in what the institutions could do differently.
+      - >-
+        In 2026 I co-authored a formal peer review in <em>Theory and Society</em>
+        showing how a chain of analytic choices in a published "brain sex" study
+        quietly bent its results towards the authors' hypothesis. At the Avalon
+        Exposition I gave a talk, "Science is largely fake," on the biases that
+        distort scientific truth and how common fake and fraudulent science
+        really is. I write about all of this on <a
+        href="https://adam.rochussen.xyz">Fruit of Eden</a> and as a 2026 Roots
+        of Progress Fellow.
+    foot:
+      - { strong: "Read", text: "<a href=\"/publications.html#pub-brain-sex\">Theory and Society, 2026</a> · <a href=\"https://adam.rochussen.xyz\">Essays</a>" }
+      - { strong: "Talk", text: "<a href=\"https://avalon.institute/exposition/\">Avalon Exposition, 2026</a>" }
+
+phd_kicker: "Doctoral research · Cambridge"
+phd_heading_plain: "How killer T cells "
+phd_heading_accent: "kill"
+phd_intro: >-
+  From 2020 to 2025 I did my PhD with <a href="https://www.griffiths-lab.com/">Gillian
+  Griffiths</a> at the Cambridge Institute for Medical Research, working on the
+  cell biology of cytotoxic T lymphocytes as they find, grip and destroy their
+  targets.
+phd_themes:
+  - id: "cdc42b"
+    num: "04"
+    tags: ["In revision", "CDC42"]
+    live: true
+    title: "What does a “brain” version of CDC42 do in killer T cells?"
+    body:
+      - >-
+        I found that killer T cells make an unusual version of the protein CDC42
+        — a splice isoform everyone thought was confined to the brain. It turns
+        out to be an important part of how these cells deliver their killing
+        machinery to a target. Manuscript in revision.
+    abstract_label: "Read the abstract"
+    abstract: >-
+      The control of polarized secretion from cytotoxic T lymphocytes (CTLs)
+      requires rapid and accurate delivery of secretory lysosomes to the immune
+      synapse. Previous studies have shown that secretory lysosomes undergo
+      dynein-directed transport towards the polarized centrosome. How this
+      process is regulated is not known. We investigate CTLs from a human patient
+      with a pathogenic C-terminal CDC42 mutation, but find that these CTLs
+      retain full killing capacity. This mutation only affects the "ubiquitous"
+      splice isoform of CDC42 (CDC42u). However, we find that CTLs also express
+      the alternative "brain" splice isoform (CDC42b). The active pool of CDC42 is
+      localized primarily on secretory lysosomes in CTLs, and inhibition of CDC42
+      activity or overexpression of constitutively inactive CDC42b impairs their
+      polarised secretion. We find that CDC42 inhibition does not impact
+      dynein-tether recruitment, but prevents dynein-mediated transport of
+      lysosomes. These findings reveal a novel role for the brain isoform of
+      CDC42 in regulating secretory lysosome polarization, critical for
+      CTL-mediated killing.
+    foot:
+      - { strong: "With", text: "Carsten Speckmann (Freiburg) · Doreen Cantrell (Dundee)" }
+      - { strong: "Presented", text: "LMB–Karolinska Student Symposium 2024" }
+
+  - id: "adaptation"
+    num: "05"
+    tags: ["Published 2025", "Journal of Cell Science"]
+    title: "Why does deleting an essential gene sometimes make T cells <em>better</em>?"
+    body:
+      - >-
+        When I knocked <em>Cdc42</em> out of killer T cells with CRISPR, their
+        killing dipped — then bounced back, and overshot, while the protein
+        stayed gone. Chemical inhibition told the opposite story. The cells had
+        quietly rewired their gene expression to compensate: a neat case of
+        "transcriptional adaptation," and a reminder to probe a protein from more
+        than one angle before you trust the answer.
+    abstract_label: "Read the abstract"
+    abstract: >-
+      Cdc42 is a Rho family GTPase known for its central role in cell polarity and
+      cytoskeletal regulation. To understand the role of Cdc42 in polarised
+      secretion from cytotoxic T lymphocytes (CTLs) we used CRISPR/Cas9 gene
+      deletion. Although Cdc42-deleted CTLs initially showed reduced cytotoxicity
+      for up to 2 days after CRISPR-mediated deletion, full secretion and
+      cytotoxicity was rapidly restored and even enhanced while CDC42 protein
+      remained absent. In contrast, chemical inhibition of CDC42 using CASIN
+      consistently decreased secretion in wild-type cells, but had no impact on
+      Cdc42-deleted CTLs, confirming the specificity of this inhibitor.
+      Comparative proteomics and transcriptomics of CTLs after Cdc42 deletion
+      revealed transcriptional changes that could support improved T cell
+      function, including compensation via other Rho GTPases. Targeting the
+      promoter region of Cdc42 did not trigger transcriptional adaptation,
+      consistent with a nonsense-mediated decay mechanism of genetic
+      compensation. Our work highlights the importance of taking orthogonal
+      approaches to study protein function and reveals the remarkable robustness
+      of primary T cells to adapt to loss of an essential gene.
+    foot:
+      - { strong: "Read", text: "<a href=\"https://doi.org/10.1242/jcs.263826\">The paper</a> · <a href=\"https://journals.biologists.com/jcs/article/138/15/e138_e1502/368799/Cytotoxic-T-lymphocytes-adapt-to-loss-of-a-key\">Editor's summary</a>" }
+
+  - id: "actin"
+    num: "06"
+    tags: ["Published 2026", "Communications Biology"]
+    title: "How does the actin skeleton change shape as a T cell pushes, pulls and kills?"
+    body:
+      - >-
+        Using probes that light up particular shapes of actin filament, together
+        with traction force microscopy, I watched the inside skeleton and the
+        outside forces of a migrating, killing T cell at the same time. The shape
+        change comes first; the force follows.
+    abstract_label: "Read the abstract"
+    abstract: >-
+      Cytotoxic T lymphocytes (CTLs) are cells of the adaptive immune system that
+      are able to recognise and kill cancerous or virally infected target cells.
+      The biochemical basis of CTL-mediated killing has been examined in great
+      detail. Recent work has underscored the importance of physical forces in T
+      cell function too, but how CTLs sense and exert force during migration and
+      killing is not fully understood. Here, by expressing actin conformation
+      probes based on the CH domain of utrophin, we directly visualize regions of
+      altered F-actin conformation in primary CTLs during migration and killing.
+      By combining these probes with traction force microscopy, we correlate
+      external force with the internal cytoskeleton. We show that actin
+      conformation is regulated upstream of force production, and that force
+      exertion at the cytotoxic immune synapse temporally follows actin
+      conformation dynamics. Our work offers insight into the relationship between
+      cellular force production and F-actin conformation in important primary
+      immune cells.
+    foot:
+      - { strong: "With", text: "Dan Fletcher (UC Berkeley) · Anna Lippert (Würzburg) · Alex Winkel (Cambridge)" }
+      - { strong: "Read", text: "<a href=\"https://doi.org/10.1038/s42003-026-11011-3\">The paper</a>" }
+
+contrib_kicker: "Collaborations"
+contrib_heading_plain: "A hand in "
+contrib_heading_accent: "other projects"
+contributions:
+  - { venue: "J Exp Med · 2025", title: "What do inherited <em>ITPR3</em> variants do to T cells?", body: "I ran functional assays on T cells from patients with a calcium-channel immunodeficiency (my data are in Figures 4E and 7B), with the Kreins Lab at Great Ormond Street and UCL.", url: "https://doi.org/10.1084/jem.20220979" }
+  - { venue: "Science Immunology · 2025", title: "The nucleus moves to the synapse to start a burst of transcription", body: "When a killer T cell meets its target, the nucleus itself polarises to the contact, dragging the transcription machinery with it.", url: "https://doi.org/10.1126/sciimmunol.adt5909" }
+  - { venue: "Open Biology · 2024", title: "A CRISPR screen flags NFIL3 as a regulator of killing", body: "NFIL3 controls the production of the proteins and cytokines a T cell uses to kill.", url: "https://doi.org/10.1098/rsob.230456" }
+  - { venue: "Communications Biology · 2022", title: "Artificial enzymes that cut cancer-linked microRNAs", body: "Synthetic XNAzymes built from an engineered nucleic acid, selective for single members of a microRNA family — from my MRes rotation.", url: "https://doi.org/10.1038/s42003-022-03987-5" }
+
+venture:
+  kicker: "Translation"
+  heading_plain: "From discovery to "
+  heading_accent: "therapy"
+  body:
+    - >-
+      I'm the inventor on a provisional patent in adoptive T cell therapy, and
+      I'm working towards a company as a solo founder. In October 2026 I won the
+      Torrey Pines Training Consortium's Postdoc Pitch — three minutes, one slide
+      — for the work on how biological rhythms change T cell function and how to
+      aim it at cancer.
+    - >-
+      If you'd like to support this philanthropically, or want an early
+      conversation about a company, I'd be glad to hear from you.
+  cta_primary:   { label: "Get in touch", url: "/#contact" }
+  cta_secondary: { label: "Email about investing", subject: "Early-stage investment enquiry" }

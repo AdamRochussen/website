@@ -1,455 +1,229 @@
-<!doctype html>
-<html lang="en-GB" data-theme="dark">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Adam Rochussen · T cell biologist &amp; meta-scientist</title>
-  <meta name="description" content="Adam Rochussen is a postdoctoral fellow at the Salk Institute studying how biological rhythms shape T cell immunity and cancer cell therapy, a 2026 Roots of Progress Fellow, and a writer on meta-science and research rigour.">
-  <meta name="theme-color" content="#0b0a08">
-  <link rel="canonical" href="https://rochussen.xyz/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Adam Rochussen">
-  <meta property="og:title" content="Adam Rochussen · T cell biologist &amp; meta-scientist">
-  <meta property="og:description" content="Postdoctoral fellow at the Salk Institute. Biological rhythms, T cell therapy, and the integrity of science.">
-  <meta property="og:url" content="https://rochussen.xyz/">
-  <meta property="og:image" content="https://rochussen.xyz/assets/img/og.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@AdamRochussen">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/bodoni-moda-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css">
-  <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})(document.documentElement);</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Adam Rochussen",
-    "honorificSuffix": "PhD",
-    "jobTitle": "Postdoctoral Fellow",
-    "affiliation": { "@type": "Organization", "name": "Salk Institute for Biological Studies", "url": "https://www.salk.edu" },
-    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Cambridge" },
-    "url": "https://rochussen.xyz/",
-    "image": "https://rochussen.xyz/assets/img/adam-800.jpg",
-    "email": "mailto:arochussen@salk.edu",
-    "knowsAbout": ["T cell biology", "Immunology", "Circadian rhythms", "Adoptive cell therapy", "Meta-science", "Research integrity"],
-    "sameAs": [
-      "https://x.com/AdamRochussen",
-      "https://orcid.org/0000-0001-9439-1206",
-      "https://scholar.google.com/citations?user=7kjD4AEAAAAJ",
-      "https://adam.rochussen.xyz",
-      "https://rootsofprogress.org/fellow/adam-rochussen/"
-    ]
-  }
-  </script>
-  <script src="assets/js/site.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+---
+layout: default
+title: "Adam Rochussen · T cell biologist & meta-scientist"
+nav_active: Home
+---
+{%- comment -%} Page text lives in _data/home.yml and _data/site.yml {%- endcomment -%}
+{%- assign h = site.data.home -%}
+<main id="main">
 
-  <!-- ============ Header ============ -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="./" aria-label="Adam Rochussen, home">
-        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M14 1.5h36L62.5 14v36L50 62.5H14L1.5 50V14z"/><path fill="none" stroke="currentColor" stroke-width=".8" opacity=".55" d="M15.6 5.5h32.8l10.1 10.1v32.8L48.4 58.5H15.6L5.5 48.4V15.6z"/><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" d="M14 46 22.5 18 31 46M17.4 35.5h10.2M37 46V18h7a7 7 0 0 1 0 14h-7M43.5 32 51 46"/></svg>
-        <span class="brand-name">Adam <b>Rochussen</b></span>
-      </a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Writing<svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></a></li>
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow" data-enter>{{ h.hero.kicker }}</p>
+        <h1 class="hero-title" id="hero-title" data-enter>
+          <span>{{ h.hero.title_line_1 }}</span>
+          <span class="accent">{{ h.hero.title_line_2 }}</span>
+        </h1>
+        <p class="lede hero-lede" data-enter>{{ h.hero.lede }}</p>
+        <ul class="hud" data-enter aria-label="At a glance">
+          <li><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-pin"></use></svg>{{ h.hero.tags[0] }}</li>
+          <li><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-flask"></use></svg>{{ h.hero.tags[1] }}</li>
         </ul>
-      </nav>
-      <div class="nav-actions">
-        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme">
-          <svg class="icon i-sun" aria-hidden="true"><use href="assets/img/icons.svg#i-sun"></use></svg>
-          <svg class="icon i-moon" aria-hidden="true"><use href="assets/img/icons.svg#i-moon"></use></svg>
-        </button>
-        <a class="btn btn-gold nav-cta" href="#contact">Get in touch</a>
-        <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+        <div class="btn-row" data-enter>
+          <a class="btn btn-key" href="{{ h.hero.cta_primary.url }}"><span>{{ h.hero.cta_primary.label }} <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-r"></use></svg></span></a>
+          <a class="btn btn-ghost" href="{{ h.hero.cta_secondary.url }}" download>{{ h.hero.cta_secondary.label }} <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-download"></use></svg></a>
+          <button class="btn btn-ghost btn-play" type="button" data-play aria-haspopup="dialog">▶ Play</button>
+        </div>
+        <ul class="socials" data-enter aria-label="Elsewhere">
+          {%- for s in site.data.site.socials %}
+          <li><a href="{{ s.url }}"{% unless s.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %} aria-label="{{ s.label }}" title="{{ s.label }}"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#{{ s.icon }}"></use></svg></a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div class="avatar-wrap" data-enter>
+        <div class="avatar">
+          <span class="avatar-tag">Player 1</span>
+          <picture>
+            <source type="image/webp" srcset="/assets/img/adam-480.webp">
+            <img src="/assets/img/adam-480.jpg" width="480" height="539" alt="Portrait of Adam Rochussen" fetchpriority="high">
+          </picture>
+          <div class="avatar-life" aria-hidden="true">
+            <span class="life-label">Rochussen</span>
+            <span class="life-hearts"><i></i><i></i><i></i></span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="scroll-progress" aria-hidden="true"></div>
-  </header>
+    <p class="press-start" aria-hidden="true">▸ press start</p>
+  </section>
 
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="pattern-fan" aria-hidden="true"></div>
-    <nav aria-label="Mobile">
-      <ul>
-        <li><a href="./" aria-current="page">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Writing ↗</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <!-- ===== TICKER ===== -->
+  <div class="ticker" role="region" aria-label="Credentials">
+    <div class="ticker-track">
+      {%- for n in (1..2) %}
+      <ul{% if n == 2 %} aria-hidden="true"{% endif %}>
+        {%- for item in h.ticker %}<li>{{ item }}</li>{% endfor %}
       </ul>
-    </nav>
+      {%- endfor %}
+    </div>
   </div>
 
-  <main id="main">
-
-    <!-- ============ Hero ============ -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="pattern-fan" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow" data-enter style="--d:100">Postdoctoral Fellow · Salk Institute</p>
-          <h1 class="hero-title" id="hero-title">
-            <span class="line"><span class="metal-text" style="--d:180">Adam</span></span>
-            <span class="line"><span class="metal-text" style="--d:300">Rochussen</span></span>
-          </h1>
-          <p class="lede hero-lede" data-enter style="--d:500">I study how the rhythms of everyday life shape the T cells that defend us, and how to turn that into better cancer therapies. I also spend a lot of time asking how much of science we can actually trust.</p>
-          <ul class="hero-meta" data-enter style="--d:620">
-            <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-pin"></use></svg>La Jolla, California</li>
-            <li><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-flask"></use></svg>Kosuri Lab, Salk Institute</li>
-          </ul>
-          <div class="btn-row hero-actions" data-enter style="--d:740">
-            <a class="btn btn-gold" href="research.html">Explore the research <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-r"></use></svg></a>
-            <a class="btn btn-ghost" href="assets/cv/Adam_Rochussen_CV.pdf" download>Download CV <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-download"></use></svg></a>
-          </div>
-          <ul class="socials" data-enter style="--d:860" aria-label="Elsewhere">
-            <li><a href="mailto:arochussen@salk.edu" aria-label="Email" title="Email"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-mail"></use></svg></a></li>
-            <li><a href="https://x.com/AdamRochussen" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-x"></use></svg></a></li>
-            <li><a href="https://adam.rochussen.xyz" target="_blank" rel="noopener" aria-label="Substack: Fruit of Eden" title="Substack"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-substack"></use></svg></a></li>
-            <li><a href="https://orcid.org/0000-0001-9439-1206" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-orcid"></use></svg></a></li>
-            <li><a href="https://scholar.google.com/citations?user=7kjD4AEAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-scholar"></use></svg></a></li>
-          </ul>
-        </div>
-
-        <div class="portrait-wrap" data-enter style="--d:200">
-          <div class="sunburst" aria-hidden="true"></div>
-                    <div class="portrait">
-            <div class="portrait-arch">
-              <picture>
-                <source type="image/webp" srcset="assets/img/adam-480.webp 480w, assets/img/adam-800.webp 800w, assets/img/adam-1100.webp 1100w" sizes="(min-width: 961px) 400px, 70vw">
-                <img src="assets/img/adam-800.jpg" srcset="assets/img/adam-480.jpg 480w, assets/img/adam-800.jpg 800w, assets/img/adam-1100.jpg 1100w" sizes="(min-width: 961px) 400px, 70vw" width="800" height="899" alt="Portrait of Adam Rochussen" fetchpriority="high">
-              </picture>
-            </div>
-          </div>
-          <div class="plinth" aria-hidden="true"><span></span></div>
-          <a class="medallion" href="https://rootsofprogress.org/fellow/adam-rochussen/" target="_blank" rel="noopener" aria-label="Roots of Progress Fellow, 2026: view fellow profile">
-            <svg viewBox="0 0 200 200" aria-hidden="true">
-              <defs><path id="medallion-path" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
-              <circle class="disc" cx="100" cy="100" r="98" stroke-width="1.4"/>
-              <circle class="inner" cx="100" cy="100" r="91" stroke-width=".8"/>
-              <circle class="inner" cx="100" cy="100" r="60" stroke-width=".8"/>
-              <g class="ring"><text><textPath href="#medallion-path" textLength="462" lengthAdjust="spacing">ROOTS OF PROGRESS ✦ FELLOWSHIP ✦</textPath></text></g>
-              <text class="small-caps" x="100" y="80" text-anchor="middle">FELLOW</text>
-              <text class="year" x="100" y="117" text-anchor="middle">2026</text>
-              <path class="star" d="M100 126l2.6 5.4 5.4 2.6-5.4 2.6-2.6 5.4-2.6-5.4-5.4-2.6 5.4-2.6z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Credentials ============ -->
-    <div class="marquee" role="region" aria-label="Credentials">
-      <div class="marquee-track">
-        <ul>
-          <li>Salk Institute for Biological Studies</li>
-          <li>PhD, University of Cambridge</li>
-          <li>Wellcome Trust PhD Studentship</li>
-          <li>Roots of Progress Fellow 2026</li>
-          <li>Winner, TPTC Postdoc Pitch 2026</li>
-          <li>Inventor, adoptive T cell therapy patent application</li>
-        </ul>
-        <ul aria-hidden="true">
-          <li>Salk Institute for Biological Studies</li>
-          <li>PhD, University of Cambridge</li>
-          <li>Wellcome Trust PhD Studentship</li>
-          <li>Roots of Progress Fellow 2026</li>
-          <li>Winner, TPTC Postdoc Pitch 2026</li>
-          <li>Inventor, adoptive T cell therapy patent application</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ============ Roots of Progress ============ -->
-    <section class="section section--tight" aria-labelledby="rop-title">
-      <div class="container">
-        <article class="card feature" data-reveal>
-          <div>
-            <p class="eyebrow"><span class="num">I</span>Fellowship</p>
-            <h2 id="rop-title">A 2026 <em>Roots of Progress</em> Fellow</h2>
-            <div class="prose">
-              <p>I'm one of 41 writers selected from nearly 400 applicants for the 2026 Blog-Building Intensive, the fellowship run by the <a href="https://rootsofprogress.org/" target="_blank" rel="noopener">Roots of Progress Institute</a> for writers on progress in science, technology and society.</p>
-              <p>During the fellowship I'm writing about meta-science and the future of human talent, including how advances in robotics could change the structure and incentives of academic labs.</p>
-            </div>
-            <div class="btn-row">
-              <a class="btn btn-ghost" href="https://rootsofprogress.org/fellow/adam-rochussen/" target="_blank" rel="noopener">Fellow profile <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></a>
-              <a class="btn-text" href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Read the essays <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></a>
-            </div>
-          </div>
-          <div class="feature-stats" aria-label="Fellowship at a glance">
-            <div class="stat"><span class="stat-num">41</span><span class="label">Fellows</span></div>
-            <div class="stat"><span class="stat-num">~400</span><span class="label">Applicants</span></div>
-            <div class="stat"><span class="stat-num">2026</span><span class="label">Cohort</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ About ============ -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div>
-          <div class="section-head" data-reveal>
-            <p class="eyebrow"><span class="num">II</span>About</p>
-            <h2 class="display" id="about-title">A T cell biologist who wants science to be <em>true</em>.</h2>
-            <div class="ornament" aria-hidden="true"><i></i></div>
-          </div>
-          <div class="prose" data-reveal>
-            <p>My research sits where human physiology meets cellular immunology. I'm a postdoctoral fellow at the Salk Institute for Biological Studies in La Jolla, California, and the question I hope to spend a career answering sounds simple: <strong>how does the way we live affect the function of our immune cells?</strong> That covers the behaviours we choose (diet, exercise, sleep, social connection and stress) and the rhythms we don't: the daily cycle of night and day, and the slow arc of ageing.</p>
-            <p>I focus on killer T cells, the immune cells that hunt down infected and cancerous cells. I study how biological rhythms shape what they do, and how to use that to build better adoptive T cell therapies for cancer. Since August 2026 I've been in the lab of <a href="https://kosurilab.com/" target="_blank" rel="noopener">Dr Pallav Kosuri</a>, whose group builds nanoscale tools to measure how molecules move and generate force.</p>
-            <p>I care just as much about whether science can be trusted. Too many influential findings don't replicate, and the incentives of academic research too often reward the wrong things. I write about publishing, peer review, bias and the structure of academic labs on my Substack, <a href="https://adam.rochussen.xyz" target="_blank" rel="noopener"><em>Fruit of Eden</em></a>, and on <a href="https://x.com/AdamRochussen" target="_blank" rel="noopener">X</a>. In 2026 I co-authored a published critique of a study on “brain sex” in <em>Theory and Society</em>.</p>
-            <p>I also want to build. I'm the inventor on a provisional patent application relating to adoptive T cell therapy, and I'm exploring company formation as a solo biotech founder.</p>
-            <p>Before moving to San Diego in January 2025, I spent a decade at the University of Cambridge, where I took my BA, MSci, MRes and PhD. My PhD was funded by the Wellcome Trust, in the lab of <a href="https://www.griffiths-lab.com/" target="_blank" rel="noopener">Prof Gillian Griffiths</a> at the Cambridge Institute for Medical Research.</p>
-          </div>
-        </div>
-
-        <aside class="card glance" data-reveal aria-labelledby="glance-title">
-          <h3 id="glance-title">At a glance</h3>
-          <dl>
-            <div><dt>Now</dt><dd>Postdoctoral Fellow, Salk Institute (Kosuri Lab, Integrative Biology Laboratory)</dd></div>
-            <div><dt>Focus</dt><dd>T cells · biological rhythms · cell therapy · meta-science</dd></div>
-            <div><dt>Trained</dt><dd>University of Cambridge: BA, MSci, MRes, PhD</dd></div>
-            <div><dt>Fellowships</dt><dd>Wellcome Trust PhD Studentship · Roots of Progress Fellow 2026</dd></div>
-            <div><dt>Writing</dt><dd><a class="link" href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Fruit of Eden</a> on Substack</dd></div>
-            <div><dt>Outside the lab</dt><dd>Marathons (3:11 at CIM 2025), Ironman 70.3, surfing and speciality coffee</dd></div>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ============ Three threads ============ -->
-    <section class="section section--raised" aria-labelledby="threads-title">
-      <div class="container">
-        <div class="section-head section-head--center" data-reveal>
-          <p class="eyebrow"><span class="num">III</span>Three threads</p>
-          <h2 class="display" id="threads-title">The bench, the record &amp; <em>the venture</em></h2>
-          <div class="ornament" aria-hidden="true"><i></i></div>
-        </div>
-        <div class="pillars" data-stagger>
-          <article class="card card--lift pillar" data-reveal>
-            <svg class="pillar-icon" aria-hidden="true"><use href="assets/img/icons.svg#i-flask"></use></svg>
-            <span class="pillar-num" aria-hidden="true">I</span>
-            <p class="label">Immunology</p>
-            <h3>The bench</h3>
-            <p>How the body's rhythms, and the physical forces cells exert, shape what killer T cells do, and how to engineer better T cell therapies.</p>
-            <ul>
-              <li>Biological rhythms &amp; T cell function</li>
-              <li>T cell mechanics &amp; the cytoskeleton</li>
-              <li>Adoptive cell therapy for cancer</li>
-            </ul>
-            <a class="btn-text" href="research.html">Research <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-r"></use></svg></a>
-          </article>
-          <article class="card card--lift pillar" data-reveal>
-            <svg class="pillar-icon" aria-hidden="true"><use href="assets/img/icons.svg#i-scale"></use></svg>
-            <span class="pillar-num" aria-hidden="true">II</span>
-            <p class="label">Meta-science</p>
-            <h3>The record</h3>
-            <p>Bias, fraud, irreproducibility and perverse incentives distort the scientific record. I study and write about how it happens, and what to do about it.</p>
-            <ul>
-              <li>Peer review in <em>Theory and Society</em> (2026)</li>
-              <li>“Science is largely fake” at the Avalon Exposition</li>
-              <li>Essays on <em>Fruit of Eden</em></li>
-            </ul>
-            <a class="btn-text" href="https://adam.rochussen.xyz" target="_blank" rel="noopener">Read the essays <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></a>
-          </article>
-          <article class="card card--lift pillar" data-reveal>
-            <svg class="pillar-icon" aria-hidden="true"><use href="assets/img/icons.svg#i-rocket"></use></svg>
-            <span class="pillar-num" aria-hidden="true">III</span>
-            <p class="label">Biotech</p>
-            <h3>The venture</h3>
-            <p>Turning discovery into therapy. I'm the inventor on a provisional patent application in adoptive T cell therapy and am exploring company formation as a solo founder.</p>
-            <ul>
-              <li>Provisional patent application, adoptive T cell therapy</li>
-              <li>Winner, TPTC Postdoc Pitch 2026</li>
-              <li>Open to conversations with angel investors</li>
-            </ul>
-            <a class="btn-text" href="#contact">Get in touch <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-r"></use></svg></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Latest ============ -->
-    <section class="section" aria-labelledby="latest-title">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow"><span class="num">IV</span>Latest</p>
-          <h2 class="display" id="latest-title">Recent <em>news</em></h2>
-        </div>
-        <ol class="news" data-stagger>
-          <li data-reveal>
-            <time datetime="2026-11">November 2026</time>
-            <h3>“Science is largely fake”</h3>
-            <p>Spoke at the Avalon Exposition in Berkeley on the biases that distort scientific truth, and how common influential fake and fraudulent science really is.</p>
-            <a class="link" href="https://avalon.institute/exposition/" target="_blank" rel="noopener">The Exposition ↗</a>
-          </li>
-          <li data-reveal>
-            <time datetime="2026-10">October 2026</time>
-            <h3>Postdoc Pitch winner</h3>
-            <p>Won the Torrey Pines Training Consortium's Postdoc Pitch, competing with finalists from Salk, Sanford Burnham Prebys, Scripps Research and UC San Diego.</p>
-            <a class="link" href="https://tptc.wordpress.com/postdoc-pitch-2/" target="_blank" rel="noopener">TPTC ↗</a>
-          </li>
-          <li data-reveal>
-            <time datetime="2026-09">September 2026</time>
-            <h3>Two new papers</h3>
-            <p>Actin conformation and force in killer T cells, in <em>Communications Biology</em>, and a peer review of “brain sex” research, in <em>Theory and Society</em>.</p>
-            <a class="link" href="publications.html">Publications</a>
-          </li>
-          <li data-reveal>
-            <time datetime="2026-08">August 2026</time>
-            <h3>New lab, new fellowship</h3>
-            <p>Joined the Kosuri Lab at Salk, and began the Roots of Progress Blog-Building Intensive.</p>
-            <a class="link" href="research.html">Research</a>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ Writing ============ -->
-    <section class="section section--raised" id="writing" aria-labelledby="writing-title">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow"><span class="num">V</span>Writing</p>
-          <h2 class="display" id="writing-title">Notes on how science <em>actually</em> works</h2>
-          <p class="lede">On <em>Fruit of Eden</em>, my Substack, I write about science, culture and whatever else takes my fancy, with a particular focus on meta-science: how research gets funded, done, published and believed.</p>
-        </div>
-        <div class="essays" data-stagger>
-          <a class="card card--lift essay" data-reveal href="https://adam.rochussen.xyz/p/at-what-age-do-we-start-to-get-stupider" target="_blank" rel="noopener">
-            <time datetime="2026-10-27">27 Oct 2026</time>
-            <h3>At what age do we start to get stupider?</h3>
-            <p>Younger than you might think.</p>
-            <span class="btn-text">Read <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></span>
-          </a>
-          <a class="card card--lift essay" data-reveal href="https://adam.rochussen.xyz/p/robots-will-put-the-humanity-back" target="_blank" rel="noopener">
-            <time datetime="2026-10-22">22 Oct 2026</time>
-            <h3>Robots will put the humanity back in science</h3>
-            <p>We've been making humans do robot jobs all this time.</p>
-            <span class="btn-text">Read <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></span>
-          </a>
-          <a class="card card--lift essay" data-reveal href="https://adam.rochussen.xyz/p/gerontocracy-is-killing-science" target="_blank" rel="noopener">
-            <time datetime="2026-09-25">25 Sep 2026</time>
-            <h3>Gerontocracy is killing science</h3>
-            <p>Turns out younger scientists are just better.</p>
-            <span class="btn-text">Read <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></span>
-          </a>
-          <a class="card card--lift essay" data-reveal href="https://adam.rochussen.xyz/p/against-scientific-collaboration" target="_blank" rel="noopener">
-            <time datetime="2026-09-04">4 Sep 2026</time>
-            <h3>Against scientific collaboration</h3>
-            <p>It was Archimedes alone who shouted “Eureka!”</p>
-            <span class="btn-text">Read <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></span>
-          </a>
-          <a class="card card--lift essay" data-reveal href="https://adam.rochussen.xyz/p/academic-science-has-a-hierarchy" target="_blank" rel="noopener">
-            <time datetime="2026-08-25">25 Aug 2026</time>
-            <h3>Academic science has a hierarchy problem</h3>
-            <p>Sexual harassment, IP fraud and slowed progress have the same root cause.</p>
-            <span class="btn-text">Read <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></span>
-          </a>
-          <a class="card card--lift essay" data-reveal href="https://adam.rochussen.xyz/p/never-trust-the-science" target="_blank" rel="noopener">
-            <time datetime="2026-03-17">17 Mar 2026</time>
-            <h3>Never trust The Science™</h3>
-            <p>On the need to identify bias and interpret data yourself.</p>
-            <span class="btn-text">Read <svg class="icon" data-ne aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></span>
-          </a>
-        </div>
-        <div class="essays-foot" data-reveal>
-          <p>More essays on academic publishing, scientific hiring, and how research really gets done.</p>
-          <a class="btn btn-ghost" href="https://adam.rochussen.xyz" target="_blank" rel="noopener">All essays on Substack <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-ne"></use></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Contact ============ -->
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-head section-head--center" data-reveal>
-          <p class="eyebrow"><span class="num">VI</span>Get in touch</p>
-          <h2 class="display" id="contact-title">Support the science. <em>Back what's next.</em></h2>
-          <p class="lede">I'm always glad to talk with people who want to help good science happen, whether through philanthropy or by backing a new company.</p>
-          <div class="ornament" aria-hidden="true"><i></i></div>
-        </div>
-        <div class="contact-grid" data-stagger>
-          <article class="card contact-card" data-reveal>
-            <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="assets/img/icons.svg#i-heart"></use></svg></span>
-            <p class="label">For donors</p>
-            <h3>Philanthropic support</h3>
-            <p>If you'd like to support my research at the Salk Institute, from how biological rhythms shape our immune cells to new approaches for cancer immunotherapy, I'd love to hear from you.</p>
-            <div class="btn-row">
-              <a class="btn btn-gold" href="mailto:arochussen@salk.edu?subject=Supporting%20your%20research%20at%20Salk">Email about giving <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-mail"></use></svg></a>
-              <button class="btn btn-ghost" type="button" data-copy="arochussen@salk.edu" data-copy-msg="Email address copied">Copy email <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-copy"></use></svg></button>
-            </div>
-            <p class="fineprint">Gifts in support of research are made to the Salk Institute for Biological Studies, a nonprofit research institute.</p>
-          </article>
-          <article class="card contact-card" data-reveal>
-            <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="assets/img/icons.svg#i-rocket"></use></svg></span>
-            <p class="label">For angel investors</p>
-            <h3>Early-stage investment</h3>
-            <p>I'm exploring company formation as a solo biotech founder, building on a provisional patent application in adoptive T cell therapy. If you're an angel investor interested in early conversations, please reach out.</p>
-            <div class="btn-row">
-              <a class="btn btn-gold" href="mailto:arochussen@salk.edu?subject=Early-stage%20investment%20enquiry">Email about investing <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-mail"></use></svg></a>
-              <button class="btn btn-ghost" type="button" data-copy="arochussen@salk.edu" data-copy-msg="Email address copied">Copy email <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-copy"></use></svg></button>
-            </div>
-            <p class="fineprint">For exploratory conversations only. Nothing on this site is an offer to sell, or a solicitation of an offer to buy, any security.</p>
-          </article>
-        </div>
-        <p class="contact-direct" data-reveal>For anything else, write to<br><a href="mailto:arochussen@salk.edu">arochussen@salk.edu</a></p>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ Footer ============ -->
-  <footer class="site-footer">
-    <div class="footer-chevrons" aria-hidden="true"></div>
+  <!-- ===== FELLOWSHIP ===== -->
+  <section class="section section--tight" aria-labelledby="rop-title">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="./" aria-label="Adam Rochussen, home">
-            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M14 1.5h36L62.5 14v36L50 62.5H14L1.5 50V14z"/><path fill="none" stroke="currentColor" stroke-width=".8" opacity=".55" d="M15.6 5.5h32.8l10.1 10.1v32.8L48.4 58.5H15.6L5.5 48.4V15.6z"/><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" d="M14 46 22.5 18 31 46M17.4 35.5h10.2M37 46V18h7a7 7 0 0 1 0 14h-7M43.5 32 51 46"/></svg>
-            <span class="brand-name">Adam <b>Rochussen</b></span>
-          </a>
-          <p>T cell biologist at the Salk Institute for Biological Studies in La Jolla, California, and writer on meta-science.</p>
-        </div>
+      <article class="panel feature" data-reveal>
         <div>
-          <p class="footer-title">Explore</p>
-          <ul class="footer-links">
-            <li><a href="research.html">Research</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="cv.html">Curriculum vitae</a></li>
-            <li><a href="assets/cv/Adam_Rochussen_CV.pdf" download>CV (PDF)</a></li>
-          </ul>
+          <p class="eyebrow"><span class="coin-ico" aria-hidden="true"></span>{{ h.fellowship.kicker }}</p>
+          <h2 id="rop-title">{{ h.fellowship.title_plain }}<em>{{ h.fellowship.title_accent }}</em>{{ h.fellowship.title_end }}</h2>
+          <p class="prose">{{ h.fellowship.body }}</p>
+          <div class="btn-row">
+            <a class="btn btn-ghost" href="{{ h.fellowship.link_primary.url }}" target="_blank" rel="noopener">{{ h.fellowship.link_primary.label }} <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>
+            <a class="btn-text" href="{{ h.fellowship.link_secondary.url }}" target="_blank" rel="noopener">{{ h.fellowship.link_secondary.label }} <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>
+          </div>
         </div>
-        <div>
-          <p class="footer-title">Elsewhere</p>
-          <ul class="footer-links">
-            <li><a href="https://adam.rochussen.xyz" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-substack"></use></svg>Substack</a></li>
-            <li><a href="https://x.com/AdamRochussen" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-x"></use></svg>X</a></li>
-            <li><a href="https://orcid.org/0000-0001-9439-1206" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-orcid"></use></svg>ORCID</a></li>
-            <li><a href="https://scholar.google.com/citations?user=7kjD4AEAAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-scholar"></use></svg>Google Scholar</a></li>
-          </ul>
+        <div class="scorebox" aria-label="Fellowship at a glance">
+          {%- for s in h.fellowship.stats %}
+          <div class="stat"><span class="stat-num">{{ s.num }}</span><span class="label">{{ s.label }}</span></div>
+          {%- endfor %}
         </div>
-        <div>
-          <p class="footer-title">Contact</p>
-          <ul class="footer-links">
-            <li><a href="mailto:arochussen@salk.edu"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-mail"></use></svg>Email</a></li>
-            <li><a href="./#contact">Donors &amp; investors</a></li>
-          </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div>
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">{{ h.about.kicker }}</p>
+          <h2 class="h-display" id="about-title">{{ h.about.heading_plain }}<em>{{ h.about.heading_accent }}</em>.</h2>
+        </div>
+        <div class="prose" data-reveal>
+          {%- for p in h.about.paragraphs %}<p>{{ p }}</p>{% endfor %}
         </div>
       </div>
+      <aside class="panel glance" data-reveal aria-labelledby="glance-title">
+        <h3 id="glance-title">{{ h.about.glance_title }}</h3>
+        <dl>
+          {%- for g in h.about.glance %}
+          <div><dt>{{ g.dt }}</dt><dd>{{ g.dd }}</dd></div>
+          {%- endfor %}
+        </dl>
+      </aside>
     </div>
-    <p class="footer-word" aria-hidden="true">Rochussen</p>
-    <div class="container footer-base">
-      <p>© 2026 Adam Rochussen</p>
-      <p>Last updated November 2026</p>
+  </section>
+
+  <!-- ===== THREE THREADS ===== -->
+  <section class="section section--alt" aria-labelledby="threads-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">{{ h.pillars_kicker }}</p>
+        <h2 class="h-display" id="threads-title">{{ h.pillars_heading_plain }}<em>{{ h.pillars_heading_accent }}</em></h2>
+      </div>
+      <div class="pillars" data-stagger>
+        {%- for p in h.pillars %}
+        <article class="panel pillar" data-reveal>
+          <img class="pillar-sprite" src="/assets/img/sprites/{{ p.sprite }}.svg" alt="" width="48" height="48">
+          <p class="label">{{ p.tag }}</p>
+          <h3>{{ p.title }}</h3>
+          <p class="pillar-body">{{ p.body }}</p>
+          <ul class="ticks">
+            {%- for pt in p.points %}<li>{{ pt }}</li>{% endfor %}
+          </ul>
+          <a class="btn-text" href="{{ p.link.url }}"{% if p.link.external %} target="_blank" rel="noopener"{% endif %}>{{ p.link.label }} <svg class="icon{% if p.link.external %} ne{% endif %}" aria-hidden="true"><use href="/assets/img/icons.svg#{% if p.link.external %}i-arrow-ne{% else %}i-arrow-r{% endif %}"></use></svg></a>
+        </article>
+        {%- endfor %}
+      </div>
     </div>
-  </footer>
-</body>
-</html>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="section" aria-labelledby="news-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ h.news_kicker }}</p>
+        <h2 class="h-display" id="news-title">{{ h.news_heading_plain }}<em>{{ h.news_heading_accent }}</em></h2>
+      </div>
+      <ol class="news" data-stagger>
+        {%- for n in h.news %}
+        <li data-reveal>
+          <time datetime="{{ n.date_iso }}">{{ n.date_label }}</time>
+          <h3>{{ n.title }}</h3>
+          <p>{{ n.body }}</p>
+          <a class="link" href="{{ n.link.url }}"{% if n.link.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ n.link.label }}{% if n.link.url contains 'http' %} ↗{% endif %}</a>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section section--alt" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ h.gallery_kicker }}</p>
+        <h2 class="h-display" id="gallery-title">{{ h.gallery_heading_plain }}<em>{{ h.gallery_heading_accent }}</em></h2>
+        <p class="lede">{{ h.gallery_intro }}</p>
+      </div>
+      <ul class="gallery" data-stagger>
+        {%- for g in h.gallery %}
+        <li data-reveal>
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="/assets/img/photos/{{ g.img }}.webp">
+              <img src="/assets/img/photos/{{ g.img }}.jpg" loading="lazy" alt="{{ g.alt }}">
+            </picture>
+            <figcaption>{{ g.caption }}</figcaption>
+          </figure>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== ESSAYS ===== -->
+  <section class="section" id="writing" aria-labelledby="writing-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">{{ h.essays_kicker }}</p>
+        <h2 class="h-display" id="writing-title">{{ h.essays_heading_plain }}<em>{{ h.essays_heading_accent }}</em>{{ h.essays_heading_end }}</h2>
+        <p class="lede">{{ h.essays_intro }}</p>
+      </div>
+      <div class="essays" data-stagger>
+        {%- for e in h.essays %}
+        <a class="panel essay" data-reveal href="{{ e.url }}" target="_blank" rel="noopener">
+          <time>{{ e.date_label }}</time>
+          <h3>{{ e.title }}</h3>
+          <p>{{ e.blurb }}</p>
+          <span class="btn-text">Read <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></span>
+        </a>
+        {%- endfor %}
+      </div>
+      <div class="essays-foot" data-reveal>
+        <p>{{ h.essays_footer }}</p>
+        <a class="btn btn-ghost" href="{{ h.essays_cta.url }}" target="_blank" rel="noopener">{{ h.essays_cta.label }} <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">{{ h.contact_kicker }}</p>
+        <h2 class="h-display" id="contact-title">{{ h.contact_heading_plain }}<em>{{ h.contact_heading_accent }}</em></h2>
+        <p class="lede">{{ h.contact_intro }}</p>
+      </div>
+      <div class="contact-grid" data-stagger>
+        {%- for c in h.contact_cards %}
+        <article class="panel contact-card" data-reveal>
+          <img class="contact-sprite" src="/assets/img/sprites/{{ c.sprite }}.svg" alt="" width="44" height="44">
+          <p class="label">{{ c.tag }}</p>
+          <h3>{{ c.title }}</h3>
+          <p class="prose">{{ c.body }}</p>
+          <div class="btn-row">
+            <a class="btn btn-key" href="mailto:{{ site.data.site.email }}?subject={{ c.button.subject | uri_escape }}"><span>{{ c.button.label }} <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"></use></svg></span></a>
+            <button class="btn btn-ghost" type="button" data-copy="{{ site.data.site.email }}" data-copy-msg="Email copied">Copy email <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-copy"></use></svg></button>
+          </div>
+          <p class="fineprint">{{ c.fineprint }}</p>
+        </article>
+        {%- endfor %}
+      </div>
+      <p class="contact-direct" data-reveal>{{ h.contact_direct_label }}<br><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></p>
+    </div>
+  </section>
+</main>

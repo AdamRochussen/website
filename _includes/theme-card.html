@@ -1,0 +1,25 @@
+{%- comment -%} A research theme card. Pass t=<theme>. {%- endcomment -%}
+{%- assign t = include.t -%}
+<article class="panel theme" id="{{ t.id }}" data-reveal>
+  <span class="theme-num" aria-hidden="true">{{ t.num }}</span>
+  <div>
+    <div class="theme-meta">
+      {%- for tag in t.tags %}<span class="pill{% if forloop.first and t.live %} pill--live{% endif %}">{{ tag }}</span>{% endfor %}
+    </div>
+    <h3>{{ t.title }}</h3>
+    <div class="prose">
+      {%- for p in t.body %}<p>{{ p }}</p>{% endfor %}
+    </div>
+    {%- if t.abstract %}
+    <details class="disclosure">
+      <summary>{{ t.abstract_label }}</summary>
+      <div class="disclosure-body">{{ t.abstract }}</div>
+    </details>
+    {%- endif %}
+    {%- if t.foot %}
+    <div class="theme-foot">
+      {%- for f in t.foot %}<span><strong>{{ f.strong }}</strong>{{ f.text }}</span>{% endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</article>

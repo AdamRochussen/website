@@ -1,0 +1,40 @@
+{%- comment -%} Top navigation. Links come from _data/site.yml → nav. {%- endcomment -%}
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="{{ site.data.site.name }}, home">
+      <img class="brand-mark" src="/assets/img/sprites/tcell.svg" alt="" width="34" height="34">
+      <span class="brand-name">Adam<b>Rochussen</b></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        {%- for item in site.data.site.nav %}
+        <li><a href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}{% if page.nav_active == item.label %} aria-current="page"{% endif %}>{{ item.label }}{% if item.external %} <svg class="icon ne" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-ne"></use></svg>{% endif %}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme" title="Switch theme">
+        <svg class="icon i-sun" aria-hidden="true"><use href="/assets/img/icons.svg#i-sun"></use></svg>
+        <svg class="icon i-moon" aria-hidden="true"><use href="/assets/img/icons.svg#i-moon"></use></svg>
+      </button>
+      <a class="btn btn-key nav-cta" href="/#contact"><span>Get in touch</span></a>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-menu"></use></svg></button>
+    </div>
+  </div>
+  <div class="scanbar" aria-hidden="true"><i style="transform:scaleX(var(--progress,0))"></i></div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="stars" aria-hidden="true"></div>
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="/">Home</a></li>
+      {%- for item in site.data.site.nav %}
+      <li><a href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}{% if item.external %} ↗{% endif %}</a></li>
+      {%- endfor %}
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>

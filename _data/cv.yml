@@ -1,0 +1,115 @@
+# ============================================================================
+#  CV PAGE + PDF
+#  This single file feeds BOTH the web CV and the downloadable PDF, so you only
+#  edit your CV in one place. After changing it, rebuild the PDF (see README).
+#  Each "- " under a section is one entry.
+# ============================================================================
+
+hero:
+  kicker: "Curriculum vitae"
+  name_plain: "Adam Rochussen, "
+  name_accent: "PhD"
+  lede: >-
+    Postdoctoral Fellow at the Salk Institute. T cell biology, biological
+    rhythms, adoptive cell therapy and meta-science.
+
+# The "file details" line next to the download button (auto-ish; edit if needed)
+pdf_meta: "PDF · US Letter · 3 pages · Updated November 2026"
+
+profile:
+  - >-
+    I'm a T cell biologist interested in where human physiology meets cellular
+    immunology: how do dynamic changes in the body change the way our immune
+    cells work? Some of those changes we choose — diet, exercise, sleep, stress.
+    Others we don't — the daily clock, and the slow arc of ageing. My current
+    focus is biological rhythms and T cell immunity against cancer, and
+    engineering better adoptive T cell therapies out of it.
+  - >-
+    I care just as much about meta-science and research rigour, which I write
+    about as a 2026 Roots of Progress Fellow, and I'm working towards a company
+    as a solo biotech founder.
+
+positions:
+  - { when: "Aug 2026 – present", title: "Postdoctoral Fellow", where: "Kosuri Lab, Integrative Biology Laboratory · Salk Institute, La Jolla, CA" }
+  - { when: "Jan 2025 – Jul 2026", title: "Postdoctoral Fellow", where: "Salk Institute, La Jolla, CA", detail: "Biological rhythms, meal timing and T cell immunity against cancer; rhythm-engineering of T cells for adoptive cell therapy." }
+  - { when: "2020 – 2025", title: "PhD researcher", where: "Griffiths Lab, Cambridge Institute for Medical Research · University of Cambridge, UK", detail: "Cell biology of cytotoxic T lymphocytes: CDC42 isoforms, transcriptional adaptation, and actin conformation and force." }
+  - { when: "2019 – 2020", title: "MRes rotation student", where: "Wellcome Trust II&I programme · University of Cambridge, UK", detail: "XNAzymes against cancer-associated microRNAs; Plasmodium vivax blood-stage vaccine candidates." }
+
+education:
+  - { when: "2025", title: "PhD in Cell Biology & Immunology", where: "University of Cambridge · CIMR" }
+  - { when: "2021", title: "MA in Natural Sciences", where: "University of Cambridge · Churchill College" }
+  - { when: "2020", title: "MRes in Medical Science", where: "University of Cambridge · Dept. of Medicine" }
+  - { when: "2019", title: "MSci in Biochemistry", where: "University of Cambridge · Dept. of Biochemistry" }
+  - { when: "2018", title: "BA in Natural Sciences", where: "University of Cambridge · Churchill College" }
+
+# "new: true" gives a little flash on the newest awards.
+awards:
+  - { year: "2026", new: true, title: "Winner, TPTC Postdoc Pitch", body: "Torrey Pines Training Consortium competition in which postdoctoral finalists — picked through internal rounds at Salk, Sanford Burnham Prebys, Scripps and UC San Diego — present their research in three minutes and one slide." }
+  - { year: "2026", new: true, title: "Roots of Progress Fellow", body: "One of 41 fellows chosen from nearly 400 applicants for the Roots of Progress Institute's 2026 Blog-Building Intensive, a fellowship for writers on progress in science, technology and society." }
+  - { year: "2025", title: "CSAR PhD Student Award", body: "University-wide competition “to recognise outstanding research with real world application and to assist students to pursue their research or careers,” awarded by the Cambridge Society for the Application of Research." }
+  - { year: "2019", title: "Wellcome Trust PhD Studentship", body: "One of five candidates, from a pool of over 300, accepted onto the Wellcome Trust MRes + PhD programme in Infection, Immunity & Inflammation (II&I) at the University of Cambridge." }
+  - { year: "2018", title: "First-class undergraduate research project", body: "Graded first class for my undergraduate project on the effect of ligand size on endocytosis in the parasite Trypanosoma brucei." }
+  - { year: "2015", title: "Elite A-level results", body: "Five A* grades at A level, the highest ever achieved at my school, placing me in the top ~30 of over 250,000 students nationwide." }
+
+patents:
+  - { when: "Pending", title: "Provisional patent application relating to adoptive T cell therapy", where: "Inventor", detail: "Working towards company formation as a solo biotech founder." }
+
+# Publications list on the CV (short form). The full page with summaries is separate.
+publications:
+  - { year: "2026", cite: "Wright CM, <b>Rochussen AM</b>, Stagg SG. Flawed methods and overstated conclusions regarding ‘Brain Sex’: a peer review of Kurth et al. (2022). <i>Theory and Society</i> 55(5), 84.", doi: "https://doi.org/10.1007/s11186-026-09747-2" }
+  - { year: "2026", cite: "<b>Rochussen AM</b>, Kebabci AO, Winkel AK, Franze K, Fletcher DA, Griffiths GM, Lippert AH. Actin conformation dynamics precede force generation in cytotoxic T lymphocytes. <i>Communications Biology</i> 9, 1256.", doi: "https://doi.org/10.1038/s42003-026-11011-3" }
+  - { year: "2025", cite: "Asano Y, Ma CY, Limbäck-Stokin MM, <b>Rochussen AM</b>, Stinchcombe JC, Griffiths GM. Nuclear polarization to the immune synapse facilitates an early transcriptional burst. <i>Science Immunology</i> 10(111), eadt5909.", doi: "https://doi.org/10.1126/sciimmunol.adt5909" }
+  - { year: "2025", cite: "<b>Rochussen AM</b>, Ma CY, Griffiths GM. Transcriptional adaptation after deletion of <i>Cdc42</i> in primary T cells. <i>Journal of Cell Science</i> 138(15), jcs263826.", doi: "https://doi.org/10.1242/jcs.263826" }
+  - { year: "2025", cite: "Blanco E, … <b>Rochussen AM</b>, … Kreins AY. Dominant negative variants in <i>ITPR3</i> impair T cell Ca²⁺ dynamics causing combined immunodeficiency. <i>Journal of Experimental Medicine</i> 222(1), e20220979.", doi: "https://doi.org/10.1084/jem.20220979" }
+  - { year: "2024", cite: "Douanne T, Strege K, Del Castillo Velasco-Herrera M, <b>Rochussen AM</b>, Adams DJ, Griffiths GM. NFIL3 contributes to cytotoxic T lymphocyte-mediated killing. <i>Open Biology</i> 14(2), 230456.", doi: "https://doi.org/10.1098/rsob.230456" }
+  - { year: "2023", cite: "<b>Rochussen AM</b>, Lippert AH, Griffiths GM. Imaging the T-cell receptor: new approaches, new insights. <i>Current Opinion in Immunology</i> 82, 102309.", doi: "https://doi.org/10.1016/j.coi.2023.102309" }
+  - { year: "2022", cite: "Donde MJ, <b>Rochussen AM</b>, Kapoor S, Taylor AI. Targeting non-coding RNA family members with artificial endonuclease XNAzymes. <i>Communications Biology</i> 5, 1010.", doi: "https://doi.org/10.1038/s42003-022-03987-5" }
+
+talks:
+  - { when: "2026", title: "“Science is largely fake”", where: "Talk · The Avalon Exposition · Berkeley, CA, USA", detail: "On the biases that distort scientific truth, and the prevalence of influential fake and fraudulent science." }
+  - { when: "2026", title: "Postdoc Pitch competition (winner)", where: "Pitch · Torrey Pines Training Consortium · La Jolla, CA, USA" }
+  - { when: "2026", title: "Rhythm-engineering enhances T cell differentiation for adoptive cell therapy", where: "Poster · ImmunoMemphis · Memphis, TN, USA" }
+  - { when: "2024", title: "CDC42 “brain” isoform controls secretory lysosome delivery to the cytotoxic immune synapse", where: "Talk · LMB–Karolinska Student Symposium · Cambridge, UK" }
+  - { when: "2024", title: "CDC42 and killer T cell function", where: "Talk · CRUK Imaging Immunity Workshop · Cambridge, UK" }
+  - { when: "2023", title: "These cells are actin’ weirdly: the roles and regulation of CDC42 in killer T cell function", where: "Poster · FASEB: Signal Transduction in the Immune System · CA, USA" }
+  - { when: "2022", title: "These cells are actin’ weirdly: how CDC42 regulates CTL function", where: "Poster · Cold Spring Harbor: Gene Expression & Signaling · NY, USA" }
+
+teaching:
+  - { when: "Summer 2024", title: "Summer student mentorship: Bernardo Petochi", where: "CIMR, Cambridge, UK", points: ["Planned and supervised an 8-week project for an undergraduate veterinary-medicine student from the University of Milan.", "Bernardo is now applying for PhD programmes in the USA."] }
+  - { when: "Summer 2023", title: "Summer student mentorship: Beverly Yuan", where: "CIMR, Cambridge, UK", points: ["Planned and supervised a 10-week project for an undergraduate biochemistry student from Imperial College London.", "Beverly is now doing her PhD at the University of Cambridge."] }
+  - { when: "2023 – 2025", title: "Interdisciplinary journal club: “Friday Breakfast Buffet”", where: "CIMR, Cambridge, UK", points: ["Co-founded and ran a journal club for students and postdocs.", "Deliberately focused on papers unrelated to our own work, to force interdisciplinary thinking."] }
+  - { when: "2023 – 2025", title: "Admissions interview tutor", where: "Athena Tuition · online", points: ["Prepared clients for the Cambridge undergraduate admissions interview in Natural Sciences."] }
+  - { when: "2023", title: "BioNatSci supervisor", where: "University of Cambridge · King's College", points: ["Taught, set and marked work for small groups of first-year undergraduates in the Biology of Cells module."] }
+  - { when: "2022 & 2023", title: "ISAC outreach: Inspiring Scientists at CIMR", where: "CIMR, Cambridge, UK", points: ["Outreach exposing local school students from underprivileged backgrounds to research.", "Co-designed a week of experiments for 16-year-olds and helped them present their results."] }
+  - { when: "2019 & 2020", title: "Summer programme counsellor", where: "Bucksmore Education · Cambridge, UK", points: ["Ran an 8-week summer school for 15–18-year-olds; one of five staff responsible for sixty students."] }
+
+skills:
+  - { dt: "Cell biology", dd: "Primary mouse & human T cell culture, in vitro functional assays, CAR T cell production, flow cytometry, lentiviral production & transduction" }
+  - { dt: "Molecular biology", dd: "CRISPR/Cas9 editing, knock-in & deletion, molecular cloning, qPCR, ddPCR, immunoblotting, co-IP, protein expression & purification, RNA extraction, bulk & single-cell RNA library prep" }
+  - { dt: "Microbiology", dd: "Bacterial (E. coli, D. solani), fungal (S. cerevisiae), nematode (C. elegans) and parasite (T. brucei, P. knowlesi) culture; bacteriophage culture from field samples, phage transduction, transposon mutagenesis screening" }
+  - { dt: "Microscopy & imaging", dd: "Live imaging, immunofluorescence, super-resolution, traction force microscopy, SEM of thin sections, AFM. Spinning-disc & Airyscan confocal, SIM & lattice SIM², oblique-plane and lattice light sheet, epifluorescence; LumiCycle, IncuCyte & CellCyte" }
+  - { dt: "Data analysis", dd: "Bulk transcriptomic & proteomic analysis incl. rhythmicity (R, Python, Excel), custom image analysis (ImageJ, MATLAB), conventional image analysis (ImageJ, Imaris, Zen), flow cytometry (FlowJo), statistics (R, Python, Prism)" }
+  - { dt: "Animal models", dd: "Mouse breeding, colony management, tissue harvesting (spleen, bone marrow, cardiac puncture), tumour engraftment & monitoring, adoptive T cell transfer; subcutaneous, intraperitoneal & retro-orbital injection" }
+
+# "Beyond the lab" — two columns.
+beyond:
+  - title: "Athletic"
+    items:
+      - "California International Marathon: 3:11:37 (2025)"
+      - "La Quinta Ironman 70.3: 5:18:54 (2024)"
+      - "London Marathon: 4:26:18 (2022), raising over £10,000 for Whizz-Kidz"
+      - "“Half Blue” for Cambridge in powerlifting (2017–18) & skiing (2016–19)"
+      - "16th in weight class, 2018 IPF University World Powerlifting Championships"
+      - "2nd at the Oxford–Cambridge Varsity ski races, the oldest alpine race in the world (2018)"
+      - "Represented the University in rugby (2019–21) and track & field (2016–17)"
+      - "CYQ Level 2 Gym Instructor & Level 3 Personal Trainer (2015)"
+  - title: "Musical"
+    items:
+      - "Clarinet: DipABRSM performance diploma (2014)"
+      - "Piano: ABRSM Performance Grade 5 (2010)"
+      - "Voice: ABRSM Performance Grade 5 (2012)"
+      - "Surrey County Youth Wind Orchestra, 2nd clarinet (2009)"
+      - "Formed a barbershop quartet that performed professionally and ran workshops for schoolchildren (2015)"
+
+# Photos used on the CV? No — photos live on the web pages only. See _data/home.yml
+# and the gallery in index. (This note is just a reminder.)

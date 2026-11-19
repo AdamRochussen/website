@@ -1,264 +1,79 @@
 <!doctype html>
-<!--
-  Source for assets/cv/Adam_Rochussen_CV.pdf
-  Edit this file, then run:  node _build/build-cv.js
-  (Lives in _build/, which GitHub Pages does not publish.)
--->
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
+<html lang="en-GB"><head><meta charset="utf-8">
 <title>Adam Rochussen · Curriculum Vitae</title>
 <meta name="author" content="Adam Rochussen">
-<meta name="description" content="Curriculum vitae of Adam Rochussen, PhD, Postdoctoral Fellow, Salk Institute for Biological Studies">
 <style>
-  @font-face { font-family: "Bodoni Moda"; font-style: normal; font-weight: 400 900; src: url("../assets/fonts/bodoni-moda-normal-latin.woff2") format("woff2"); }
-  @font-face { font-family: "Bodoni Moda"; font-style: italic; font-weight: 400 900; src: url("../assets/fonts/bodoni-moda-italic-latin.woff2") format("woff2"); }
-  @font-face { font-family: "Jost"; font-style: normal; font-weight: 300 700; src: url("../assets/fonts/jost-normal-latin.woff2") format("woff2"); }
-  @font-face { font-family: "Jost"; font-style: italic; font-weight: 300 700; src: url("../assets/fonts/jost-italic-latin.woff2") format("woff2"); }
-  @font-face { font-family: "Jost"; font-style: normal; font-weight: 300 700; src: url("../assets/fonts/jost-normal-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+1E00-1EFF; }
-
-  @page { size: Letter; margin: 0.5in 0.6in 0.62in; }
-
-  :root {
-    --ink: #1b1712;
-    --ink-2: #3b342b;
-    --muted: #6d6252;
-    --wine: #7a1c22;
-    --gold: #b38d3f;
-    --gold-light: #d9c08a;
-    --rule: #e6dccb;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body { margin: 0; color: var(--ink); font: 400 8.6pt/1.4 "Jost", sans-serif; }
-  a { color: inherit; text-decoration: none; }
-  p { margin: 0; }
-  ul { margin: 0; padding: 0; list-style: none; }
-  i, em { font-style: italic; }
-  b, strong { font-weight: 600; }
-
-  /* ---------- Masthead ---------- */
-  .masthead { position: relative; padding: 2pt 0 12pt; margin-bottom: 4pt; }
-  .masthead .burst { position: absolute; right: -0.6in; top: -0.5in; width: 2.7in; height: 2.7in; opacity: .16; }
-  .name { font: 500 31pt/1 "Bodoni Moda", serif; letter-spacing: .05em; text-transform: uppercase; margin: 0; }
-  .name .phd { font: italic 500 17pt/1 "Bodoni Moda", serif; letter-spacing: 0; text-transform: none; color: var(--wine); margin-left: 4pt; }
-  .role { margin-top: 7pt; font: 500 8.4pt/1.3 "Jost"; letter-spacing: .24em; text-transform: uppercase; color: var(--wine); }
-  .contacts { display: flex; flex-wrap: wrap; gap: 3pt 14pt; margin-top: 9pt; font-size: 8pt; color: var(--ink-2); }
-  .contacts a { display: inline-flex; align-items: center; gap: 4pt; }
-  .contacts svg { width: 8.5pt; height: 8.5pt; color: var(--gold); flex: none; }
-  .deco-rule { display: flex; align-items: center; gap: 6pt; margin-top: 11pt; }
-  .deco-rule::before, .deco-rule::after { content: ""; height: 0; flex: 1; border-top: 2.2pt double var(--gold); }
-  .deco-rule i { width: 5pt; height: 5pt; background: var(--gold); transform: rotate(45deg); outline: .6pt solid var(--gold); outline-offset: 1.6pt; }
-
-  /* ---------- Sections ---------- */
-  section { margin-top: 11.5pt; }
-  h2 {
-    display: flex; align-items: center; gap: 8pt; margin: 0 0 7pt;
-    font: 600 11.2pt/1.1 "Bodoni Moda", serif; letter-spacing: .14em; text-transform: uppercase; color: var(--wine);
-    break-after: avoid;
-  }
-  h2::before { content: ""; width: 4.5pt; height: 4.5pt; background: var(--gold); transform: rotate(45deg); flex: none; }
-  h2::after { content: ""; flex: 1; height: 0; border-top: .8pt solid var(--gold-light); }
-  h3 { margin: 0; font: 600 9.6pt/1.25 "Bodoni Moda", serif; color: var(--ink); }
-  .where { color: var(--wine); font-weight: 500; font-size: 8.3pt; }
-  .meta { color: var(--muted); font-size: 7.9pt; }
-  .meta span + span::before { content: " · "; color: var(--gold); }
-  .desc { color: var(--ink-2); margin-top: 1.5pt; }
-
-  .profile { font: italic 400 10pt/1.45 "Bodoni Moda", serif; color: #3d1416; }
-
-  /* timeline rows */
-  .row { display: grid; grid-template-columns: 0.98in 1fr; gap: 10pt; padding: 4pt 0; break-inside: avoid; border-top: .5pt solid var(--rule); }
-  .row:first-of-type { border-top: 0; padding-top: 0; }
-  .when { font: 500 7.4pt/1.6 "Jost"; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); padding-top: 1pt; }
-
-  /* grids */
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7pt 14pt; }
-  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7pt 16pt; }
-  .cell { break-inside: avoid; }
-  .award { position: relative; padding: 5pt 8pt 5.5pt; border: .6pt solid var(--rule); break-inside: avoid; }
-  .award::before, .award::after { content: ""; position: absolute; width: 7pt; height: 7pt; border: .8pt solid var(--gold); }
-  .award::before { top: -1pt; left: -1pt; border-right: 0; border-bottom: 0; }
-  .award::after { bottom: -1pt; right: -1pt; border-left: 0; border-top: 0; }
-  .award .yr { font: italic 600 9pt/1 "Bodoni Moda"; color: var(--gold); margin-bottom: 2pt; display: block; }
-  .award.new { background: #fbf6ec; }
-  .award p { color: var(--ink-2); font-size: 7.9pt; line-height: 1.35; margin-top: 1pt; }
-
-  /* bulleted lists */
-  .bullets li { position: relative; padding-left: 9pt; margin-top: 1.5pt; color: var(--ink-2); }
-  .bullets li::before { content: ""; position: absolute; left: 0; top: .62em; width: 3.2pt; height: 3.2pt; background: var(--gold); transform: rotate(45deg); }
-
-  /* publications */
-  .pubs li { position: relative; padding-left: 12pt; margin-bottom: 3pt; break-inside: avoid; color: var(--ink-2); }
-  .pubs li::before { content: ""; position: absolute; left: 1pt; top: .6em; width: 3.4pt; height: 3.4pt; background: var(--gold); transform: rotate(45deg); }
-  .pubs .t { color: var(--ink); font-weight: 500; }
-  .pubs .j { font-style: italic; }
-  .pubs a.doi { color: var(--wine); }
-  .pubs b { color: var(--ink); font-weight: 600; }
-  .sub { font: 600 8.6pt/1.2 "Jost"; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin: 7pt 0 4pt; display: flex; align-items: center; gap: 6pt; break-after: avoid; }
-  .new-tag { font: 600 6.2pt/1 "Jost"; letter-spacing: .14em; text-transform: uppercase; color: #fff; background: var(--wine); padding: 1.6pt 3pt 1.2pt; margin-left: 3pt; vertical-align: 1pt; }
-
-  .skills { display: grid; grid-template-columns: 1.15in 1fr; gap: 3pt 10pt; }
-  .skills dt { font: 600 8.8pt/1.35 "Bodoni Moda"; color: var(--ink); }
-  .skills dd { margin: 0 0 2pt; color: var(--ink-2); }
-
-  .page-break { break-before: page; }
-  .avoid { break-inside: avoid; }
-</style>
-</head>
+  @font-face { font-family:"DM Sans"; font-weight:400; src:url("../assets/fonts/dmsans-normal-400-latin.woff2") format("woff2"); }
+  @font-face { font-family:"DM Sans"; font-weight:500; src:url("../assets/fonts/dmsans-normal-500-latin.woff2") format("woff2"); }
+  @font-face { font-family:"DM Sans"; font-weight:700; src:url("../assets/fonts/dmsans-normal-700-latin.woff2") format("woff2"); }
+  @font-face { font-family:"DM Sans"; font-style:italic; font-weight:400; src:url("../assets/fonts/dmsans-italic-400-latin.woff2") format("woff2"); }
+  :root{ --ink:#17211a; --ink2:#3a463c; --muted:#6a776c; --accent:#1f6f3a; --rule:#dfe4da; }
+  *{box-sizing:border-box}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{ size:Letter; margin:0.5in 0.6in 0.6in; }
+  body{margin:0;color:var(--ink);font:400 8.3pt/1.34 "DM Sans",sans-serif}
+  a{color:inherit;text-decoration:none} p{margin:0} ul{margin:0;padding:0;list-style:none}
+  i,em{font-style:italic} b,strong{font-weight:700}
+  .mast{display:flex;align-items:flex-end;justify-content:space-between;gap:14pt;border-bottom:2.5pt solid var(--accent);padding-bottom:8pt}
+  .tmark{width:20pt;height:20pt;vertical-align:-3pt;margin-right:7pt}
+  .name{font-weight:700;font-size:25pt;letter-spacing:-.02em;line-height:1;margin:0}
+  .role{margin-top:5pt;font-size:8.6pt;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500}
+  .contacts{text-align:right;font-size:7.7pt;color:var(--ink2);line-height:1.7}
+  .contacts a{display:flex;align-items:center;gap:5pt;justify-content:flex-end}
+  .contacts svg{width:8.5pt;height:8.5pt;color:var(--accent);flex:none}
+  section{margin-top:7.5pt}
+  h2{font-size:8.6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin:0 0 5pt;padding-bottom:2.5pt;border-bottom:.8pt solid var(--rule);font-weight:700}
+  h3{margin:0;font-size:9.4pt;font-weight:700}
+  h3.t3{font-weight:500;font-size:9pt}
+  .where{color:var(--accent);font-weight:500;font-size:8.2pt}
+  .meta{color:var(--muted);font-size:7.8pt} .meta span+span::before{content:" · "}
+  .desc{color:var(--ink2);margin-top:1.5pt}
+  .profile{font-size:9pt;line-height:1.46;color:#223}
+  .profile p+p{margin-top:4pt}
+  .row{display:grid;grid-template-columns:0.95in 1fr;gap:9pt;padding:3pt 0;break-inside:avoid;border-top:.5pt solid var(--rule)}
+  .row:first-of-type{border-top:0;padding-top:1pt}
+  .when{font-size:7.6pt;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:6pt 14pt}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:7pt 14pt}
+  .cell{break-inside:avoid}
+  .award{position:relative;border:.7pt solid var(--rule);border-left:2.5pt solid var(--accent);padding:4.5pt 8pt;break-inside:avoid}
+  .award.new{background:#f3f8ee}
+  .award .yr{font-weight:700;color:var(--accent);font-size:8.4pt}
+  .award p{color:var(--ink2);font-size:7.9pt;line-height:1.36;margin-top:1.5pt}
+  .bullets li{position:relative;padding-left:9pt;margin-top:1pt;color:var(--ink2)}
+  .bullets li::before{content:"";position:absolute;left:0;top:.5em;width:3pt;height:3pt;background:var(--accent)}
+  .pubs li{position:relative;padding-left:11pt;margin-bottom:3pt;break-inside:avoid;color:var(--ink2)}
+  .pubs li::before{content:"";position:absolute;left:1pt;top:.5em;width:3.4pt;height:3.4pt;background:var(--accent)}
+  .pubs b{color:var(--ink)} .pubs i{font-style:italic}
+  .pubs .doi{color:var(--accent)}
+  .new-tag{font-size:6pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--accent);padding:1pt 3pt;margin-left:3pt;border-radius:2pt}
+  .skills{display:grid;grid-template-columns:1.1in 1fr;gap:3pt 10pt}
+  .skills dt{font-weight:700;font-size:8.6pt} .skills dd{margin:0;color:var(--ink2)}
+  .sub{font-weight:700;font-size:8.4pt;margin:6pt 0 3pt;color:var(--ink)}
+</style></head>
 <body>
-
-<header class="masthead">
-  <svg class="burst" viewBox="-100 -100 200 200" aria-hidden="true"><defs><radialGradient id="fade"><stop offset=".15" stop-color="#b38d3f"/><stop offset="1" stop-color="#b38d3f" stop-opacity="0"/></radialGradient></defs><g fill="url(#fade)"><path d="M-0.2 -14.0L-3.6 -99.9L3.6 -99.9L0.2 -14.0ZM1.7 -13.9L8.2 -77.6L12.2 -77.0L1.9 -13.9ZM3.5 -13.6L22.4 -97.5L29.3 -95.6L3.8 -13.5ZM5.3 -13.0L28.0 -72.8L31.7 -71.3L5.5 -12.9ZM6.9 -12.2L46.9 -88.3L53.1 -84.7L7.1 -12.0ZM8.4 -11.2L45.8 -63.1L49.1 -60.6L8.6 -11.0ZM9.8 -10.0L68.1 -73.2L73.2 -68.1L10.0 -9.8ZM11.0 -8.6L60.6 -49.1L63.1 -45.8L11.2 -8.4ZM12.0 -7.1L84.7 -53.1L88.3 -46.9L12.2 -6.9ZM12.9 -5.5L71.3 -31.7L72.8 -28.0L13.0 -5.3ZM13.5 -3.8L95.6 -29.3L97.5 -22.4L13.6 -3.5ZM13.9 -1.9L77.0 -12.2L77.6 -8.2L13.9 -1.7ZM14.0 -0.2L99.9 -3.6L99.9 3.6L14.0 0.2ZM13.9 1.7L77.6 8.2L77.0 12.2L13.9 1.9ZM13.6 3.5L97.5 22.4L95.6 29.3L13.5 3.8ZM13.0 5.3L72.8 28.0L71.3 31.7L12.9 5.5ZM12.2 6.9L88.3 46.9L84.7 53.1L12.0 7.1ZM11.2 8.4L63.1 45.8L60.6 49.1L11.0 8.6ZM10.0 9.8L73.2 68.1L68.1 73.2L9.8 10.0ZM8.6 11.0L49.1 60.6L45.8 63.1L8.4 11.2ZM7.1 12.0L53.1 84.7L46.9 88.3L6.9 12.2ZM5.5 12.9L31.7 71.3L28.0 72.8L5.3 13.0ZM3.8 13.5L29.3 95.6L22.4 97.5L3.5 13.6ZM1.9 13.9L12.2 77.0L8.2 77.6L1.7 13.9ZM0.2 14.0L3.6 99.9L-3.6 99.9L-0.2 14.0ZM-1.7 13.9L-8.2 77.6L-12.2 77.0L-1.9 13.9ZM-3.5 13.6L-22.4 97.5L-29.3 95.6L-3.8 13.5ZM-5.3 13.0L-28.0 72.8L-31.7 71.3L-5.5 12.9ZM-6.9 12.2L-46.9 88.3L-53.1 84.7L-7.1 12.0ZM-8.4 11.2L-45.8 63.1L-49.1 60.6L-8.6 11.0ZM-9.8 10.0L-68.1 73.2L-73.2 68.1L-10.0 9.8ZM-11.0 8.6L-60.6 49.1L-63.1 45.8L-11.2 8.4ZM-12.0 7.1L-84.7 53.1L-88.3 46.9L-12.2 6.9ZM-12.9 5.5L-71.3 31.7L-72.8 28.0L-13.0 5.3ZM-13.5 3.8L-95.6 29.3L-97.5 22.4L-13.6 3.5ZM-13.9 1.9L-77.0 12.2L-77.6 8.2L-13.9 1.7ZM-14.0 0.2L-99.9 3.6L-99.9 -3.6L-14.0 -0.2ZM-13.9 -1.7L-77.6 -8.2L-77.0 -12.2L-13.9 -1.9ZM-13.6 -3.5L-97.5 -22.4L-95.6 -29.3L-13.5 -3.8ZM-13.0 -5.3L-72.8 -28.0L-71.3 -31.7L-12.9 -5.5ZM-12.2 -6.9L-88.3 -46.9L-84.7 -53.1L-12.0 -7.1ZM-11.2 -8.4L-63.1 -45.8L-60.6 -49.1L-11.0 -8.6ZM-10.0 -9.8L-73.2 -68.1L-68.1 -73.2L-9.8 -10.0ZM-8.6 -11.0L-49.1 -60.6L-45.8 -63.1L-8.4 -11.2ZM-7.1 -12.0L-53.1 -84.7L-46.9 -88.3L-6.9 -12.2ZM-5.5 -12.9L-31.7 -71.3L-28.0 -72.8L-5.3 -13.0ZM-3.8 -13.5L-29.3 -95.6L-22.4 -97.5L-3.5 -13.6ZM-1.9 -13.9L-12.2 -77.0L-8.2 -77.6L-1.7 -13.9Z"/></g></svg>
-  <h1 class="name">Adam Rochussen<span class="phd">PhD</span></h1>
-  <p class="role">Postdoctoral Fellow · Salk Institute for Biological Studies</p>
-  <div class="contacts">
-    <a href="mailto:arochussen@salk.edu"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 5.5h18v13H3z"/><path fill="none" stroke="currentColor" stroke-width="2" d="m3.5 6 8.5 7 8.5-7"/></svg>arochussen@salk.edu</a>
-    <a href="https://rochussen.xyz"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>rochussen.xyz</a>
-    <a href="https://adam.rochussen.xyz"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>adam.rochussen.xyz</a>
-    <a href="https://x.com/AdamRochussen"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>@AdamRochussen</a>
-    <a href="https://orcid.org/0000-0001-9439-1206"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>0000-0001-9439-1206</a>
-  </div>
-  <div class="deco-rule" aria-hidden="true"><i></i></div>
-</header>
-
-<section>
-  <h2>Profile</h2>
-  <p class="profile">I am interested in the interplay between human physiology and cellular immunology: how are our immune cells affected by dynamic changes in our physiology? Some of those changes we choose, through diet, exercise, sleep, social interaction and stress. Others are temporal, from rhythmic fluctuations across the day–night cycle to the changes that come with age. My current focus is on biological rhythms and T cell immunity against cancer, and on engineering better adoptive T cell therapies. I am equally committed to meta-science and research rigour, and am exploring company formation as a solo biotech founder.</p>
-</section>
-
-<section>
-  <h2>Research positions</h2>
-  <div class="row"><p class="when">Aug 2026 – present</p><div><h3>Postdoctoral Fellow</h3><p class="where">Kosuri Lab, Integrative Biology Laboratory · Salk Institute for Biological Studies, La Jolla, CA</p></div></div>
-  <div class="row"><p class="when">Jan 2025 – Jul 2026</p><div><h3>Postdoctoral Fellow</h3><p class="where">Salk Institute for Biological Studies, La Jolla, CA</p><p class="desc">Biological rhythms, meal timing and T cell immunity against cancer; rhythm-engineering of T cells for adoptive cell therapy.</p></div></div>
-  <div class="row"><p class="when">2020 – 2025</p><div><h3>PhD researcher</h3><p class="where">Griffiths Lab, Cambridge Institute for Medical Research · University of Cambridge, UK</p><p class="desc">Cell biology of cytotoxic T lymphocytes: CDC42 isoforms, transcriptional adaptation, and actin conformation and force.</p></div></div>
-  <div class="row"><p class="when">2019 – 2020</p><div><h3>MRes rotation student</h3><p class="where">Wellcome Trust II&amp;I programme · University of Cambridge, UK</p><p class="desc">XNAzymes against cancer-associated microRNAs; <i>Plasmodium vivax</i> blood-stage vaccine candidates.</p></div></div>
-</section>
-
-<section>
-  <h2>Education</h2>
-  <div class="grid-3">
-    <div class="cell"><h3>PhD in Cell Biology &amp; Immunology</h3><p class="where">University of Cambridge</p><p class="meta"><span>2025</span><span>CIMR</span></p></div>
-    <div class="cell"><h3>MA in Natural Sciences</h3><p class="where">University of Cambridge</p><p class="meta"><span>2021</span><span>Churchill College</span></p></div>
-    <div class="cell"><h3>MRes in Medical Science</h3><p class="where">University of Cambridge</p><p class="meta"><span>2020</span><span>Dept. of Medicine</span></p></div>
-    <div class="cell"><h3>MSci in Biochemistry</h3><p class="where">University of Cambridge</p><p class="meta"><span>2019</span><span>Dept. of Biochemistry</span></p></div>
-    <div class="cell"><h3>BA in Natural Sciences</h3><p class="where">University of Cambridge</p><p class="meta"><span>2018</span><span>Churchill College</span></p></div>
-  </div>
-</section>
-
-<section>
-  <h2>Honours, awards &amp; fellowships</h2>
-  <div class="grid-2">
-    <div class="award new"><span class="yr">2026</span><h3>Winner, TPTC Postdoc Pitch</h3><p>Torrey Pines Training Consortium competition in which postdoctoral finalists, chosen through internal competitions at Salk, Sanford Burnham Prebys, Scripps Research and UC San Diego, present their research in three minutes with a single slide.</p></div>
-    <div class="award new"><span class="yr">2026</span><h3>Roots of Progress Fellow</h3><p>One of 41 fellows selected from nearly 400 applicants for the Roots of Progress Institute's 2026 Blog-Building Intensive, a fellowship for writers on progress in science, technology and society.</p></div>
-    <div class="award"><span class="yr">2025</span><h3>CSAR PhD Student Award</h3><p>University-wide competition “to recognise outstanding research with real world application and to assist students to pursue their research or careers”, awarded by the Cambridge Society for the Application of Research.</p></div>
-    <div class="award"><span class="yr">2019</span><h3>Wellcome Trust PhD Studentship</h3><p>One of five successful candidates, from a pool of over 300, accepted onto the Wellcome Trust MRes + PhD programme in Infection, Immunity &amp; Inflammation (II&amp;I) at the University of Cambridge.</p></div>
-    <div class="award"><span class="yr">2018</span><h3>First-class undergraduate research project</h3><p>Graded first class for my undergraduate research project on the effect of ligand size on endocytosis in the protozoan parasite <i>Trypanosoma brucei</i>.</p></div>
-    <div class="award"><span class="yr">2015</span><h3>Elite A-level results</h3><p>Achieved 5 A* grades at A level, the highest ever achieved at my school, placing me in the top ~30 of over 250,000 students nationwide.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>Patents &amp; translation</h2>
-  <div class="row"><p class="when">Pending</p><div><h3>Provisional patent application relating to adoptive T cell therapy</h3><p class="where">Inventor</p><p class="desc">Exploring company formation as a solo biotech founder.</p></div></div>
-</section>
-
-<section>
-  <h2>Publications</h2>
-  <p class="sub">Journal articles</p>
-  <ul class="pubs">
-    <li>C. M. Wright, <b>A. M. Rochussen</b>, and S. G. Stagg, <span class="t">“Flawed methods and overstated conclusions regarding ‘Brain Sex’: a peer review of Kurth et al. (2022),”</span> <span class="j">Theory and Society</span>, vol. 55 (5), 84, 2026. <a class="doi" href="https://doi.org/10.1007/s11186-026-09747-2">doi:10.1007/s11186-026-09747-2</a><span class="new-tag">New</span></li>
-    <li><b>A. M. Rochussen</b>, A. O. Kebabci, A. K. Winkel, K. Franze, D. A. Fletcher, G. M. Griffiths, and A. H. Lippert, <span class="t">“Actin conformation dynamics precede force generation in cytotoxic T lymphocytes,”</span> <span class="j">Communications Biology</span>, vol. 9, 1256, 2026. <a class="doi" href="https://doi.org/10.1038/s42003-026-11011-3">doi:10.1038/s42003-026-11011-3</a><span class="new-tag">New</span></li>
-    <li>Y. Asano, C. Y. Ma, M. M. Limbäck-Stokin, <b>A. M. Rochussen</b>, J. C. Stinchcombe, and G. M. Griffiths, <span class="t">“Nuclear polarization to the immune synapse facilitates an early transcriptional burst,”</span> <span class="j">Science Immunology</span>, vol. 10 (111), 2025. <a class="doi" href="https://doi.org/10.1126/sciimmunol.adt5909">doi:10.1126/sciimmunol.adt5909</a></li>
-    <li><b>A. M. Rochussen</b>, C. Y. Ma, and G. M. Griffiths, <span class="t">“Transcriptional adaptation after deletion of <i>Cdc42</i> in primary T cells,”</span> <span class="j">Journal of Cell Science</span>, vol. 138 (15), 2025. <a class="doi" href="https://doi.org/10.1242/jcs.263826">doi:10.1242/jcs.263826</a></li>
-    <li>E. Blanco, …, <b>A. M. Rochussen</b>, …, and A. Y. Kreins, <span class="t">“Dominant negative variants in <i>ITPR3</i> impair T cell Ca<sup>2+</sup> dynamics causing combined immunodeficiency,”</span> <span class="j">Journal of Experimental Medicine</span>, vol. 222 (1), 2025. <a class="doi" href="https://doi.org/10.1084/jem.20220979">doi:10.1084/jem.20220979</a></li>
-    <li>T. Douanne, K. Strege, M. Del Castillo Velasco-Herrera, <b>A. M. Rochussen</b>, D. J. Adams, and G. M. Griffiths, <span class="t">“NFIL3 contributes to cytotoxic T lymphocyte-mediated killing,”</span> <span class="j">Open Biology</span>, vol. 14 (2), 2024. <a class="doi" href="https://doi.org/10.1098/rsob.230456">doi:10.1098/rsob.230456</a></li>
-    <li><b>A. M. Rochussen</b>, A. H. Lippert, and G. M. Griffiths, <span class="t">“Imaging the T-cell receptor: new approaches, new insights,”</span> <span class="j">Current Opinion in Immunology</span>, vol. 82, 2023. <a class="doi" href="https://doi.org/10.1016/j.coi.2023.102309">doi:10.1016/j.coi.2023.102309</a></li>
-    <li>M. J. Donde, <b>A. M. Rochussen</b>, S. Kapoor, and A. I. Taylor, <span class="t">“Targeting non-coding RNA family members with artificial endonuclease XNAzymes,”</span> <span class="j">Communications Biology</span>, vol. 5, 2022. <a class="doi" href="https://doi.org/10.1038/s42003-022-03987-5">doi:10.1038/s42003-022-03987-5</a></li>
-  </ul>
-
-  <p class="sub">Other writing</p>
-  <ul class="pubs">
-    <li><b>A. M. Rochussen</b>, <span class="t">“How much protein should you eat?”</span> <span class="j">Qeios</span> (preprint), 2025. <a class="doi" href="https://doi.org/10.32388/substack.o72c0z">doi:10.32388/substack.o72c0z</a></li>
-    <li><b>A. M. Rochussen</b>, <span class="j">Fruit of Eden</span>, essays on meta-science, academic publishing and scientific culture, 2025 – present. <a class="doi" href="https://adam.rochussen.xyz">adam.rochussen.xyz</a></li>
-  </ul>
-
-  <p class="sub">Theses</p>
-  <ul class="pubs">
-    <li><b>A. M. Rochussen</b>, <i>Cytotoxic T lymphocyte biology under the microscope</i>, PhD thesis, University of Cambridge, 2025. <a class="doi" href="https://www.dropbox.com/scl/fi/42lgnmukt3j61yyjag56s/PhD-Thesis-Adam-Rochussen.pdf?rlkey=6b7yoryyeopq3jkgrn523v9rl&amp;st=oqsptcq1&amp;dl=0">PDF</a></li>
-    <li><b>A. M. Rochussen</b>, <i>Developing XNAzymes to cleave cancer-associated microRNAs</i>, MRes Rotation II, 2020. <a class="doi" href="https://www.dropbox.com/s/ylczp6odea7mmth/WT%20II%26I%20MRes%20Rotation%20II%20Report%20-%20Adam%20Rochussen.pdf?dl=0">PDF</a></li>
-    <li><b>A. M. Rochussen</b>, <i>Screening Plasmodium vivax blood-stage vaccine candidates</i>, MRes Rotation I, 2020. <a class="doi" href="https://www.dropbox.com/s/u9higmmfyx5n8qp/WT%20II%26I%20MRes%20Rotation%20I%20Report%20-%20Adam%20Rochussen.pdf?dl=0">PDF</a></li>
-    <li><b>A. M. Rochussen</b>, <i>Investigation into the regulation of a novel antifungal compound in the plant pathogen Dickeya solani</i>, Master of Natural Sciences, 2019. <a class="doi" href="https://www.dropbox.com/s/z3zy149x69xo747/MSci%20Project%20Dissertation%20-%20Adam%20Rochussen.pdf?dl=0">PDF</a></li>
-    <li><b>A. M. Rochussen</b>, <i>Investigation into the effect of size of ligand on uptake of surface proteins in bloodstream form Trypanosoma brucei</i>, Bachelor of Arts, 2018. <a class="doi" href="https://www.dropbox.com/s/052cd44j6pu3a16/BA%20Project%20Dissertation%20-%20Adam%20Rochussen.pdf?dl=0">PDF</a></li>
-  </ul>
-</section>
-
-<section>
-  <h2>Conference presentations</h2>
-  <ul class="pubs">
-    <li><b>A. M. Rochussen</b>, “Talk: <span class="t">Science is largely fake</span>,” in <span class="j">The Avalon Exposition</span>, Avalon Institute, Berkeley, CA, USA, 2026.<span class="new-tag">New</span></li>
-    <li><b>A. M. Rochussen</b>, “Pitch: <span class="t">Postdoc Pitch competition</span> (winner),” in <span class="j">Torrey Pines Training Consortium Postdoc Pitch</span>, La Jolla, CA, USA, 2026.</li>
-    <li><b>A. M. Rochussen</b>, “Poster: <span class="t">Rhythm-engineering enhances T cell differentiation for adoptive cell therapy</span>,” in <span class="j">ImmunoMemphis: Tuning T cells to give cancer the blues</span>, Memphis, TN, USA, 2026.</li>
-    <li><b>A. M. Rochussen</b>, “Oral presentation: <span class="t">CDC42 “brain” isoform controls secretory lysosome delivery to the cytotoxic immune synapse</span>,” in <span class="j">LMB–Karolinska Student Symposium</span>, Cambridge, UK, 2024.</li>
-    <li><b>A. M. Rochussen</b>, “Oral presentation: <span class="t">CDC42 and killer T cell function</span>,” in <span class="j">CRUK Fundamental Biology of Cancer: Imaging Immunity Workshop</span>, Cambridge, UK, 2024.</li>
-    <li><b>A. M. Rochussen</b>, “Poster: <span class="t">These cells are actin' weirdly: the roles and regulation of CDC42 in killer T cell function</span>,” in <span class="j">FASEB: Signal Transduction in the Immune System</span>, CA, USA, 2023.</li>
-    <li><b>A. M. Rochussen</b>, “Poster: <span class="t">These cells are actin' weirdly: how CDC42 regulates CTL function</span>,” in <span class="j">Cold Spring Harbor: Gene Expression &amp; Signaling in the Immune System</span>, NY, USA, 2022.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Teaching &amp; mentoring</h2>
-  <div class="grid-3">
-    <div class="cell"><h3>Summer student mentorship</h3><p class="where">Bernardo Petochi</p><p class="meta"><span>Summer 2024</span><span>CIMR, Cambridge</span></p><ul class="bullets"><li>Planned and supervised an 8-week lab project for an undergraduate veterinary medicine student from the University of Milan.</li><li>Bernardo is now applying for PhD programmes in the USA.</li></ul></div>
-    <div class="cell"><h3>Summer student mentorship</h3><p class="where">Beverly Yuan</p><p class="meta"><span>Summer 2023</span><span>CIMR, Cambridge</span></p><ul class="bullets"><li>Planned and supervised a 10-week lab project for an undergraduate biochemistry student from Imperial College London.</li><li>Beverly is now completing her PhD at the University of Cambridge.</li></ul></div>
-    <div class="cell"><h3>Interdisciplinary journal club</h3><p class="where">“Friday Breakfast Buffet”</p><p class="meta"><span>2023 – 2025</span><span>CIMR, Cambridge</span></p><ul class="bullets"><li>Co-founded and ran a journal club for students and postdocs at CIMR.</li><li>Emphasis on papers unrelated to one's own work, to promote interdisciplinary thinking.</li></ul></div>
-    <div class="cell"><h3>ISAC outreach programme</h3><p class="where">Inspiring Scientists at CIMR</p><p class="meta"><span>2022 &amp; 2023</span><span>CIMR, Cambridge</span></p><ul class="bullets"><li>Outreach exposing local school students from underprivileged backgrounds to research.</li><li>Co-designed a week of experiments for 16-year-olds and helped them present their results.</li></ul></div>
-    <div class="cell"><h3>BioNatSci supervisor</h3><p class="where">University of Cambridge</p><p class="meta"><span>2023</span><span>King's College</span></p><ul class="bullets"><li>Taught, set and marked work for small groups of first-year undergraduates in the Biology of Cells module.</li></ul></div>
-    <div class="cell"><h3>Admissions interview tutor</h3><p class="where">Athena Tuition</p><p class="meta"><span>2023 – 2025</span><span>Online</span></p><ul class="bullets"><li>Prepared clients for the Cambridge undergraduate admissions interview for Natural Sciences.</li></ul></div>
-    <div class="cell"><h3>Summer programme counsellor</h3><p class="where">Bucksmore Education</p><p class="meta"><span>2019 &amp; 2020</span><span>Cambridge</span></p><ul class="bullets"><li>Organised and ran an 8-week summer school for 15 to 18-year-olds; one of five staff responsible for sixty students.</li></ul></div>
-  </div>
-</section>
-
-<section class="avoid">
-  <h2>Technical expertise</h2>
-  <dl class="skills">
-    <dt>Cell biology</dt><dd>Primary mouse &amp; human T cell culture, <i>in vitro</i> T cell functional assays, CAR T cell production, flow cytometry, lentiviral production &amp; transduction</dd>
-    <dt>Molecular biology</dt><dd>CRISPR/Cas9 gene editing, knock-in &amp; deletion, molecular cloning, qPCR, ddPCR, immunoblotting, co-immunoprecipitation, protein expression &amp; purification, RNA extraction, bulk &amp; single-cell RNA library preparation</dd>
-    <dt>Microbiology</dt><dd>Bacterial (<i>E. coli</i>, <i>D. solani</i>), fungal (<i>S. cerevisiae</i>), nematode (<i>C. elegans</i>) and parasite (<i>T. brucei</i>, <i>P. knowlesi</i>) culture, bacteriophage culture from field samples, phage transduction, random transposon mutagenesis screening</dd>
-    <dt>Microscopy &amp; imaging</dt><dd>Live microscopy, immunofluorescence, super-resolution microscopy, traction force microscopy, scanning electron microscopy of thin sections, atomic force microscopy. Spinning disc &amp; Airyscan confocal, SIM &amp; lattice SIM², oblique plane light sheet, lattice light sheet, epifluorescence; LumiCycle, IncuCyte &amp; CellCyte imaging systems</dd>
-    <dt>Data analysis</dt><dd>Bulk transcriptomic and proteomic analysis including rhythmicity analysis (R, Python, Excel), custom image analysis (ImageJ, MATLAB), conventional image analysis (ImageJ, Imaris, Zen), flow cytometric analysis (FlowJo), statistics (R, Python, Prism, Excel)</dd>
-    <dt>Animal models</dt><dd>Mouse breeding, colony management, tissue harvesting (spleen, bone marrow, cardiac puncture), tumour engraftment and monitoring, adoptive T cell transfer; subcutaneous, intraperitoneal &amp; retro-orbital injections</dd>
-  </dl>
-</section>
-
-<section>
-  <h2>Beyond the lab</h2>
-  <div class="grid-2">
-    <div class="cell">
-      <h3>Athletic</h3>
-      <ul class="bullets">
-        <li>California International Marathon: 3:11:37 (2025)</li>
-        <li>La Quinta Ironman 70.3: 5:18:54 (2024)</li>
-        <li>London Marathon: 4:26:18 (2022), raising over £10,000 for Whizz-Kidz</li>
-        <li>“Half Blue” for representing Cambridge in powerlifting (2017–18) &amp; skiing (2016–19)</li>
-        <li>16th in weight class, 2018 IPF University World Powerlifting Championships</li>
-        <li>2nd at the Oxford vs Cambridge Varsity ski races, the oldest alpine ski race in the world (2018)</li>
-        <li>Represented the University in rugby (2019–21) and track &amp; field (2016–17)</li>
-        <li>CYQ Level 2 Gym Instructor &amp; Level 3 Personal Trainer (2015)</li>
-      </ul>
+  <header class="mast">
+    <div>
+      <h1 class="name"><svg class="tmark" viewBox="0 0 11 11" shape-rendering="crispEdges" aria-hidden="true"><rect x="2" y="0" width="7" height="1" fill="#1f6f3a"/><rect x="1" y="1" width="9" height="1" fill="#1f6f3a"/><rect x="0" y="2" width="11" height="7" fill="#2a8f52"/><rect x="1" y="9" width="9" height="1" fill="#1f6f3a"/><rect x="2" y="10" width="7" height="1" fill="#1f6f3a"/><rect x="3" y="3" width="2" height="2" fill="#fff"/><rect x="6" y="3" width="2" height="2" fill="#fff"/><rect x="4" y="6" width="3" height="2" fill="#0e2714"/></svg>Adam Rochussen</h1>
+      <p class="role">Postdoctoral Fellow · Salk Institute for Biological Studies</p>
     </div>
-    <div class="cell">
-      <h3>Musical</h3>
-      <ul class="bullets">
-        <li>Clarinet: Diploma of the Associated Board of the Royal Schools of Music (DipABRSM) in performance (2014)</li>
-        <li>Piano: ABRSM Performance Grade 5 (2010)</li>
-        <li>Voice: ABRSM Performance Grade 5 (2012)</li>
-        <li>Surrey County Youth Wind Orchestra, 2nd clarinet (2009)</li>
-        <li>Formed a barbershop quartet that performed professionally and gave workshops to schoolchildren (2015)</li>
-      </ul>
+    <div class="contacts">
+      <a href="mailto:arochussen@salk.edu"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 5.5h18v13H3z"/><path fill="none" stroke="currentColor" stroke-width="2" d="m3.5 6 8.5 7 8.5-7"/></svg>arochussen@salk.edu</a>
+      <a href="https://rochussen.xyz"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>rochussen.xyz</a>
+      <a href="https://adam.rochussen.xyz"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 8.2H1.5V5.4h21v2.8zM1.5 10.8V24L12 18.1 22.5 24V10.8H1.5zM22.5 0H1.5v2.8h21V0z"/></svg>Fruit of Eden</a>
+      <a href="https://x.com/AdamRochussen"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 1.2h3.7l-8 9.2L24 22.8h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L0 1.2h7.6l5.2 6.9ZM17.6 20.6h2L6.5 3.2H4.3Z"/></svg>@AdamRochussen</a>
+      <a href="https://orcid.org/0000-0001-9439-1206"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.4 4.4c.5 0 .9.4.9.9s-.4 1-.9 1a1 1 0 0 1-.9-1c0-.5.4-.9.9-.9zm-.7 3h1.4v10H6.7V7.4zm3.5 0h3.9c3.7 0 5.3 2.7 5.3 5s-2 5-5.3 5h-3.9V7.4zm1.4 1.3v7.4h2.3c3.3 0 4-2.5 4-3.7 0-2-1.3-3.7-4.1-3.7h-2.2z"/></svg>0000-0001-9439-1206</a>
     </div>
-  </div>
-</section>
+  </header>
 
-</body>
-</html>
+  <section><h2>Profile</h2><div class="profile"><p>I'm a T cell biologist interested in where human physiology meets cellular immunology: how do dynamic changes in the body change the way our immune cells work? Some of those changes we choose — diet, exercise, sleep, stress. Others we don't — the daily clock, and the slow arc of ageing. My current focus is biological rhythms and T cell immunity against cancer, and engineering better adoptive T cell therapies out of it.</p><p>I care just as much about meta-science and research rigour, which I write about as a 2026 Roots of Progress Fellow, and I'm working towards a company as a solo biotech founder.</p></div></section>
+  <section><h2>Research positions</h2><div class="row"><p class="when">Aug 2026 – present</p><div><h3>Postdoctoral Fellow</h3><p class="where">Kosuri Lab, Integrative Biology Laboratory · Salk Institute, La Jolla, CA</p></div></div><div class="row"><p class="when">Jan 2025 – Jul 2026</p><div><h3>Postdoctoral Fellow</h3><p class="where">Salk Institute, La Jolla, CA</p><p class="desc">Biological rhythms, meal timing and T cell immunity against cancer; rhythm-engineering of T cells for adoptive cell therapy.</p></div></div><div class="row"><p class="when">2020 – 2025</p><div><h3>PhD researcher</h3><p class="where">Griffiths Lab, Cambridge Institute for Medical Research · University of Cambridge, UK</p><p class="desc">Cell biology of cytotoxic T lymphocytes: CDC42 isoforms, transcriptional adaptation, and actin conformation and force.</p></div></div><div class="row"><p class="when">2019 – 2020</p><div><h3>MRes rotation student</h3><p class="where">Wellcome Trust II&amp;I programme · University of Cambridge, UK</p><p class="desc">XNAzymes against cancer-associated microRNAs; Plasmodium vivax blood-stage vaccine candidates.</p></div></div></section>
+  <section><h2>Education</h2><div class="grid3"><div class="cell"><h3>PhD in Cell Biology &amp; Immunology</h3><p class="where">University of Cambridge</p><p class="meta"><span>2025</span><span>CIMR</span></p></div><div class="cell"><h3>MA in Natural Sciences</h3><p class="where">University of Cambridge</p><p class="meta"><span>2021</span><span>Churchill College</span></p></div><div class="cell"><h3>MRes in Medical Science</h3><p class="where">University of Cambridge</p><p class="meta"><span>2020</span><span>Dept. of Medicine</span></p></div><div class="cell"><h3>MSci in Biochemistry</h3><p class="where">University of Cambridge</p><p class="meta"><span>2019</span><span>Dept. of Biochemistry</span></p></div><div class="cell"><h3>BA in Natural Sciences</h3><p class="where">University of Cambridge</p><p class="meta"><span>2018</span><span>Churchill College</span></p></div></div></section>
+  <section><h2>Honours, awards &amp; fellowships</h2><div class="grid2"><div class="award new"><span class="yr">2026</span><h3>Winner, TPTC Postdoc Pitch</h3><p>Torrey Pines Training Consortium competition in which postdoctoral finalists — picked through internal rounds at Salk, Sanford Burnham Prebys, Scripps and UC San Diego — present their research in three minutes and one slide.</p></div><div class="award new"><span class="yr">2026</span><h3>Roots of Progress Fellow</h3><p>One of 41 fellows chosen from nearly 400 applicants for the Roots of Progress Institute's 2026 Blog-Building Intensive, a fellowship for writers on progress in science, technology and society.</p></div><div class="award"><span class="yr">2025</span><h3>CSAR PhD Student Award</h3><p>University-wide competition “to recognise outstanding research with real world application and to assist students to pursue their research or careers,” awarded by the Cambridge Society for the Application of Research.</p></div><div class="award"><span class="yr">2019</span><h3>Wellcome Trust PhD Studentship</h3><p>One of five candidates, from a pool of over 300, accepted onto the Wellcome Trust MRes + PhD programme in Infection, Immunity &amp; Inflammation (II&amp;I) at the University of Cambridge.</p></div><div class="award"><span class="yr">2018</span><h3>First-class undergraduate research project</h3><p>Graded first class for my undergraduate project on the effect of ligand size on endocytosis in the parasite Trypanosoma brucei.</p></div><div class="award"><span class="yr">2015</span><h3>Elite A-level results</h3><p>Five A* grades at A level, the highest ever achieved at my school, placing me in the top ~30 of over 250,000 students nationwide.</p></div></div></section>
+  <section><h2>Patents &amp; translation</h2><div class="row"><p class="when">Pending</p><div><h3>Provisional patent application relating to adoptive T cell therapy</h3><p class="where">Inventor</p><p class="desc">Working towards company formation as a solo biotech founder.</p></div></div></section>
+  <section><h2>Publications</h2><ul class="pubs"><li>Wright CM, <b>Rochussen AM</b>, Stagg SG. Flawed methods and overstated conclusions regarding ‘Brain Sex’: a peer review of Kurth et al. (2022). <i>Theory and Society</i> 55(5), 84. <a class="doi" href="https://doi.org/10.1007/s11186-026-09747-2">doi:10.1007/s11186-026-09747-2</a><span class="new-tag">New</span></li><li><b>Rochussen AM</b>, Kebabci AO, Winkel AK, Franze K, Fletcher DA, Griffiths GM, Lippert AH. Actin conformation dynamics precede force generation in cytotoxic T lymphocytes. <i>Communications Biology</i> 9, 1256. <a class="doi" href="https://doi.org/10.1038/s42003-026-11011-3">doi:10.1038/s42003-026-11011-3</a><span class="new-tag">New</span></li><li>Asano Y, Ma CY, Limbäck-Stokin MM, <b>Rochussen AM</b>, Stinchcombe JC, Griffiths GM. Nuclear polarization to the immune synapse facilitates an early transcriptional burst. <i>Science Immunology</i> 10(111), eadt5909. <a class="doi" href="https://doi.org/10.1126/sciimmunol.adt5909">doi:10.1126/sciimmunol.adt5909</a></li><li><b>Rochussen AM</b>, Ma CY, Griffiths GM. Transcriptional adaptation after deletion of <i>Cdc42</i> in primary T cells. <i>Journal of Cell Science</i> 138(15), jcs263826. <a class="doi" href="https://doi.org/10.1242/jcs.263826">doi:10.1242/jcs.263826</a></li><li>Blanco E, … <b>Rochussen AM</b>, … Kreins AY. Dominant negative variants in <i>ITPR3</i> impair T cell Ca²⁺ dynamics causing combined immunodeficiency. <i>Journal of Experimental Medicine</i> 222(1), e20220979. <a class="doi" href="https://doi.org/10.1084/jem.20220979">doi:10.1084/jem.20220979</a></li><li>Douanne T, Strege K, Del Castillo Velasco-Herrera M, <b>Rochussen AM</b>, Adams DJ, Griffiths GM. NFIL3 contributes to cytotoxic T lymphocyte-mediated killing. <i>Open Biology</i> 14(2), 230456. <a class="doi" href="https://doi.org/10.1098/rsob.230456">doi:10.1098/rsob.230456</a></li><li><b>Rochussen AM</b>, Lippert AH, Griffiths GM. Imaging the T-cell receptor: new approaches, new insights. <i>Current Opinion in Immunology</i> 82, 102309. <a class="doi" href="https://doi.org/10.1016/j.coi.2023.102309">doi:10.1016/j.coi.2023.102309</a></li><li>Donde MJ, <b>Rochussen AM</b>, Kapoor S, Taylor AI. Targeting non-coding RNA family members with artificial endonuclease XNAzymes. <i>Communications Biology</i> 5, 1010. <a class="doi" href="https://doi.org/10.1038/s42003-022-03987-5">doi:10.1038/s42003-022-03987-5</a></li></ul></section>
+  <section><h2>Conference presentations</h2><div class="row"><p class="when">2026</p><div><h3 class="t3">“Science is largely fake”</h3><p class="where">Talk · The Avalon Exposition · Berkeley, CA, USA</p></div></div><div class="row"><p class="when">2026</p><div><h3 class="t3">Postdoc Pitch competition (winner)</h3><p class="where">Pitch · Torrey Pines Training Consortium · La Jolla, CA, USA</p></div></div><div class="row"><p class="when">2026</p><div><h3 class="t3">Rhythm-engineering enhances T cell differentiation for adoptive cell therapy</h3><p class="where">Poster · ImmunoMemphis · Memphis, TN, USA</p></div></div><div class="row"><p class="when">2024</p><div><h3 class="t3">CDC42 “brain” isoform controls secretory lysosome delivery to the cytotoxic immune synapse</h3><p class="where">Talk · LMB–Karolinska Student Symposium · Cambridge, UK</p></div></div><div class="row"><p class="when">2024</p><div><h3 class="t3">CDC42 and killer T cell function</h3><p class="where">Talk · CRUK Imaging Immunity Workshop · Cambridge, UK</p></div></div><div class="row"><p class="when">2023</p><div><h3 class="t3">These cells are actin’ weirdly: the roles and regulation of CDC42 in killer T cell function</h3><p class="where">Poster · FASEB: Signal Transduction in the Immune System · CA, USA</p></div></div><div class="row"><p class="when">2022</p><div><h3 class="t3">These cells are actin’ weirdly: how CDC42 regulates CTL function</h3><p class="where">Poster · Cold Spring Harbor: Gene Expression &amp; Signaling · NY, USA</p></div></div></section>
+  <section><h2>Teaching &amp; mentoring</h2><div class="grid3"><div class="cell"><h3>Summer student mentorship: Bernardo Petochi</h3><p class="where">CIMR, Cambridge, UK</p><p class="meta"><span>Summer 2024</span></p><ul class="bullets"><li>Planned and supervised an 8-week project for an undergraduate veterinary-medicine student from the University of Milan.</li><li>Bernardo is now applying for PhD programmes in the USA.</li></ul></div><div class="cell"><h3>Summer student mentorship: Beverly Yuan</h3><p class="where">CIMR, Cambridge, UK</p><p class="meta"><span>Summer 2023</span></p><ul class="bullets"><li>Planned and supervised a 10-week project for an undergraduate biochemistry student from Imperial College London.</li><li>Beverly is now doing her PhD at the University of Cambridge.</li></ul></div><div class="cell"><h3>Interdisciplinary journal club: “Friday Breakfast Buffet”</h3><p class="where">CIMR, Cambridge, UK</p><p class="meta"><span>2023 – 2025</span></p><ul class="bullets"><li>Co-founded and ran a journal club for students and postdocs.</li><li>Deliberately focused on papers unrelated to our own work, to force interdisciplinary thinking.</li></ul></div><div class="cell"><h3>Admissions interview tutor</h3><p class="where">Athena Tuition · online</p><p class="meta"><span>2023 – 2025</span></p><ul class="bullets"><li>Prepared clients for the Cambridge undergraduate admissions interview in Natural Sciences.</li></ul></div><div class="cell"><h3>BioNatSci supervisor</h3><p class="where">University of Cambridge · King's College</p><p class="meta"><span>2023</span></p><ul class="bullets"><li>Taught, set and marked work for small groups of first-year undergraduates in the Biology of Cells module.</li></ul></div><div class="cell"><h3>ISAC outreach: Inspiring Scientists at CIMR</h3><p class="where">CIMR, Cambridge, UK</p><p class="meta"><span>2022 &amp; 2023</span></p><ul class="bullets"><li>Outreach exposing local school students from underprivileged backgrounds to research.</li><li>Co-designed a week of experiments for 16-year-olds and helped them present their results.</li></ul></div><div class="cell"><h3>Summer programme counsellor</h3><p class="where">Bucksmore Education · Cambridge, UK</p><p class="meta"><span>2019 &amp; 2020</span></p><ul class="bullets"><li>Ran an 8-week summer school for 15–18-year-olds; one of five staff responsible for sixty students.</li></ul></div></div></section>
+  <section><h2>Technical expertise</h2><dl class="skills"><dt>Cell biology</dt><dd>Primary mouse &amp; human T cell culture, in vitro functional assays, CAR T cell production, flow cytometry, lentiviral production &amp; transduction</dd><dt>Molecular biology</dt><dd>CRISPR/Cas9 editing, knock-in &amp; deletion, molecular cloning, qPCR, ddPCR, immunoblotting, co-IP, protein expression &amp; purification, RNA extraction, bulk &amp; single-cell RNA library prep</dd><dt>Microbiology</dt><dd>Bacterial (E. coli, D. solani), fungal (S. cerevisiae), nematode (C. elegans) and parasite (T. brucei, P. knowlesi) culture; bacteriophage culture from field samples, phage transduction, transposon mutagenesis screening</dd><dt>Microscopy &amp; imaging</dt><dd>Live imaging, immunofluorescence, super-resolution, traction force microscopy, SEM of thin sections, AFM. Spinning-disc &amp; Airyscan confocal, SIM &amp; lattice SIM², oblique-plane and lattice light sheet, epifluorescence; LumiCycle, IncuCyte &amp; CellCyte</dd><dt>Data analysis</dt><dd>Bulk transcriptomic &amp; proteomic analysis incl. rhythmicity (R, Python, Excel), custom image analysis (ImageJ, MATLAB), conventional image analysis (ImageJ, Imaris, Zen), flow cytometry (FlowJo), statistics (R, Python, Prism)</dd><dt>Animal models</dt><dd>Mouse breeding, colony management, tissue harvesting (spleen, bone marrow, cardiac puncture), tumour engraftment &amp; monitoring, adoptive T cell transfer; subcutaneous, intraperitoneal &amp; retro-orbital injection</dd></dl></section>
+  <section><h2>Beyond the lab</h2><div class="grid2"><div class="cell"><h3>Athletic</h3><ul class="bullets"><li>California International Marathon: 3:11:37 (2025)</li><li>La Quinta Ironman 70.3: 5:18:54 (2024)</li><li>London Marathon: 4:26:18 (2022), raising over £10,000 for Whizz-Kidz</li><li>“Half Blue” for Cambridge in powerlifting (2017–18) &amp; skiing (2016–19)</li><li>16th in weight class, 2018 IPF University World Powerlifting Championships</li><li>2nd at the Oxford–Cambridge Varsity ski races, the oldest alpine race in the world (2018)</li><li>Represented the University in rugby (2019–21) and track &amp; field (2016–17)</li><li>CYQ Level 2 Gym Instructor &amp; Level 3 Personal Trainer (2015)</li></ul></div><div class="cell"><h3>Musical</h3><ul class="bullets"><li>Clarinet: DipABRSM performance diploma (2014)</li><li>Piano: ABRSM Performance Grade 5 (2010)</li><li>Voice: ABRSM Performance Grade 5 (2012)</li><li>Surrey County Youth Wind Orchestra, 2nd clarinet (2009)</li><li>Formed a barbershop quartet that performed professionally and ran workshops for schoolchildren (2015)</li></ul></div></div></section>
+</body></html>

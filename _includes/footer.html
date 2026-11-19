@@ -1,0 +1,44 @@
+{%- comment -%} Footer. Text comes from _data/site.yml. {%- endcomment -%}
+<footer class="site-footer">
+  <div class="footer-rule" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="{{ site.data.site.name }}, home">
+          <img class="brand-mark" src="/assets/img/sprites/tcell.svg" alt="" width="30" height="30">
+          <span class="brand-name">Adam<b>Rochussen</b></span>
+        </a>
+        <p>{{ site.data.site.footer_blurb }}</p>
+      </div>
+      <div>
+        <p class="footer-title">Explore</p>
+        <ul class="footer-links">
+          <li><a href="/research.html">Research</a></li>
+          <li><a href="/publications.html">Publications</a></li>
+          <li><a href="/cv.html">Curriculum vitae</a></li>
+          <li><a href="/assets/cv/Adam_Rochussen_CV.pdf">CV (PDF)</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Elsewhere</p>
+        <ul class="footer-links">
+          {%- for s in site.data.site.socials %}{% unless s.label == "Email" %}
+          <li><a href="{{ s.url }}"{% unless s.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#{{ s.icon }}"></use></svg>{{ s.label }}</a></li>
+          {%- endunless %}{% endfor %}
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <ul class="footer-links">
+          <li><a href="mailto:{{ site.data.site.email }}"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"></use></svg>Email</a></li>
+          <li><a href="/#contact">Donors &amp; investors</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="footer-word" aria-hidden="true">ROCHUSSEN</p>
+  <div class="container footer-base">
+    <p>© {{ site.time | date: "%Y" }} {{ site.data.site.name }}</p>
+    <p class="insert-coin">Insert coin to continue · updated {{ site.data.site.footer_updated }}</p>
+  </div>
+</footer>
